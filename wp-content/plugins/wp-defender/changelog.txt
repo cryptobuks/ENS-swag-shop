@@ -1,0 +1,81 @@
+Plugin Name: WP Defender
+Author: WPMU DEV
+Tested up to: 6.1
+
+Change Log:
+
+= 3.4.0 ( 2022-11-01 ) =
+
+- New: Disable Google reCAPTCHA for logged-in users
+- Enhance: Check HTML Entity for Audit Logs
+- Enhance: Web Authentication notice on 2FA page
+- Enhance: Show CVSS score in plugin vulnerability details
+- Enhance: Compatibility with WordPress 6.1
+- Enhance: IP detection
+- Fix: Web Authentication during plugin upgrade
+- Fix: Banned usernames for existing users
+- Fix: Outdated manual rules for Prevent Information Disclosure
+- Fix: User detail doesn't match the login/logout audit logs
+- Fix: Defender 2FA conflicts with other plugins on Users page
+- Fix: Displaying users when bulk updating notifications
+- Fix: Masked Login not updating on My sites menu
+- Fix: Conflict with OptimizePress
+
+= 3.3.3 ( 2022-10-20 ) =
+
+- Enhance: 2FA flow for secret keys
+
+= 3.3.2 ( 2022-09-29 ) =
+
+- Fix: Encrypt 2FA secret keys
+
+= 3.3.1 ( 2022-09-21 ) =
+
+- Enhance: 2FA security improvements
+- Enhance: IP detection
+- Enhance: Replace Google fonts with Bunny fonts for GDPR compliance
+- Enhance: Membership detection
+- Fix: Defender User Agent banning
+
+= 3.3.0 ( 2022-09-05 ) =
+
+- New: Google reCAPTCHA integration with BuddyPress plugin
+- New: Google reCAPTCHA for WooCommerce Checkout
+- Enhance: Add new Delete Lockouts button
+- Enhance: Prevent brute force attack through 2fa
+- Enhance: Wildcard for User Agent
+- Enhance: Add new checkbox for User Agent Lockout to Firewall notification
+- Enhance: Disable Delete button for active theme
+- Enhance: Vulnerability when scanned using OWASP tools
+- Fix: WebAuthn not working automatically on Subsites when it is enabled in Network for Multisite
+- Fix: WebAuthn devices unregistered from user profile if salt keys are updated
+- Fix: Audit log not capturing event on few themes during login or logout
+- Fix: Google reCAPTCHA triggers on Rest API and prevents adding new user for WooCommerce
+
+= 3.2.0 ( 2022-08-04 ) =
+
+- New: WooCommerce integration with 2FA
+- New: Disable 2FA for a specific user
+- New: Use URL for image in 2FA > Custom Graphic
+- Enhance: Unsubscribe links in email notifications
+- Enhance: White label email notifications
+- Enhance: White label 2FA backup codes file
+- Enhance: 2FA summary section
+- Enhance: Configure 2FA for Super Admin users on multisite
+- Enhance: Check HTML Entity for 2FA > App Title
+- Enhance: Description for 2FA > User Roles option
+- Enhance: Hide Cancel-tooltip while scanning
+- Enhance: Include string comments for translators
+- Fix: 2FA throwing a blank page
+- Fix: Password Reset Link for user fails when Google reCAPTCHA location is set for Lost Password
+- Fix: Wrong Malware scan reports when there are identical plugin slugs at wp.org
+- Fix: Google reCAPTCHA verification fails if the form is submitted after 2 minutes - token expiration issue
+
+= 3.1.2 ( 2022-07-20 ) =
+
+- Fix: WAF status not showing correctly
+- Fix: Notification scheduler error
+- Fix: Plugin support link error
+
+
+1014685-1667379631-au

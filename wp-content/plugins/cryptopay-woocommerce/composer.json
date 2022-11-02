@@ -1,0 +1,15 @@
+{
+    "autoload": {
+        "psr-4": {
+            "BeycanPress\\CryptoPay\\WooCommerce\\": "app"
+        }
+    },
+    "require": {
+        "beycan/moodel": "^1.3",
+        "beycan/response": "^1.0",
+        "beycan/multi-chain": "^1.3",
+        "beycan/license-verifier": "^1.0",
+        "beycan/currency-converter": "^1.0",
+        "beycan/wp-table": "^2.0"
+    }
+}
