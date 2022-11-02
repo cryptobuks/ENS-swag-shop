@@ -1,0 +1,110 @@
+2022-10-05T00:41:42+00:00 CRITICAL Uncaught TypeError: filter_var_array(): Argument #1 ($array) must be of type array, null given in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:22
+Stack trace:
+#0 /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php(22): filter_var_array(NULL)
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(307): set_ens_domains('')
+#2 /var/web/site/public_html/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters('', Array)
+#3 /var/web/site/public_html/wp-includes/plugin.php(476): WP_Hook->do_action(Array)
+#4 /var/web/site/public_html/wp-admin/admin-ajax.php(202): do_action('wp_ajax_nopriv_...')
+#5 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 22
+
+2022-10-05T00:42:18+00:00 CRITICAL Uncaught TypeError: filter_var_array(): Argument #1 ($array) must be of type array, null given in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:22
+Stack trace:
+#0 /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php(22): filter_var_array(NULL)
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(307): set_ens_domains('')
+#2 /var/web/site/public_html/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters('', Array)
+#3 /var/web/site/public_html/wp-includes/plugin.php(476): WP_Hook->do_action(Array)
+#4 /var/web/site/public_html/wp-admin/admin-ajax.php(202): do_action('wp_ajax_nopriv_...')
+#5 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 22
+
+2022-10-05T00:49:29+00:00 CRITICAL Uncaught TypeError: filter_var_array(): Argument #1 ($array) must be of type array, null given in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:22
+Stack trace:
+#0 /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php(22): filter_var_array(NULL)
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(307): set_ens_domains('')
+#2 /var/web/site/public_html/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters('', Array)
+#3 /var/web/site/public_html/wp-includes/plugin.php(476): WP_Hook->do_action(Array)
+#4 /var/web/site/public_html/wp-admin/admin-ajax.php(202): do_action('wp_ajax_nopriv_...')
+#5 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 22
+
+2022-10-05T12:32:02+00:00 CRITICAL Uncaught TypeError: filter_var_array(): Argument #1 ($array) must be of type array, null given in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:22
+Stack trace:
+#0 /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php(22): filter_var_array(NULL)
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(307): set_ens_domains('')
+#2 /var/web/site/public_html/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters('', Array)
+#3 /var/web/site/public_html/wp-includes/plugin.php(476): WP_Hook->do_action(Array)
+#4 /var/web/site/public_html/wp-admin/admin-ajax.php(202): do_action('wp_ajax_nopriv_...')
+#5 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 22
+
+2022-10-05T12:33:08+00:00 CRITICAL Uncaught TypeError: filter_var_array(): Argument #1 ($array) must be of type array, null given in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:22
+Stack trace:
+#0 /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php(22): filter_var_array(NULL)
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(307): set_ens_domains('')
+#2 /var/web/site/public_html/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters('', Array)
+#3 /var/web/site/public_html/wp-includes/plugin.php(476): WP_Hook->do_action(Array)
+#4 /var/web/site/public_html/wp-admin/admin-ajax.php(202): do_action('wp_ajax_nopriv_...')
+#5 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 22
+
+2022-10-05T12:33:13+00:00 CRITICAL Uncaught TypeError: filter_var_array(): Argument #1 ($array) must be of type array, null given in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:22
+Stack trace:
+#0 /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php(22): filter_var_array(NULL)
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(307): set_ens_domains('')
+#2 /var/web/site/public_html/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters('', Array)
+#3 /var/web/site/public_html/wp-includes/plugin.php(476): WP_Hook->do_action(Array)
+#4 /var/web/site/public_html/wp-admin/admin-ajax.php(202): do_action('wp_ajax_nopriv_...')
+#5 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 22
+
+2022-10-05T12:33:14+00:00 CRITICAL Uncaught TypeError: filter_var_array(): Argument #1 ($array) must be of type array, null given in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:22
+Stack trace:
+#0 /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php(22): filter_var_array(NULL)
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(307): set_ens_domains('')
+#2 /var/web/site/public_html/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters('', Array)
+#3 /var/web/site/public_html/wp-includes/plugin.php(476): WP_Hook->do_action(Array)
+#4 /var/web/site/public_html/wp-admin/admin-ajax.php(202): do_action('wp_ajax_nopriv_...')
+#5 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 22
+
+2022-10-05T12:33:15+00:00 CRITICAL Uncaught TypeError: filter_var_array(): Argument #1 ($array) must be of type array, null given in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:22
+Stack trace:
+#0 /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php(22): filter_var_array(NULL)
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(307): set_ens_domains('')
+#2 /var/web/site/public_html/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters('', Array)
+#3 /var/web/site/public_html/wp-includes/plugin.php(476): WP_Hook->do_action(Array)
+#4 /var/web/site/public_html/wp-admin/admin-ajax.php(202): do_action('wp_ajax_nopriv_...')
+#5 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 22
+
+2022-10-05T12:33:16+00:00 CRITICAL Uncaught TypeError: filter_var_array(): Argument #1 ($array) must be of type array, null given in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:22
+Stack trace:
+#0 /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php(22): filter_var_array(NULL)
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(307): set_ens_domains('')
+#2 /var/web/site/public_html/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters('', Array)
+#3 /var/web/site/public_html/wp-includes/plugin.php(476): WP_Hook->do_action(Array)
+#4 /var/web/site/public_html/wp-admin/admin-ajax.php(202): do_action('wp_ajax_nopriv_...')
+#5 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 22
+
+2022-10-05T12:33:21+00:00 CRITICAL Uncaught TypeError: filter_var_array(): Argument #1 ($array) must be of type array, null given in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:22
+Stack trace:
+#0 /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php(22): filter_var_array(NULL)
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(307): set_ens_domains('')
+#2 /var/web/site/public_html/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters('', Array)
+#3 /var/web/site/public_html/wp-includes/plugin.php(476): WP_Hook->do_action(Array)
+#4 /var/web/site/public_html/wp-admin/admin-ajax.php(202): do_action('wp_ajax_nopriv_...')
+#5 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 22
+
+2022-10-05T12:33:23+00:00 CRITICAL Uncaught TypeError: filter_var_array(): Argument #1 ($array) must be of type array, null given in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:22
+Stack trace:
+#0 /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php(22): filter_var_array(NULL)
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(307): set_ens_domains('')
+#2 /var/web/site/public_html/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters('', Array)
+#3 /var/web/site/public_html/wp-includes/plugin.php(476): WP_Hook->do_action(Array)
+#4 /var/web/site/public_html/wp-admin/admin-ajax.php(202): do_action('wp_ajax_nopriv_...')
+#5 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 22
+

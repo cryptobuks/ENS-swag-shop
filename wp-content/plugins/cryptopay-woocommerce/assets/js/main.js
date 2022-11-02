@@ -1,0 +1,1 @@
+initCryptoPay("cryptopay-woocommerce", CryptoPayWooCommerce);

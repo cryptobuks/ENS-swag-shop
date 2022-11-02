@@ -1,0 +1,5 @@
+{
+    "require": {
+        "agustind/ethsignature": "^1.0"
+    }
+}
