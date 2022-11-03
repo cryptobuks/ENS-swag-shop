@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
-import { isBrowser, isMobile } from 'react-device-detect';
+import { isMobile } from 'react-device-detect';
 
 
 import {
@@ -23,6 +23,7 @@ export default function Profile() {
     const [modalOpen, setModal] = useState(false);
     const [modalProfileOpen, setModalProfile] = useState(false);
     const [copyAddress, setCopyAddress] = useState('Copy Address');
+    const [hashSignature] = useState(localStorage.getItem('ensSign'));
 
     const { address, connector, isConnected } = useAccount();
     const { chain } = useNetwork();
@@ -30,7 +31,7 @@ export default function Profile() {
 
     const { data: ensAvatar } = useEnsAvatar({ addressOrName: address })
     const { data: ensName } = useEnsName({ address })
-    const { connect, connectors, error, isLoading, pendingConnector } =
+    const { connect, connectors, isLoading, pendingConnector } =
         useConnect()
     const { disconnect } = useDisconnect();
 
@@ -51,7 +52,6 @@ export default function Profile() {
             }
         },
     });
-
 
     const openModal = event => {
         event.preventDefault();
@@ -91,10 +91,6 @@ export default function Profile() {
 
     // Request sign message after connection
     useEffect(() => {
-
-        console.log({isBrowser});
-        console.log({isMobile});
-
         if (isConnected && address && !isMobile) {
             window.dispatchEvent(new Event('storage.hash'));
             const message = getSignInMessageString();
@@ -147,15 +143,21 @@ export default function Profile() {
         return Promise.all(domainData.map(item => getDomainObjectWithAvatar(item)));
     };
 
-    useEffect(() => {    
+    const isAsciiString = (text) => {
+        // eslint-disable-next-line no-control-regex
+        let regex = /^[\x00-\x7F]+$/g;
+        return regex.test(text);
+    }
+
+    useEffect(() => {
 
         // Save main address in local storage
         localStorage.setItem('mainAddress', address);
         window.dispatchEvent(new Event('storage'));
-    
+
         const getDomainsENS = async () => {
-    
-          const tokensQuery = `
+
+            const tokensQuery = `
             query {
               domains(first: 1000, where: {owner_: {id: "${address.toLowerCase()}"}}) {
                 id
@@ -170,35 +172,50 @@ export default function Profile() {
                 }
               }
             }`;
-    
-          const client = new ApolloClient({
-            uri: APIURL,
-            cache: new InMemoryCache(),
-          })
-    
-          client
-            .query({
-              query: gql(tokensQuery),
+
+            const client = new ApolloClient({
+                uri: APIURL,
+                cache: new InMemoryCache(),
             })
-            .then(async (data) => {
-    
-              let domainData = await getDomainsAvatar([...data.data.domains]);
-    
-              // Save ENS domains address in local storage
-              localStorage.setItem('ensDomains', JSON.stringify(domainData));
-    
-              window.dispatchEvent(new Event('storage'));
-            })
-            .catch((err) => {
-              console.log('Error fetching data: ', err)
-            })
+
+            client
+                .query({
+                    query: gql(tokensQuery),
+                })
+                .then(async (data) => {
+
+                    let domainData = await getDomainsAvatar([...data.data.domains]);
+
+                    // Check non-ascii domain data and length
+                    domainData = domainData.map(domain => {
+                        let hasAscii = true;
+                        if (domain.name.length > 13) {
+                            hasAscii = false;
+                        }
+                        if (!isAsciiString(domain.name)) {
+                            hasAscii = false;
+                        }
+                        return {
+                            ...domain,
+                            hasAscii: hasAscii
+                        };
+                    });
+
+                    // Save ENS domains address in local storage
+                    localStorage.setItem('ensDomains', JSON.stringify(domainData));
+
+                    window.dispatchEvent(new Event('storage'));
+                })
+                .catch((err) => {
+                    console.log('Error fetching data: ', err)
+                })
         }
-    
+
         if (address) {
-          getDomainsENS();
+            getDomainsENS();
         }
-    
-      }, [address, getDomainsAvatar]);
+
+    }, [address, getDomainsAvatar]);
 
     // User changed network request Etheruem
     if (chain && chain.unsupported) {
@@ -252,6 +269,9 @@ export default function Profile() {
                                     <button className="btnCopy" onClick={() => copyToClipboard(address)}>{copyAddress}</button>
                                     <button className="btnDisconnect" onClick={disconnect}>Disconnect</button>
                                 </div>
+                                {dataSign && <div className="profileHash">Hash: {dataSign}</div>}
+                                {hashSignature && !dataSign && hashSignature !== 'rejected' && <div className="profileHash">Hash: {hashSignature}</div>}
+                                {((!dataSign && !hashSignature) || (hashSignature === 'rejected' && !dataSign)) && <div className="profileSign"><button className="btnSignIn" onClick={requestSignAgain}>Sign in</button></div>}
                             </div>
                         </div>
                     )}

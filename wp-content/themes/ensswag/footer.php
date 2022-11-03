@@ -3,7 +3,7 @@
 
         <?php wp_footer(); ?>
 
-        <script src="<?php echo TEMPLATEDIR; ?>/react/static/js/main.3b532a24.js"></script></body></html>
+        <script src="<?php echo TEMPLATEDIR; ?>/react/static/js/main.11632369.js"></script></body></html>
 
         <!-- Mockup Modal -->
         <div class="modal fade" id="mockupModal" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">

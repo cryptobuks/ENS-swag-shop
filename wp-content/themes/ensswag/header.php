@@ -28,7 +28,7 @@
     <meta name="description" content="Get your customised official ENS merch.">
 
     <!-- start:stylesheets -->
-    <link href="<?php echo TEMPLATEDIR; ?>/react/static/css/main.2b2dc94b.css" rel="stylesheet">
+    <link href="<?php echo TEMPLATEDIR; ?>/react/static/css/main.fddd8ea3.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo TEMPLATEDIR; ?>/style.css?ver=1.42">
     <!-- end:stylesheets -->
 
@@ -41,7 +41,7 @@
     <script src="<?php echo TEMPLATEDIR; ?>/js/bootstrap-select.min.js" defer></script>
     <script src="<?php echo TEMPLATEDIR; ?>/js/dd.min.js" defer></script>
     <script src="<?php echo TEMPLATEDIR; ?>/js/lightbox.min.js" defer></script>
-    <script src="<?php echo TEMPLATEDIR; ?>/js/require.js?ver=1.68" defer></script>
+    <script src="<?php echo TEMPLATEDIR; ?>/js/require.js?ver=1.71" defer></script>
     <!-- end:scripts -->
 
     <?php include 'templates/header/header-google-head.php'; ?>
@@ -49,8 +49,6 @@
 </head>
 
 <body <?php body_class(); ?>>
-
-    <input type="text" id="signatureInput" value="">
 
     <?php include 'templates/header/header-google-body.php'; ?>
 

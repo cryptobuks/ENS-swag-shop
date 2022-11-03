@@ -1,0 +1,200 @@
+2022-11-03T08:06:07+00:00 CRITICAL Uncaught Error: Call to undefined function get_field() in /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-category-header.php:4
+Stack trace:
+#0 /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-list.php(5): include()
+#1 /var/web/site/public_html/wp-content/themes/ensswag/archive-product.php(3): include('/var/web/site/p...')
+#2 /var/web/site/public_html/wp-includes/template-loader.php(106): include('/var/web/site/p...')
+#3 /var/web/site/public_html/wp-blog-header.php(19): require_once('/var/web/site/p...')
+#4 /var/web/site/public_html/index.php(17): require('/var/web/site/p...')
+#5 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-category-header.php on line 4
+
+2022-11-03T08:08:00+00:00 CRITICAL Uncaught Error: Call to undefined function get_field() in /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-category-header.php:4
+Stack trace:
+#0 /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-list.php(5): include()
+#1 /var/web/site/public_html/wp-content/themes/ensswag/archive-product.php(3): include('/var/web/site/p...')
+#2 /var/web/site/public_html/wp-includes/template-loader.php(106): include('/var/web/site/p...')
+#3 /var/web/site/public_html/wp-blog-header.php(19): require_once('/var/web/site/p...')
+#4 /var/web/site/public_html/index.php(17): require('/var/web/site/p...')
+#5 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-category-header.php on line 4
+
+2022-11-03T08:08:07+00:00 CRITICAL Uncaught Error: Call to undefined function get_field() in /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-category-header.php:4
+Stack trace:
+#0 /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-list.php(5): include()
+#1 /var/web/site/public_html/wp-content/themes/ensswag/archive-product.php(3): include('/var/web/site/p...')
+#2 /var/web/site/public_html/wp-includes/template-loader.php(106): include('/var/web/site/p...')
+#3 /var/web/site/public_html/wp-blog-header.php(19): require_once('/var/web/site/p...')
+#4 /var/web/site/public_html/index.php(17): require('/var/web/site/p...')
+#5 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-category-header.php on line 4
+
+2022-11-03T08:08:09+00:00 CRITICAL Uncaught Error: Call to undefined function get_field() in /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-category-header.php:4
+Stack trace:
+#0 /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-list.php(5): include()
+#1 /var/web/site/public_html/wp-content/themes/ensswag/archive-product.php(3): include('/var/web/site/p...')
+#2 /var/web/site/public_html/wp-includes/template-loader.php(106): include('/var/web/site/p...')
+#3 /var/web/site/public_html/wp-blog-header.php(19): require_once('/var/web/site/p...')
+#4 /var/web/site/public_html/index.php(17): require('/var/web/site/p...')
+#5 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-category-header.php on line 4
+
+2022-11-03T08:08:11+00:00 CRITICAL Uncaught Error: Call to undefined function get_field() in /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-category-header.php:4
+Stack trace:
+#0 /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-list.php(5): include()
+#1 /var/web/site/public_html/wp-content/themes/ensswag/archive-product.php(3): include('/var/web/site/p...')
+#2 /var/web/site/public_html/wp-includes/template-loader.php(106): include('/var/web/site/p...')
+#3 /var/web/site/public_html/wp-blog-header.php(19): require_once('/var/web/site/p...')
+#4 /var/web/site/public_html/index.php(17): require('/var/web/site/p...')
+#5 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-category-header.php on line 4
+
+2022-11-03T08:18:21+00:00 CRITICAL Uncaught Error: Call to undefined function get_field() in /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-category-header.php:4
+Stack trace:
+#0 /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-list.php(5): include()
+#1 /var/web/site/public_html/wp-content/themes/ensswag/archive-product.php(3): include('/var/web/site/p...')
+#2 /var/web/site/public_html/wp-includes/template-loader.php(106): include('/var/web/site/p...')
+#3 /var/web/site/public_html/wp-blog-header.php(19): require_once('/var/web/site/p...')
+#4 /var/web/site/public_html/index.php(17): require('/var/web/site/p...')
+#5 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-category-header.php on line 4
+
+2022-11-03T08:18:23+00:00 CRITICAL Uncaught Error: Call to undefined function get_field() in /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-category-header.php:4
+Stack trace:
+#0 /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-list.php(5): include()
+#1 /var/web/site/public_html/wp-content/themes/ensswag/archive-product.php(3): include('/var/web/site/p...')
+#2 /var/web/site/public_html/wp-includes/template-loader.php(106): include('/var/web/site/p...')
+#3 /var/web/site/public_html/wp-blog-header.php(19): require_once('/var/web/site/p...')
+#4 /var/web/site/public_html/index.php(17): require('/var/web/site/p...')
+#5 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-category-header.php on line 4
+
+2022-11-03T08:18:25+00:00 CRITICAL Uncaught Error: Call to undefined function get_field() in /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-category-header.php:4
+Stack trace:
+#0 /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-list.php(5): include()
+#1 /var/web/site/public_html/wp-content/themes/ensswag/archive-product.php(3): include('/var/web/site/p...')
+#2 /var/web/site/public_html/wp-includes/template-loader.php(106): include('/var/web/site/p...')
+#3 /var/web/site/public_html/wp-blog-header.php(19): require_once('/var/web/site/p...')
+#4 /var/web/site/public_html/index.php(17): require('/var/web/site/p...')
+#5 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-category-header.php on line 4
+
+2022-11-03T08:18:47+00:00 CRITICAL Uncaught Error: Call to undefined function get_field() in /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-category-header.php:4
+Stack trace:
+#0 /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-list.php(5): include()
+#1 /var/web/site/public_html/wp-content/themes/ensswag/archive-product.php(3): include('/var/web/site/p...')
+#2 /var/web/site/public_html/wp-includes/template-loader.php(106): include('/var/web/site/p...')
+#3 /var/web/site/public_html/wp-blog-header.php(19): require_once('/var/web/site/p...')
+#4 /var/web/site/public_html/index.php(17): require('/var/web/site/p...')
+#5 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-category-header.php on line 4
+
+2022-11-03T08:19:36+00:00 CRITICAL Uncaught Error: Call to undefined function get_field() in /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-category-header.php:4
+Stack trace:
+#0 /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-list.php(5): include()
+#1 /var/web/site/public_html/wp-content/themes/ensswag/archive-product.php(3): include('/var/web/site/p...')
+#2 /var/web/site/public_html/wp-includes/template-loader.php(106): include('/var/web/site/p...')
+#3 /var/web/site/public_html/wp-blog-header.php(19): require_once('/var/web/site/p...')
+#4 /var/web/site/public_html/index.php(17): require('/var/web/site/p...')
+#5 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-category-header.php on line 4
+
+2022-11-03T08:19:38+00:00 CRITICAL Uncaught Error: Call to undefined function get_field() in /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-category-header.php:4
+Stack trace:
+#0 /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-list.php(5): include()
+#1 /var/web/site/public_html/wp-content/themes/ensswag/archive-product.php(3): include('/var/web/site/p...')
+#2 /var/web/site/public_html/wp-includes/template-loader.php(106): include('/var/web/site/p...')
+#3 /var/web/site/public_html/wp-blog-header.php(19): require_once('/var/web/site/p...')
+#4 /var/web/site/public_html/index.php(17): require('/var/web/site/p...')
+#5 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-category-header.php on line 4
+
+2022-11-03T08:19:45+00:00 CRITICAL Uncaught Error: Call to undefined function get_field() in /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-category-header.php:4
+Stack trace:
+#0 /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-list.php(5): include()
+#1 /var/web/site/public_html/wp-content/themes/ensswag/archive-product.php(3): include('/var/web/site/p...')
+#2 /var/web/site/public_html/wp-includes/template-loader.php(106): include('/var/web/site/p...')
+#3 /var/web/site/public_html/wp-blog-header.php(19): require_once('/var/web/site/p...')
+#4 /var/web/site/public_html/index.php(17): require('/var/web/site/p...')
+#5 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-category-header.php on line 4
+
+2022-11-03T08:19:53+00:00 CRITICAL Uncaught Error: Call to undefined function get_field() in /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-category-header.php:4
+Stack trace:
+#0 /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-list.php(5): include()
+#1 /var/web/site/public_html/wp-content/themes/ensswag/archive-product.php(3): include('/var/web/site/p...')
+#2 /var/web/site/public_html/wp-includes/template-loader.php(106): include('/var/web/site/p...')
+#3 /var/web/site/public_html/wp-blog-header.php(19): require_once('/var/web/site/p...')
+#4 /var/web/site/public_html/index.php(17): require('/var/web/site/p...')
+#5 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-category-header.php on line 4
+
+2022-11-03T08:19:55+00:00 CRITICAL Uncaught Error: Call to undefined function get_field() in /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-category-header.php:4
+Stack trace:
+#0 /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-list.php(5): include()
+#1 /var/web/site/public_html/wp-content/themes/ensswag/archive-product.php(3): include('/var/web/site/p...')
+#2 /var/web/site/public_html/wp-includes/template-loader.php(106): include('/var/web/site/p...')
+#3 /var/web/site/public_html/wp-blog-header.php(19): require_once('/var/web/site/p...')
+#4 /var/web/site/public_html/index.php(17): require('/var/web/site/p...')
+#5 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-category-header.php on line 4
+
+2022-11-03T08:21:47+00:00 CRITICAL Uncaught Error: Call to undefined function get_field() in /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-category-header.php:4
+Stack trace:
+#0 /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-list.php(5): include()
+#1 /var/web/site/public_html/wp-content/themes/ensswag/archive-product.php(3): include('/var/web/site/p...')
+#2 /var/web/site/public_html/wp-includes/template-loader.php(106): include('/var/web/site/p...')
+#3 /var/web/site/public_html/wp-blog-header.php(19): require_once('/var/web/site/p...')
+#4 /var/web/site/public_html/index.php(17): require('/var/web/site/p...')
+#5 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-category-header.php on line 4
+
+2022-11-03T08:21:49+00:00 CRITICAL Uncaught Error: Call to undefined function get_field() in /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-category-header.php:4
+Stack trace:
+#0 /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-list.php(5): include()
+#1 /var/web/site/public_html/wp-content/themes/ensswag/archive-product.php(3): include('/var/web/site/p...')
+#2 /var/web/site/public_html/wp-includes/template-loader.php(106): include('/var/web/site/p...')
+#3 /var/web/site/public_html/wp-blog-header.php(19): require_once('/var/web/site/p...')
+#4 /var/web/site/public_html/index.php(17): require('/var/web/site/p...')
+#5 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-category-header.php on line 4
+
+2022-11-03T08:21:51+00:00 CRITICAL Uncaught Error: Call to undefined function get_field() in /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-category-header.php:4
+Stack trace:
+#0 /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-list.php(5): include()
+#1 /var/web/site/public_html/wp-content/themes/ensswag/archive-product.php(3): include('/var/web/site/p...')
+#2 /var/web/site/public_html/wp-includes/template-loader.php(106): include('/var/web/site/p...')
+#3 /var/web/site/public_html/wp-blog-header.php(19): require_once('/var/web/site/p...')
+#4 /var/web/site/public_html/index.php(17): require('/var/web/site/p...')
+#5 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-category-header.php on line 4
+
+2022-11-03T08:22:01+00:00 CRITICAL Uncaught Error: Call to undefined function get_field() in /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-category-header.php:4
+Stack trace:
+#0 /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-list.php(5): include()
+#1 /var/web/site/public_html/wp-content/themes/ensswag/archive-product.php(3): include('/var/web/site/p...')
+#2 /var/web/site/public_html/wp-includes/template-loader.php(106): include('/var/web/site/p...')
+#3 /var/web/site/public_html/wp-blog-header.php(19): require_once('/var/web/site/p...')
+#4 /var/web/site/public_html/index.php(17): require('/var/web/site/p...')
+#5 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-category-header.php on line 4
+
+2022-11-03T08:22:03+00:00 CRITICAL Uncaught Error: Call to undefined function get_field() in /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-category-header.php:4
+Stack trace:
+#0 /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-list.php(5): include()
+#1 /var/web/site/public_html/wp-content/themes/ensswag/archive-product.php(3): include('/var/web/site/p...')
+#2 /var/web/site/public_html/wp-includes/template-loader.php(106): include('/var/web/site/p...')
+#3 /var/web/site/public_html/wp-blog-header.php(19): require_once('/var/web/site/p...')
+#4 /var/web/site/public_html/index.php(17): require('/var/web/site/p...')
+#5 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-category-header.php on line 4
+
+2022-11-03T08:22:12+00:00 CRITICAL Uncaught Error: Call to undefined function get_field() in /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-category-header.php:4
+Stack trace:
+#0 /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-list.php(5): include()
+#1 /var/web/site/public_html/wp-content/themes/ensswag/archive-product.php(3): include('/var/web/site/p...')
+#2 /var/web/site/public_html/wp-includes/template-loader.php(106): include('/var/web/site/p...')
+#3 /var/web/site/public_html/wp-blog-header.php(19): require_once('/var/web/site/p...')
+#4 /var/web/site/public_html/index.php(17): require('/var/web/site/p...')
+#5 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-category-header.php on line 4
+

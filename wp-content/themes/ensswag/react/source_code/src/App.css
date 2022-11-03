@@ -56,7 +56,7 @@ button{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   border-radius: 20px;
 }
 
@@ -298,6 +298,29 @@ button{
 
 .walletModal.profileModal .walletModalContent .buttonsHolder button:hover{
   background-color: rgba(60, 66, 66, 0.1);
+}
+
+.profileHash{
+  padding: 15px 0 0 0;
+  word-break: break-all;
+  font-size: 12px;
+}
+
+.profileSign{
+  width: 100%;
+  padding: 15px 0 0 0;
+  text-align: center;
+}
+
+.profileSign button{
+  padding: 15px 26px;
+  background: #AF52DE;
+  border: none;
+  border-radius: 8px;
+  line-height: 20px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #ffffff;
 }
 
 

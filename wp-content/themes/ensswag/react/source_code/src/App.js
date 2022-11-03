@@ -2,6 +2,8 @@ import './polyfills';
 
 import './App.css';
 
+import { isMobile } from 'react-device-detect';
+
 // import ConnectButtons from './ConnectButtons';
 import Profile from './Profile';
 
@@ -59,7 +61,7 @@ const client = createClient({
 
 function App() {
 
-  const windowsWidth = window.innerWidth <= 600 ? 'mobile' : 'desktop';
+  const windowsWidth = isMobile ? 'mobile' : 'desktop';
 
   return (
     <div className={`App ${windowsWidth}`}>

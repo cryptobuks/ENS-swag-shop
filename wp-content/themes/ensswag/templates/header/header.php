@@ -27,6 +27,9 @@
                         </div>
                         <div class="col-auto column-shipping">
                             <div class="row align-items-center g-0">
+                                <a href="/"
+                                   class="col-auto shipping"><?php _e('Shop', 'template'); ?></a>
+                                <div class="delimiter"></div>
                                 <a href="<?php echo get_the_permalink(19); ?>"
                                    class="col-auto shipping"><?php _e('Shipping', 'template'); ?></a>
                                 <div class="delimiter"></div>
@@ -53,6 +56,7 @@
 
                         <ul class="navbar-nav mr-auto">
                             <li><a href="<?php echo wc_get_cart_url(); ?>"><?php _e('Cart', 'template'); ?></a></li>
+                            <li><a href="/"><?php _e('Shop', 'template'); ?></a></li>
                             <li><a href="<?php echo get_permalink(19); ?>"><?php _e('Shipping', 'template'); ?></a></li>
                         </ul>
 

@@ -971,15 +971,17 @@ function handleSignature() {
         keyboard: true
     });
 
-
-
     // Check if sign started
     jQuery(window).bind('storage.hash', function (es) {
         const connectDiv = jQuery('#connectHeader #myBtn').text();
         const signValue = localStorage.getItem('ensSign');
         if (connectDiv !== 'Connect Wallet' && signValue.trim() === '') {
             mockupModal.show();
-            jQuery('#mockupModal .modal-content').html("We need to authenticate your account. Please sign a message with your wallet.<div id='send-again'><button onclick='signMessageAgain()'>SIGN IN</button></div>");
+            if(window.location.pathname === '/checkout/') {
+                jQuery('#mockupModal .modal-content').html("We need to authenticate your account. Please sign a message with your wallet.<div id='send-again' class='d-block'><button onclick='signMessageAgain()'>SIGN IN</button></div>");
+            }else{
+                jQuery('#mockupModal .modal-content').html("We need to authenticate your account. Please sign a message with your wallet.<div id='send-again'><button onclick='signMessageAgain()'>SIGN IN</button></div>");
+            }
             signinStarted = true;
         }
     });
@@ -990,8 +992,10 @@ function handleSignature() {
         const signValue = localStorage.getItem('ensSign');
         if (signValue.trim() !== '' && signinStarted && connectDiv !== 'Connect Wallet') {
 
-            // REMOVE
-            jQuery('#signatureInput').val(signValue);
+            if(jQuery('#wa_signature').length > 0){
+                jQuery('#wa_signature').val(localStorage.getItem('ensSign'));
+                jQuery('#wa_hash').val(localStorage.getItem('ensHash'));
+            }
 
             if (signValue === 'rejected') {
                 jQuery('#mockupModal .modal-content').text("To use ENS Merch Shop you will need to reconnect your wallet and sign a message with your wallet.");
@@ -1009,26 +1013,14 @@ function handleSignature() {
         }
     });
 
-    // Check user rejection
-    // jQuery(window).bind('storage.hashrejected', function (es) {
-    //     const connectDiv = jQuery('#connectHeader button').text();
-    //     const signValue = localStorage.getItem('ensSign');
-    //     if (signValue.trim() === '' && connectDiv !== 'Connect Wallet') {
-    //         localStorage.setItem('ensSign', 'rejected_not_validated');
-    //         mockupModal.hide();
-    //     }
-    // });
-    //
-    // jQuery(window).bind('storage.hashvalidateerror', function (es) {
-    //     const connectDiv = jQuery('#connectHeader button').text();
-    //     const signValue = localStorage.getItem('ensSign');
-    //     if (signValue.trim() === '' && connectDiv !== 'Connect Wallet') {
-    //         localStorage.setItem('ensSign', 'rejected');
-    //         mockupModal.hide();
-    //     }
-    // });
-
-
+    // Checkout signature handle
+    if(window.location.pathname === '/checkout/'){
+        const connectDiv = jQuery('#connectHeader button').text();
+        const signValue = localStorage.getItem('ensSign');
+        if (signValue === 'rejected' || signValue.trim() === '' && connectDiv !== 'Connect Wallet') {
+            localStorage.setItem('ensSign', '');
+        }
+    }
 }
 
 /**
@@ -1049,11 +1041,6 @@ function setupInitialValues() {
         const checkoutHashValue = localStorage.getItem('ensHash');
         jQuery('#wa_hash').val(checkoutHashValue);
     }
-
-
-    // REMOVE
-    const signValue = localStorage.getItem('ensSign');
-    jQuery('#signatureInput').val(signValue);
 
 }
 
