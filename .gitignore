@@ -3,4 +3,5 @@
 
 #wp files adn folders
 wp-config.php
-wp-content/uploads/*
+/wp-content/uploads/
+/wp-content/wphb-cache/

@@ -2,6 +2,11 @@ Plugin Name: SmartCrawl SEO
 
 Change Log:
 ----------------------------------------------------------------------
+3.3.1 - 2022-11-2
+----------------------------------------------------------------------
+- Improvement: Permission checks on config management.
+- Fix: Conflict with Defender login masking.
+
 3.3.0 - 2022-10-31
 ----------------------------------------------------------------------
 - New: Pagination for Auto Linking custom keywords.
@@ -1083,4 +1088,4 @@ exist yet
 - Initial Release.
 
 
-1014685-1667379643-au
+1014685-1667568223-au

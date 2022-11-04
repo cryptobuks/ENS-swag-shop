@@ -200,6 +200,11 @@ class Smartcrawl_Controller_Configs extends Smartcrawl_Base_Controller {
 	}
 
 	private function get_request_data() {
+		// Only admins should have access.
+		if ( ! $this->has_permission() ) {
+			return array();
+		}
+
 		return isset( $_POST['_wds_nonce'] ) && wp_verify_nonce( wp_unslash( $_POST['_wds_nonce'] ), 'wds-configs-nonce' ) ? stripslashes_deep( $_POST ) : array(); // phpcs:ignore
 	}
 
@@ -222,5 +227,24 @@ class Smartcrawl_Controller_Configs extends Smartcrawl_Base_Controller {
 		}
 
 		Smartcrawl_Controller_Onboard::get()->mark_onboarding_done();
+	}
+
+	/**
+	 * Check if current user has permission to perform actions.
+	 *
+	 * @since 3.3.1
+	 *
+	 * @return bool
+	 */
+	private function has_permission() {
+		// Site admins only.
+		$cap = 'manage_options';
+		// If only super admins should access.
+		if ( is_multisite() && smartcrawl_subsite_manager_role() === 'superadmin' ) {
+			$cap = 'manage_network_options';
+		}
+
+		// Only admins should have access.
+		return current_user_can( $cap );
 	}
 }

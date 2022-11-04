@@ -128,7 +128,7 @@ abstract class Smartcrawl_Settings_Admin extends Smartcrawl_Settings {
 	public static function admin_url( $tab ) {
 		$admin_url = esc_url_raw( add_query_arg( 'page', $tab, admin_url( 'admin.php' ) ) );
 
-		if ( class_exists( '\WP_Defender\Model\Setting\Mask_Login' ) ) {
+		if ( class_exists( '\WP_Defender\Model\Setting\Mask_Login' ) && ! is_user_logged_in() ) {
 			$mask_login_model = new \WP_Defender\Model\Setting\Mask_Login();
 
 			if ( $mask_login_model->is_active() ) {

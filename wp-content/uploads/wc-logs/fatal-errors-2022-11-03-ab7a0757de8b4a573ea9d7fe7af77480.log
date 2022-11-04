@@ -198,3 +198,318 @@ Stack trace:
 #5 {main}
   thrown in /var/web/site/public_html/wp-content/themes/ensswag/templates/webshop/webshop-category-header.php on line 4
 
+2022-11-03T19:48:34+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:111
+Stack trace:
+#0 /var/web/site/public_html/wp-includes/class-wp-hook.php(308): set_ens_domains('')
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/web/site/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/web/site/public_html/wp-admin/admin-ajax.php(203): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 111
+
+2022-11-03T19:48:34+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:111
+Stack trace:
+#0 /var/web/site/public_html/wp-includes/class-wp-hook.php(308): set_ens_domains('')
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/web/site/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/web/site/public_html/wp-admin/admin-ajax.php(203): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 111
+
+2022-11-03T19:48:34+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:111
+Stack trace:
+#0 /var/web/site/public_html/wp-includes/class-wp-hook.php(308): set_ens_domains('')
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/web/site/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/web/site/public_html/wp-admin/admin-ajax.php(203): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 111
+
+2022-11-03T19:48:35+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:111
+Stack trace:
+#0 /var/web/site/public_html/wp-includes/class-wp-hook.php(308): set_ens_domains('')
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/web/site/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/web/site/public_html/wp-admin/admin-ajax.php(203): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 111
+
+2022-11-03T19:48:35+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:111
+Stack trace:
+#0 /var/web/site/public_html/wp-includes/class-wp-hook.php(308): set_ens_domains('')
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/web/site/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/web/site/public_html/wp-admin/admin-ajax.php(203): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 111
+
+2022-11-03T19:48:47+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:111
+Stack trace:
+#0 /var/web/site/public_html/wp-includes/class-wp-hook.php(308): set_ens_domains('')
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/web/site/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/web/site/public_html/wp-admin/admin-ajax.php(203): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 111
+
+2022-11-03T19:48:50+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:111
+Stack trace:
+#0 /var/web/site/public_html/wp-includes/class-wp-hook.php(308): set_ens_domains('')
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/web/site/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/web/site/public_html/wp-admin/admin-ajax.php(203): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 111
+
+2022-11-03T19:48:52+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:111
+Stack trace:
+#0 /var/web/site/public_html/wp-includes/class-wp-hook.php(308): set_ens_domains('')
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/web/site/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/web/site/public_html/wp-admin/admin-ajax.php(203): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 111
+
+2022-11-03T19:48:55+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:111
+Stack trace:
+#0 /var/web/site/public_html/wp-includes/class-wp-hook.php(308): set_ens_domains('')
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/web/site/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/web/site/public_html/wp-admin/admin-ajax.php(203): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 111
+
+2022-11-03T19:48:55+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:111
+Stack trace:
+#0 /var/web/site/public_html/wp-includes/class-wp-hook.php(308): set_ens_domains('')
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/web/site/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/web/site/public_html/wp-admin/admin-ajax.php(203): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 111
+
+2022-11-03T19:48:58+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:111
+Stack trace:
+#0 /var/web/site/public_html/wp-includes/class-wp-hook.php(308): set_ens_domains('')
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/web/site/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/web/site/public_html/wp-admin/admin-ajax.php(203): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 111
+
+2022-11-03T19:48:58+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:111
+Stack trace:
+#0 /var/web/site/public_html/wp-includes/class-wp-hook.php(308): set_ens_domains('')
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/web/site/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/web/site/public_html/wp-admin/admin-ajax.php(203): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 111
+
+2022-11-03T19:49:02+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:111
+Stack trace:
+#0 /var/web/site/public_html/wp-includes/class-wp-hook.php(308): set_ens_domains('')
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/web/site/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/web/site/public_html/wp-admin/admin-ajax.php(203): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 111
+
+2022-11-03T19:49:02+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:111
+Stack trace:
+#0 /var/web/site/public_html/wp-includes/class-wp-hook.php(308): set_ens_domains('')
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/web/site/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/web/site/public_html/wp-admin/admin-ajax.php(203): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 111
+
+2022-11-03T19:49:02+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:111
+Stack trace:
+#0 /var/web/site/public_html/wp-includes/class-wp-hook.php(308): set_ens_domains('')
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/web/site/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/web/site/public_html/wp-admin/admin-ajax.php(203): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 111
+
+2022-11-03T19:49:06+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:111
+Stack trace:
+#0 /var/web/site/public_html/wp-includes/class-wp-hook.php(308): set_ens_domains('')
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/web/site/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/web/site/public_html/wp-admin/admin-ajax.php(203): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 111
+
+2022-11-03T19:49:06+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:111
+Stack trace:
+#0 /var/web/site/public_html/wp-includes/class-wp-hook.php(308): set_ens_domains('')
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/web/site/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/web/site/public_html/wp-admin/admin-ajax.php(203): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 111
+
+2022-11-03T19:49:07+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:111
+Stack trace:
+#0 /var/web/site/public_html/wp-includes/class-wp-hook.php(308): set_ens_domains('')
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/web/site/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/web/site/public_html/wp-admin/admin-ajax.php(203): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 111
+
+2022-11-03T19:49:07+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:111
+Stack trace:
+#0 /var/web/site/public_html/wp-includes/class-wp-hook.php(308): set_ens_domains('')
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/web/site/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/web/site/public_html/wp-admin/admin-ajax.php(203): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 111
+
+2022-11-03T19:49:07+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:111
+Stack trace:
+#0 /var/web/site/public_html/wp-includes/class-wp-hook.php(308): set_ens_domains('')
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/web/site/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/web/site/public_html/wp-admin/admin-ajax.php(203): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 111
+
+2022-11-03T19:50:03+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:111
+Stack trace:
+#0 /var/web/site/public_html/wp-includes/class-wp-hook.php(308): set_ens_domains('')
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/web/site/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/web/site/public_html/wp-admin/admin-ajax.php(203): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 111
+
+2022-11-03T19:50:03+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:111
+Stack trace:
+#0 /var/web/site/public_html/wp-includes/class-wp-hook.php(308): set_ens_domains('')
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/web/site/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/web/site/public_html/wp-admin/admin-ajax.php(203): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 111
+
+2022-11-03T19:50:06+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:111
+Stack trace:
+#0 /var/web/site/public_html/wp-includes/class-wp-hook.php(308): set_ens_domains('')
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/web/site/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/web/site/public_html/wp-admin/admin-ajax.php(203): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 111
+
+2022-11-03T19:50:07+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:111
+Stack trace:
+#0 /var/web/site/public_html/wp-includes/class-wp-hook.php(308): set_ens_domains('')
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/web/site/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/web/site/public_html/wp-admin/admin-ajax.php(203): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 111
+
+2022-11-03T19:50:07+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:111
+Stack trace:
+#0 /var/web/site/public_html/wp-includes/class-wp-hook.php(308): set_ens_domains('')
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/web/site/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/web/site/public_html/wp-admin/admin-ajax.php(203): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 111
+
+2022-11-03T19:50:07+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:111
+Stack trace:
+#0 /var/web/site/public_html/wp-includes/class-wp-hook.php(308): set_ens_domains('')
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/web/site/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/web/site/public_html/wp-admin/admin-ajax.php(203): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 111
+
+2022-11-03T19:50:07+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:111
+Stack trace:
+#0 /var/web/site/public_html/wp-includes/class-wp-hook.php(308): set_ens_domains('')
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/web/site/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/web/site/public_html/wp-admin/admin-ajax.php(203): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 111
+
+2022-11-03T19:50:22+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:111
+Stack trace:
+#0 /var/web/site/public_html/wp-includes/class-wp-hook.php(308): set_ens_domains('')
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/web/site/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/web/site/public_html/wp-admin/admin-ajax.php(203): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 111
+
+2022-11-03T19:50:22+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:111
+Stack trace:
+#0 /var/web/site/public_html/wp-includes/class-wp-hook.php(308): set_ens_domains('')
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/web/site/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/web/site/public_html/wp-admin/admin-ajax.php(203): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 111
+
+2022-11-03T19:50:26+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:111
+Stack trace:
+#0 /var/web/site/public_html/wp-includes/class-wp-hook.php(308): set_ens_domains('')
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/web/site/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/web/site/public_html/wp-admin/admin-ajax.php(203): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 111
+
+2022-11-03T19:50:26+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:111
+Stack trace:
+#0 /var/web/site/public_html/wp-includes/class-wp-hook.php(308): set_ens_domains('')
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/web/site/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/web/site/public_html/wp-admin/admin-ajax.php(203): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 111
+
+2022-11-03T19:50:26+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:111
+Stack trace:
+#0 /var/web/site/public_html/wp-includes/class-wp-hook.php(308): set_ens_domains('')
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/web/site/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/web/site/public_html/wp-admin/admin-ajax.php(203): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 111
+
+2022-11-03T19:50:27+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:111
+Stack trace:
+#0 /var/web/site/public_html/wp-includes/class-wp-hook.php(308): set_ens_domains('')
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/web/site/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/web/site/public_html/wp-admin/admin-ajax.php(203): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 111
+
+2022-11-03T19:52:41+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:111
+Stack trace:
+#0 /var/web/site/public_html/wp-includes/class-wp-hook.php(308): set_ens_domains('')
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/web/site/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/web/site/public_html/wp-admin/admin-ajax.php(203): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 111
+
+2022-11-03T19:52:45+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php:111
+Stack trace:
+#0 /var/web/site/public_html/wp-includes/class-wp-hook.php(308): set_ens_domains('')
+#1 /var/web/site/public_html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 /var/web/site/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/web/site/public_html/wp-admin/admin-ajax.php(203): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in /var/web/site/public_html/wp-content/themes/ensswag/admin-theme/forms/set-ens-domains.php on line 111
+

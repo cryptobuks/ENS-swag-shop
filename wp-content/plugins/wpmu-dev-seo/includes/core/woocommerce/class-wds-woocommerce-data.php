@@ -106,7 +106,7 @@ class Smartcrawl_Woocommerce_Data {
 		if ( ! $social_enabled || ! $og_active ) {
 			return Smartcrawl_Settings_Admin::admin_url( Smartcrawl_Settings::TAB_SOCIAL );
 		} else {
-			return Smartcrawl_Settings_Admin::admin_url( Smartcrawl_Settings::TAB_ONPAGE ) . '&tab=tab_post_types';				 					   	   	  
+			return Smartcrawl_Settings_Admin::admin_url( Smartcrawl_Settings::TAB_ONPAGE ) . '&tab=tab_post_types';
 		}
 	}
 
