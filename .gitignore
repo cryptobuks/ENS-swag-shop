@@ -1,2 +1,6 @@
-wp-config.php
+#editor files
 .idea
+
+#wp files adn folders
+wp-config.php
+wp-content/uploads/*
