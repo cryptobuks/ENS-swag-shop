@@ -65,15 +65,18 @@ function product_add_cart()
     $return_data['total_cart'] = 0;
     $return_data['cart_already_html'] = '';
 
-    //get post data
+    // get post data
     $productID = filter_var($_POST['product_id']);
     $quantity = filter_var($_POST['quantity']);
     $domain = filter_var($_POST['domain']);
 
-    if (filter_var($productID) > 0 && trim($domain) != '' && $quantity > 0) {
+    $return_data['status_this_has'] = has_term([26,27], 'product_cat', $productID);
+
+    // printful product with domain print
+    if (filter_var($productID) > 0 && trim($domain) != '' && $quantity > 0 && has_term(26, 'product_cat', $productID) && has_term(27, 'product_cat', $productID)) {
 
         // Check if domain is user domain
-        $address = (isset($_SESSION['user_wallet_address']))? filter_var($_SESSION['user_wallet_address']) : '';
+        $address = (isset($_SESSION['user_wallet_address'])) ? filter_var($_SESSION['user_wallet_address']) : '';
         $userID = 0;
         $query = $wpdb->get_row(
             "
@@ -87,7 +90,7 @@ function product_add_cart()
 
         $domainID = 0;
         $queryD = $wpdb->get_row(
-        "
+            "
                 SELECT * FROM wenp_ens_domains
                 WHERE name='{$domain}' AND ens_user_id='{$userID}' LIMIT 1
         ");
@@ -96,7 +99,7 @@ function product_add_cart()
             $domainID = $queryD->id;
         }
 
-        if( isset($_SESSION['user_wallet_address']) && $userID > 0 && $address != '' && $domainID > 0 ){
+        if (isset($_SESSION['user_wallet_address']) && $userID > 0 && $address != '' && $domainID > 0) {
             $result = WC()->cart->add_to_cart($productID, $quantity, 0, [], ['ensName' => $domain, 'wAddress' => $_SESSION['user_wallet_address']]);
 
             $return_data['total_cart'] = WC()->cart->cart_contents_count;
@@ -104,13 +107,24 @@ function product_add_cart()
             $return_data['cart_already_html'] = getProductAlreadyItemsInCartHtml($productID);
 
             $return_data['status'] = 1;
-        }
-        else{
+        } else {
             $return_data['status'] = 3;
+            $return_data['status_this'] = 3;
         }
 
+    } // prinful product with NO domain
+    elseif (filter_var($productID) > 0 && trim($domain) != '' && $domain === 'no-domain' && $quantity > 0 && has_term(26, 'product_cat', $productID)) {
+        $address = (isset($_SESSION['user_wallet_address'])) ? $_SESSION['user_wallet_address'] : '';
+        $result = WC()->cart->add_to_cart($productID, $quantity, 0, [], ['wAddress' => $address]);
+
+        $return_data['total_cart'] = WC()->cart->cart_contents_count;
+
+        $return_data['cart_already_html'] = getProductAlreadyItemsInCartHtml($productID);
+
+        $return_data['status'] = 1;
     } else {
         $return_data['status'] = 2;
+        $return_data['status_this'] = has_category(26, $productID);
     }
 
     echo json_encode($return_data);

@@ -27,7 +27,6 @@ $query = new WP_Query($queryArgs);
             <!-- start:product-list -->
             <div id="home-products-list" class="product-list">
 
-
                 <?php $queryCounter = 0; ?>
 
                 <?php while ($query->have_posts()): ?>
@@ -45,7 +44,7 @@ $query = new WP_Query($queryArgs);
                     <form id="addProductForm<?php echo $postID; ?>" class="add-mockup-form form" role="form" action="">
                         <input type="hidden" name="product_id" id="product_id-<?php echo $postID; ?>" value="<?php echo $postID; ?>" autocomplete="off">
                         <!-- start:row -->
-                        <div class="row justify-content-between g-2">
+                        <div class="row justify-content-between g-2 mb-5">
 
                             <div class="col-auto home-products-gallery">
                                 <?php include 'page-home-product-image.php'; ?>

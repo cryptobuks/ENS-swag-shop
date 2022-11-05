@@ -327,22 +327,25 @@ function getCartShippingCost(){
     global $wpdb;
 
     foreach (WC()->cart->get_cart() as $cart_item_key => $cart_item) {
-
         // Get variant id
         $variantID = $cart_item['product_id'];
-        $postMetaData = $wpdb->get_row(
-            "
-                SELECT id, variant_id FROM wenp_ens_product_meta
-                WHERE post_id='{$variantID}' LIMIT 1
-        ");
-        if (isset($postMetaData->id) && $postMetaData->id == 0) {
-            $variantID = $postMetaData->variant_id;
-        }
 
-        $postData["items"][] = [
-            "variant_id" => $variantID,
-            "quantity" => $cart_item['quantity'],
-        ];
+        // Check only if it is printful product
+        if( has_term(26, 'product_cat', $variantID) ){
+            $postMetaData = $wpdb->get_results(
+                "
+                    SELECT id, variant_id FROM wenp_ens_product_meta
+                    WHERE post_id='{$variantID}' LIMIT 1
+            ");
+            if (isset($postMetaData->id) && $postMetaData->id == 0) {
+                $variantID = $postMetaData->variant_id;
+            }
+
+            $postData["items"][] = [
+                "variant_id" => $variantID,
+                "quantity" => $cart_item['quantity'],
+            ];
+        }
     }
 
     $data = curl_post_PF('https://api.printful.com/shipping/rates', $postData);

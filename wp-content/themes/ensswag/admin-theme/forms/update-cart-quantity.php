@@ -36,6 +36,8 @@ function update_cart_quantity()
         $return_data['status'] = 2;
     }
 
+    $return_data['shipping_amount'] = '$' . getCartShippingCost();
+
     echo json_encode($return_data);
 
 }

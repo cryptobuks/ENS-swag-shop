@@ -1,5 +1,5 @@
 <!-- start:text -->
-<div class="text">
+<div class="text <?php echo ( (has_term(27, 'product_cat'))? 'has-domain-product' : 'no-domain-product' );?>" id="product-desc-<?php echo $postID; ?>">
 
     <div class="intro">
         <h2><?php the_title(); ?></h2>
@@ -21,17 +21,21 @@
 
     <div class="row product-cart-options g-3">
 
-        <?php if( isset($_SESSION['ascii_status']) && trim($_SESSION['ascii_status']) != '' ): ?>
+        <?php if( isset($_SESSION['ascii_status']) && trim($_SESSION['ascii_status']) != '' && has_term(27, 'product_cat') ): ?>
             <div class="col-12 ascii_notice-over"><div class="ascii_notice">Only names shorter than 13 characters (excl. “.eth”) and ASCII characters supported.</div></div>
         <?php endif; ?>
 
-        <div class="col-auto domain-select column">
-            <select name="domain" id="domain-<?php echo $postID; ?>" is="ms-dropdown" data-enable-auto-filter="true" data-child-height="340">
-                <option value="0" data-image="<?php echo TEMPLATEDIR; ?>/images/default-avatar.svg">
-                    nick.eth
-                </option>
-            </select>
-        </div>
+        <?php if( has_term(26, 'product_cat') && has_term(27, 'product_cat') ): ?>
+            <div class="col-auto domain-select column">
+                <select name="domain" id="domain-<?php echo $postID; ?>" is="ms-dropdown" data-enable-auto-filter="true" data-child-height="340">
+                    <option value="0" data-image="<?php echo TEMPLATEDIR; ?>/images/default-avatar.svg">
+                        nick.eth
+                    </option>
+                </select>
+            </div>
+        <?php else: ?>
+            <input type="hidden" name="domain" id="domain-<?php echo $postID; ?>" value="no-domain">
+        <?php endif; ?>
 
         <div class="col-auto quantity-select column">
             <select name="quantity" id="quantity" is="ms-dropdown">

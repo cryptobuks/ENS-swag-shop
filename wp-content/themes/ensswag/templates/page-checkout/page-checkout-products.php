@@ -173,6 +173,9 @@ global $woocommerce;
                                                 </div>
                                             ';
                                         }
+                                        else{
+                                            echo '<div class="already-in-cart my-2">&nbsp;</div>';
+                                        }
                                         ?>
 
                                         <?php

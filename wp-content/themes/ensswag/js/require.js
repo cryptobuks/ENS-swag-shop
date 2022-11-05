@@ -72,28 +72,23 @@ function setUpUserENSDomains(address, domains) {
                         });
 
                         if (response_data.ascii_status && response_data.ascii_status.trim() !== '' && jQuery('.ascii_notice').length == 0) {
-                            jQuery('.product-cart-options').prepend('<div class="col-12 ascii_notice-over"><div class="ascii_notice">' + response_data.ascii_status + '</div></div>')
+                            jQuery('.has-domain-product .product-cart-options').prepend('<div class="col-12 ascii_notice-over"><div class="ascii_notice">' + response_data.ascii_status + '</div></div>')
                         }
 
                     }
 
                 }
 
+                // default nick.eth domain
                 if (response_data.status == 2 && response_data.default_domain?.name) {
 
                     jQuery('.domain-select select').each(function () {
-
                         const ddSelect = jQuery(this)[0].msDropdown;
-
                         jQuery(this).children('option').each(function () {
                             jQuery(this).remove();
                         });
-
-                        // Add domains to each select
                         jQuery(this).append('<option value="' + response_data.default_domain.value + '" data-image="' + response_data.default_domain.image + '">' + response_data.default_domain.name + '</option>');
-
                         ddSelect.refresh();
-
                     });
 
                 }
@@ -813,6 +808,10 @@ function setQuantityCartUpdate() {
 
                         if (response_data.product_updated) {
                             jQuery('div[data-cart-item="' + itemKey + '"] div[data-title="Subtotal"]').html(response_data.product_updated);
+                        }
+
+                        if (response_data.shipping_amount) {
+                            jQuery('#shipping_method .method-item-right').html(response_data.shipping_amount);
                         }
                     }
                 }
