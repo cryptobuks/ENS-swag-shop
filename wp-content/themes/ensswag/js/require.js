@@ -260,7 +260,12 @@ jQuery(document).ajaxStop(function () {
  * Domain dropdown handler
  */
 function domainDropdownHandler() {
-    jQuery('.domain-select select').on('click', function () {
+
+    let initialSelectValue = 'nick.eth';
+    const domainSelect = jQuery('.domain-select select');
+
+    domainSelect.on('click', function () {
+        initialSelectValue = jQuery(this).val();
         jQuery(this).parent().find('.ms-filter-box').show();
     });
 
@@ -283,9 +288,16 @@ function domainDropdownHandler() {
         }
     });
 
-    jQuery('.domain-select select').change(function () {
-        jQuery('.domain-select .ms-filter-box').hide();
-        jQuery('.domain-select').removeClass('focused');
+    domainSelect.change(function () {
+        const msFilterBox = jQuery('.domain-select .ms-filter-box');
+        if(
+            (initialSelectValue != jQuery(this).val()) ||
+            !msFilterBox.is(':visible')
+        ){
+            initialSelectValue = jQuery(this).val();
+            msFilterBox.hide();
+            jQuery('.domain-select').removeClass('focused');
+        }
     });
 
 }
@@ -320,7 +332,7 @@ function setUpImages() {
 
 /**
  * Set up loader when user change his data on
- * cart
+ * cart page
  */
 function setUpLoadersCart() {
 
@@ -346,7 +358,7 @@ function setUpLoadersCart() {
 
 /**
  * Set up loader when user change his data on
- * checkout
+ * checkout page
  */
 function setUpLoadersCheckout() {
 
@@ -371,6 +383,30 @@ function setUpLoadersCheckout() {
 }
 
 /**
+ * Initialize bootstrap modal
+ *
+ * @param modalId
+ * @param keyboard
+ * @returns {*}
+ */
+function initializeModal({modalId, keyboard = false}){
+    return new bootstrap.Modal(modalId, {
+        keyboard: keyboard
+    });
+}
+
+/**
+ * Add content to modal
+ *
+ * @param modalId
+ * @param modalContent
+ * @returns {*|jQuery}
+ */
+function addModalContent(modalId, modalContent){
+    return jQuery(`${modalId} .modal-content`).html(modalContent);
+}
+
+/**
  * Create mockup for selected domain
  */
 function createMockup(postID) {
@@ -378,22 +414,17 @@ function createMockup(postID) {
     const domain = jQuery('#domain-' + postID).val();
 
     // Open modal
-    const mockupModal = new bootstrap.Modal('#mockupModal', {
-        keyboard: false
-    });
+    const mockupModal = initializeModal({modalId: '#mockupModal'});
     mockupModal.show();
 
-    // Default domain error
+    // Default domain - error
     if (domain === '0') {
-        jQuery('#mockupModal .modal-content').text('Select some domain names different of the default :)');
-        setTimeout(function () {
-            mockupModal.hide();
-        }, 3000);
-
+        addModalContent('#mockupModal', 'Select some domain names different of the default :)');
+        setTimeout(function () { mockupModal.hide(); }, 3000);
         return false;
     }
 
-    jQuery('#mockupModal .modal-content').text('We are creating mockups, it will take some time, we must use special magic for that ;)');
+    addModalContent('#mockupModal', 'We are creating mockups, it will take some time, we must use special magic for that ;)');
 
     if (postID && postID > 0 && domain !== '0') {
         jQuery.ajax({
@@ -432,42 +463,29 @@ function createMockup(postID) {
                         }
                     }
 
-                    jQuery('#mockupModal .modal-content').text('We are done, magic happen :)');
-                    setTimeout(function () {
-                        mockupModal.hide();
-                    }, 2500);
+                    addModalContent('#mockupModal', 'We are done, magic happen :)');
+                    setTimeout(function () { mockupModal.hide(); }, 2500);
 
                 } else if (response_data.status == 3 || response_data.status == 4 || response_data.status == 5) {
-                    jQuery('#mockupModal .modal-content').text('Sorry we found error, please try later :(');
-                    setTimeout(function () {
-                        mockupModal.hide();
-                    }, 2500);
+                    addModalContent('#mockupModal', 'Sorry we found error, please try later :(');
+                    setTimeout(function () { mockupModal.hide(); }, 2500);
                 } else {
-                    jQuery('#mockupModal .modal-content').text('Sorry we found error, please try later :(');
-                    setTimeout(function () {
-                        mockupModal.hide();
-                    }, 2500);
+                    addModalContent('#mockupModal', 'Sorry we found error, please try later :(');
+                    setTimeout(function () { mockupModal.hide(); }, 2500);
                 }
             },
             error: function () {
-                jQuery('#mockupModal .modal-content').text('Sorry we found error, please try later :(');
-                setTimeout(function () {
-                    mockupModal.hide();
-                }, 2500);
+                addModalContent('#mockupModal', 'Sorry we found error, please try later :(');
+                setTimeout(function () { mockupModal.hide(); }, 2500);
             },
-            complete: function () {
-
-            }
+            complete: function () {}
         });
     } else {
-        jQuery('#mockupModal .modal-content').text('Sorry we found error, please try later :(');
-        setTimeout(function () {
-            mockupModal.hide();
-        }, 2500);
+        addModalContent('#mockupModal', 'Sorry we found error, please try later :(');
+        setTimeout(function () { mockupModal.hide(); }, 2500);
     }
 
     return false;
-
 }
 
 /**
@@ -478,24 +496,20 @@ function addProductToCart(postID) {
     if (postID > 0) {
 
         // Open modal
-        const mockupModal = new bootstrap.Modal('#mockupModal', {
-            keyboard: false
-        });
-        mockupModal.show();
+        const addModal = initializeModal({modalId: '#mockupModal'});
+        addModal.show();
+        addModalContent('#mockupModal', 'Adding product to your bag, please wait ;)');
 
-        jQuery('#mockupModal .modal-content').text('Adding product to your bag, please wait ;)');
+        // Get data
+        const productID = jQuery('#product_id-' + postID).val();
+        const domain = jQuery('#domain-' + postID).val();
+        const ensSign = localStorage.getItem('ensSign');
+        const signMessage = localStorage.getItem('ensHash');
 
-        var productID = jQuery('#product_id-' + postID).val();
-        var domain = jQuery('#domain-' + postID).val();
+        let error = false;
 
-        var error = false;
-
-        if (jQuery.trim(productID) == '') {
-            error = true;
-        }
-        if (jQuery.trim(domain) == '') {
-            error = true;
-        }
+        if (jQuery.trim(productID) == '') { error = true; }
+        if (jQuery.trim(domain) == '') { error = true; }
 
         if (!error) {
 
@@ -503,7 +517,7 @@ function addProductToCart(postID) {
                 type: "POST",
                 url: "/wp-admin/admin-ajax.php",
                 data: 'action=product_add_cart&' + jQuery("#addProductForm" + postID).serialize()
-                    + '&sign=' + localStorage.getItem('ensSign') + '&signMessage=' + localStorage.getItem('ensHash')
+                    + '&sign=' + ensSign + '&signMessage=' +signMessage
                 ,
                 success: function (data) {
                     var response_data = jQuery.parseJSON(data.substring(0, data.length - 1));
@@ -524,38 +538,25 @@ function addProductToCart(postID) {
                             jQuery('.button-submit .btn-submit').after('<a href="/checkout" title="View Cart" class="btn-view-cart">View Cart</a>');
                         }
 
-                        jQuery('#mockupModal .modal-content').text('Product added to your bag ;)');
-                        setTimeout(function () {
-                            mockupModal.hide();
-                        }, 2000);
-                    } else if (response_data.status == 3) {
-                        jQuery('#mockupModal .modal-content').text('You can\'t buy hat with domain that you don\'t own :(');
-                        setTimeout(function () {
-                            mockupModal.hide();
-                        }, 2000);
-                    } else {
-                        jQuery('#mockupModal .modal-content').text('Sorry we found error, please try later :(');
-                        setTimeout(function () {
-                            mockupModal.hide();
-                        }, 2000);
+                        addModalContent('#mockupModal', 'Product added to your bag ;)');
+                        setTimeout(function () { addModal.hide(); }, 2000);
+                    } else if (response_data.status == 3) { // ens domain with user doesn't match
+                        addModalContent('#mockupModal', 'You can\'t buy hat with domain that you don\'t own :(');
+                        setTimeout(function () { addModal.hide(); }, 2000);
+                    } else { // we have some error
+                        addModalContent('#mockupModal', 'Sorry we found error, please try later :(');
+                        setTimeout(function () { addModal.hide(); }, 2000);
                     }
                 },
                 error: function () {
-                    jQuery('#mockupModal .modal-content').text('Sorry we found error, please try later :(');
-                    setTimeout(function () {
-                        mockupModal.hide();
-                    }, 2000);
-                },
-                complete: function () {
-
+                    addModalContent('#mockupModal', 'Sorry we found error, please try later :(');
+                    setTimeout(function () { addModal.hide(); }, 2000);
                 }
             });
 
         } else {
-            jQuery('#mockupModal .modal-content').text('Sorry we found error, please try later :(');
-            setTimeout(function () {
-                mockupModal.hide();
-            }, 2000);
+            addModalContent('#mockupModal', 'Sorry we found error, please try later :(');
+            setTimeout(function () { addModal.hide(); }, 2000);
         }
 
     }
@@ -571,12 +572,9 @@ function removeProductFromCart(cartProductKey, productID) {
     if (jQuery.trim(cartProductKey) !== '' && productID > 0) {
 
         // Open modal
-        const mockupModal = new bootstrap.Modal('#mockupModal', {
-            keyboard: false
-        });
-        mockupModal.show();
-
-        jQuery('#mockupModal .modal-content').text('Removing product from your bag :(');
+        const removeModal = initializeModal({modalId: '#mockupModal'});
+        removeModal.show();
+        addModalContent('#mockupModal', 'Removing product from your bag :(');
 
         if (cartProductKey && productID) {
             jQuery.ajax({
@@ -599,10 +597,8 @@ function removeProductFromCart(cartProductKey, productID) {
                             jQuery('.subtotal-title div[data-title="Subtotal"]').html(response_data.subtotal_cart);
                         }
 
-                        jQuery('#mockupModal .modal-content').text('Product removed from your bag :(');
-                        setTimeout(function () {
-                            mockupModal.hide();
-                        }, 2500);
+                        addModalContent('#mockupModal', 'Product removed from your bag :(');
+                        setTimeout(function () { removeModal.hide(); }, 2500);
 
                         // Redirect to cart if it is empty
                         if (jQuery('.woocommerce-checkout').length > 0) {
@@ -612,27 +608,21 @@ function removeProductFromCart(cartProductKey, productID) {
                         }
 
                     } else {
-                        jQuery('#mockupModal .modal-content').text('Sorry we found error, please try later :(');
-                        setTimeout(function () {
-                            mockupModal.hide();
-                        }, 2500);
+                        addModalContent('#mockupModal', 'Sorry we found error, please try later :(');
+                        setTimeout(function () { removeModal.hide(); }, 2500);
                     }
                 },
                 error: function () {
-                    jQuery('#mockupModal .modal-content').text('Sorry we found error, please try later :(');
-                    setTimeout(function () {
-                        mockupModal.hide();
-                    }, 2500);
+                    addModalContent('#mockupModal', 'Sorry we found error, please try later :(');
+                    setTimeout(function () { removeModal.hide(); }, 2500);
                 },
                 complete: function () {
 
                 }
             });
         } else {
-            jQuery('#mockupModal .modal-content').text('Sorry we found error, please try later :(');
-            setTimeout(function () {
-                mockupModal.hide();
-            }, 2500);
+            addModalContent('#mockupModal', 'Sorry we found error, please try later :(');
+            setTimeout(function () { removeModal.hide(); }, 2500);
         }
 
     }
@@ -750,34 +740,27 @@ function isValidEmailAddress(emailAddress) {
  */
 function newslettelSubscribe() {
 
-    const mockupModal = new bootstrap.Modal('#mockupModal', {
-        keyboard: false
-    });
+    const newslettelModal = initializeModal({modalId: '#mockupModal'});
 
     let error = false;
 
     if (jQuery.trim(jQuery('#email').val()) == '') {
-        console.log('1');
         error = true;
     }
     if (!isValidEmailAddress(jQuery('#email').val())) {
-        console.log('2');
         error = true;
     }
     if (jQuery.trim(jQuery('#newsletter-form-nonce').val()) === '') {
-        console.log('3');
         error = true;
     }
     if (jQuery.trim(jQuery('#newfrch-check').val()) !== '1') {
-        console.log('4');
         error = true;
     }
 
     if (!error) {
 
-        mockupModal.show();
-
-        jQuery('#addCartModal .modal-content').text('Subscribing...');
+        newslettelModal.show();
+        addModalContent('#mockupModal', 'Subscribing...');
 
         jQuery.ajax({
             type: "POST",
@@ -788,20 +771,15 @@ function newslettelSubscribe() {
 
                 if (response_data.status == 1) {
                     jQuery('#email').val('');
-                    jQuery('#mockupModal .modal-content').text('Subscribed');
-                    setTimeout(function () {
-                        mockupModal.hide();
-                    }, 2500);
+                    addModalContent('#mockupModal', 'Subscribed');
+                    setTimeout(function () { newslettelModal.hide(); }, 2500);
                 }
             },
             error: function () {
-                jQuery('#mockupModal .modal-content').text('Sorry we found error, please try later :(');
-                setTimeout(function () {
-                    mockupModal.hide();
-                }, 2500);
+                addModalContent('#mockupModal', 'Sorry we found error, please try later :(');
+                setTimeout(function () { newslettelModal.hide(); }, 2500);
             },
-            complete: function () {
-            }
+            complete: function () {}
         });
     }
 
@@ -837,10 +815,6 @@ function setQuantityCartUpdate() {
                             jQuery('div[data-cart-item="' + itemKey + '"] div[data-title="Subtotal"]').html(response_data.product_updated);
                         }
                     }
-                },
-                error: function () {
-                },
-                complete: function () {
                 }
             });
         }
@@ -852,13 +826,11 @@ function setQuantityCartUpdate() {
 /**
  * Check if email valid
  *
- * @param string emailAddress
- *
+ * @param emailAddress
  * @returns {boolean}
  */
 function isValidEmailAddress(emailAddress) {
-    var pattern = new RegExp(/^(("[\w-+\s]+")|([\w-+]+(?:\.[\w-+]+)*)|("[\w-+\s]+")([\w-+]+(?:\.[\w-+]+)*))(@((?:[\w-+]+\.)*\w[\w-+]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][\d]\.|1[\d]{2}\.|[\d]{1,2}\.))((25[0-5]|2[0-4][\d]|1[\d]{2}|[\d]{1,2})\.){2}(25[0-5]|2[0-4][\d]|1[\d]{2}|[\d]{1,2})\]?$)/i);
-
+    let pattern = new RegExp(/^(("[\w-+\s]+")|([\w-+]+(?:\.[\w-+]+)*)|("[\w-+\s]+")([\w-+]+(?:\.[\w-+]+)*))(@((?:[\w-+]+\.)*\w[\w-+]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][\d]\.|1[\d]{2}\.|[\d]{1,2}\.))((25[0-5]|2[0-4][\d]|1[\d]{2}|[\d]{1,2})\.){2}(25[0-5]|2[0-4][\d]|1[\d]{2}|[\d]{1,2})\]?$)/i);
     return pattern.test(emailAddress);
 }
 
@@ -866,23 +838,17 @@ function isValidEmailAddress(emailAddress) {
  * Reset form elements values
  */
 function _resetFormElementsValues() {
-
     jQuery('input,textarea').not('input[type=submit]').not('input[name=contact-nonce]').val('');
     jQuery('input:checkbox').removeAttr('checked');
-
     return false;
-
 }
 
 /**
  * Remove errors from form elements
  */
 function _removeErrorsClass() {
-
     jQuery('input,textarea,label').removeClass('error-element');
-
     return false;
-
 }
 
 /**
@@ -894,12 +860,12 @@ function sendContactMessage() {
 
     jQuery('#contact-form .contact-alert-warning').hide();
 
-    var name = jQuery('#contact-name').val();
-    var email = jQuery('#contact-email').val();
-    var message = jQuery('#contact-message').val();
-    var nonce = jQuery('#contact-nonce').val();
+    const name = jQuery('#contact-name').val();
+    const email = jQuery('#contact-email').val();
+    const message = jQuery('#contact-message').val();
+    const nonce = jQuery('#contact-nonce').val();
 
-    var error = false;
+    let error = false;
 
     if (jQuery.trim(name) == '') {
         jQuery('input#contact-name').addClass('error-element');
@@ -927,10 +893,9 @@ function sendContactMessage() {
             url: "/wp-admin/admin-ajax.php",
             data: 'action=contact_form&' + jQuery("#contact-form").serialize(),
             success: function (data) {
-                var response_data = jQuery.parseJSON(data.substring(0, data.length - 1));
+                const response_data = jQuery.parseJSON(data.substring(0, data.length - 1));
 
                 if (response_data.status == 1) {
-
                     jQuery('#contact-form .contact-alert-warning').slideUp();
                     jQuery('#contact-form .contact-alert-success').slideDown();
                     _resetFormElementsValues();
@@ -940,9 +905,6 @@ function sendContactMessage() {
             },
             error: function () {
                 jQuery('#contact-form .contact-alert-warning').slideDown();
-            },
-            complete: function () {
-
             }
         });
     } else {
@@ -967,20 +929,18 @@ function handleSignature() {
 
     let signinStarted = false;
 
-    const mockupModal = new bootstrap.Modal('#mockupModal', {
-        keyboard: true
-    });
+    const signatureModal = initializeModal({modalId: '#mockupModal', keyboard: true});
 
     // Check if sign started
     jQuery(window).bind('storage.hash', function (es) {
         const connectDiv = jQuery('#connectHeader #myBtn').text();
         const signValue = localStorage.getItem('ensSign');
         if (connectDiv !== 'Connect Wallet' && signValue.trim() === '') {
-            mockupModal.show();
+            signatureModal.show();
             if(window.location.pathname === '/checkout/') {
-                jQuery('#mockupModal .modal-content').html("We need to authenticate your account. Please sign a message with your wallet.<div id='send-again' class='d-block'><button onclick='signMessageAgain()'>SIGN IN</button></div>");
+                addModalContent('#mockupModal', "We need to authenticate your account. Please sign a message with your wallet.<div id='send-again' class='d-block'><button onclick='signMessageAgain()'>SIGN IN</button></div>");
             }else{
-                jQuery('#mockupModal .modal-content').html("We need to authenticate your account. Please sign a message with your wallet.<div id='send-again'><button onclick='signMessageAgain()'>SIGN IN</button></div>");
+                addModalContent('#mockupModal', "We need to authenticate your account. Please sign a message with your wallet.<div id='send-again'><button onclick='signMessageAgain()'>SIGN IN</button></div>");
             }
             signinStarted = true;
         }
@@ -998,15 +958,15 @@ function handleSignature() {
             }
 
             if (signValue === 'rejected') {
-                jQuery('#mockupModal .modal-content').text("To use ENS Merch Shop you will need to reconnect your wallet and sign a message with your wallet.");
+                addModalContent('#mockupModal', "To use ENS Merch Shop you will need to reconnect your wallet and sign a message with your wallet.");
                 setTimeout(function () {
-                    mockupModal.hide();
+                    signatureModal.hide();
                     signinStarted = false;
                 }, 5000);
             } else {
-                jQuery('#mockupModal .modal-content').text("You have successfully authenticated.");
+                addModalContent('#mockupModal', "You have successfully authenticated.");
                 setTimeout(function () {
-                    mockupModal.hide();
+                    signatureModal.hide();
                     signinStarted = false;
                 }, 2000);
             }
@@ -1025,7 +985,7 @@ function handleSignature() {
 
 /**
  * Set up initial values related to user wallet and
- * webshop
+ * web shop data
  */
 function setupInitialValues() {
     const connectDiv = jQuery('#connectHeader button').text();

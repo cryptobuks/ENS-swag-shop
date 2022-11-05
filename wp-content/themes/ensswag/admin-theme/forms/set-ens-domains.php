@@ -11,6 +11,7 @@ function set_ens_domains()
     $return_data = array();
     $return_data['status'] = 0;
     $return_data['no_domains'] = 0;
+    $return_data['ascii_status'] = '';
     $return_data['user_domains'] = [];
     $return_data['default_domain'] = [
         'value' => 'nick.eth',
@@ -62,9 +63,11 @@ function set_ens_domains()
                     $nameArray = explode('.', $name);
 
                     if(sizeof($nameArray) > 0 && strlen($nameArray[0]) > 13){
+                        $return_data['ascii_status'] = $_SESSION['ascii_status'] = 'Only names shorter than 13 characters (excl. “.eth”) and ASCII characters supported.';
                         $active = 0;
                     }
                     elseif(sizeof($nameArray) > 0 && mb_detect_encoding($nameArray[0], 'ASCII', true) == FALSE){
+                        $return_data['ascii_status'] = $_SESSION['ascii_status'] = 'Only names shorter than 13 characters (excl. “.eth”) and ASCII characters supported.';
                         $active = 0;
                     }
 
@@ -191,6 +194,7 @@ function set_ens_domains()
     // This will also happen when user change her account and have no domains
     if ($return_data['status'] == 2) {
         $return_data['no_domains'] = 1;
+        $_SESSION['ascii_status'] = '';
         removeAllCartItemsIfExist();
     }
 
