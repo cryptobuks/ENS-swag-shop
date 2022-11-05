@@ -28,7 +28,7 @@
     <meta name="description" content="Get your customised official ENS merch.">
 
     <!-- start:stylesheets -->
-    <link href="<?php echo TEMPLATEDIR; ?>/react/static/css/main.fddd8ea3.css" rel="stylesheet">
+    <link href="<?php echo TEMPLATEDIR; ?>/react/build/static/css/main.ff1199ad.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo TEMPLATEDIR; ?>/style.css?ver=1.42">
     <!-- end:stylesheets -->
 

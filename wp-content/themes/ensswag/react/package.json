@@ -2,7 +2,7 @@
   "name": "react-wagmi-only",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ensmerchshop.xyz/wp-content/themes/ensswag/react/",
+  "homepage": "https://ensmerchshop.xyz/wp-content/themes/ensswag/react/build/",
   "dependencies": {
     "@apollo/client": "^3.7.1",
     "@testing-library/jest-dom": "^5.16.5",

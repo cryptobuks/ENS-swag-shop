@@ -5,3 +5,4 @@
 wp-config.php
 /wp-content/uploads/
 /wp-content/wphb-cache/
+/wp-content/themes/ensswag/react/node_modules/
