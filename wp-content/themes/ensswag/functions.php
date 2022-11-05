@@ -47,26 +47,34 @@ function set_html_content_type()
 }
 
 /*-----------------------------------------------------------------------------------*/
-/* Theme settings data
+/* Theme settings data and AJAX requests
 /*-----------------------------------------------------------------------------------*/
 
 include ('admin-theme/printful.php');
+
+include ('admin-theme/forms/initial-setup.php');
 
 include ('admin-theme/admin/settings-api.php');
 
 include ('admin-theme/forms/validate-signature.php');
 
-include  'admin-theme/forms/product_add_cart.php';
+include  'admin-theme/forms/product-add-cart.php';
 
-include  'admin-theme/forms/product_remove_cart.php';
+include  'admin-theme/forms/product-remove-cart.php';
 
-include  'admin-theme/forms/update_cart_quantity.php';
+include  'admin-theme/forms/update-cart-quantity.php';
 
-include  'admin-theme/forms/calculate_shipping_page_cost.php';
+include  'admin-theme/forms/calculate-shipping-page-cost.php';
 
-include  'admin-theme/forms/newsletter_form.php';
+include  'admin-theme/forms/newsletter-form.php';
 
 include  'admin-theme/forms/contact-form.php';
+
+include('admin-theme/forms/set-crypto-address.php');
+
+include('admin-theme/forms/set-ens-domains.php');
+
+include('admin-theme/forms/set-new-mockups.php');
 
 /*-----------------------------------------------------------------------------------*/
 /* Menus */
@@ -88,16 +96,6 @@ include  'admin-theme/post-types/product-post-type.php';
 /*-----------------------------------------------------------------------------------*/
 
 include('admin-theme/woocommerce/woocommerce.php');
-
-/*-----------------------------------------------------------------------------------*/
-/* AJAXs
-/*-----------------------------------------------------------------------------------*/
-
-include('admin-theme/forms/set-crypto-address.php');
-
-include('admin-theme/forms/set-ens-domains.php');
-
-include('admin-theme/forms/set-new-mockups.php');
 
 /**
  * Get specific post data by selected gallery,
@@ -203,7 +201,9 @@ function getFirstCategoryID($postCategories)
     return '';
 }
 
-// Set array in chuncks
+/**
+ * Split array in sam arrays of chuncks
+ */
 $pergroup = 3;
 $redfunc = function ($partial, $elem) use ($pergroup) {
     $groupCount = count($partial);
@@ -215,7 +215,9 @@ $redfunc = function ($partial, $elem) use ($pergroup) {
     return $partial;
 };
 
-
+/**
+ * Disable showing author page in RSS and og meta tags
+ */
 add_filter( 'oembed_response_data', 'disable_embeds_filter_oembed_response_data_' );
 function disable_embeds_filter_oembed_response_data_( $data ) {
     unset($data['author_url']);
