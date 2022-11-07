@@ -15,55 +15,63 @@
     <div class="button-more-holder">
         <button onclick="changeExpandTitle(this);" class="btn btn-expand" type="button" data-bs-toggle="collapse"
                 data-bs-target="#collapseDesc" aria-expanded="false" aria-controls="collapseDesc">
-            <span class="title">See More</span>
+            <span class="title">Read more</span>
         </button>
     </div>
 
-    <div class="row product-cart-options g-3">
+    <div class="product-cart-options-holder">
 
-        <?php if( isset($_SESSION['ascii_status']) && trim($_SESSION['ascii_status']) != '' && has_term(27, 'product_cat') ): ?>
-            <div class="col-12 ascii_notice-over"><div class="ascii_notice">Only names shorter than 13 characters (excl. “.eth”) and ASCII characters supported.</div></div>
-        <?php endif; ?>
+        <div class="row product-cart-options g-0">
 
-        <?php if( has_term(26, 'product_cat') && has_term(27, 'product_cat') ): ?>
-            <div class="col-auto domain-select column">
-                <select name="domain" id="domain-<?php echo $postID; ?>" is="ms-dropdown" data-enable-auto-filter="true" data-child-height="340">
-                    <option value="0" data-image="<?php echo TEMPLATEDIR; ?>/images/default-avatar.svg">
-                        nick.eth
-                    </option>
+            <?php if( isset($_SESSION['ascii_status']) && trim($_SESSION['ascii_status']) != '' && has_term(27, 'product_cat') ): ?>
+                <div class="col-12 ascii_notice-over"><div class="ascii_notice">Only names shorter than 13 characters (excl. “.eth”) and ASCII characters supported.</div></div>
+            <?php endif; ?>
+
+            <?php if( has_term(26, 'product_cat') && has_term(27, 'product_cat') ): ?>
+                <div class="col-auto domain-select column me-2">
+                    <select name="domain" id="domain-<?php echo $postID; ?>" is="ms-dropdown" data-enable-auto-filter="true" data-child-height="340">
+                        <option value="0" data-image="<?php echo TEMPLATEDIR; ?>/images/default-avatar.svg">
+                            nick.eth
+                        </option>
+                    </select>
+                </div>
+            <?php else: ?>
+                <input type="hidden" name="domain" id="domain-<?php echo $postID; ?>" value="no-domain">
+            <?php endif; ?>
+
+            <div class="col-auto quantity-select column">
+                <select name="quantity" id="quantity" is="ms-dropdown">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
                 </select>
             </div>
-        <?php else: ?>
-            <input type="hidden" name="domain" id="domain-<?php echo $postID; ?>" value="no-domain">
-        <?php endif; ?>
 
-        <div class="col-auto quantity-select column">
-            <select name="quantity" id="quantity" is="ms-dropdown">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-            </select>
+            <div class="col-auto connect-column column">
+                <button onclick="return clickConnectButton();" type="button"><?php _e('Connect Wallet', 'template'); ?></button>
+            </div>
+
         </div>
+
+        <?php if (isset($singleProduct) && $singleProduct): /* It is single product view list added domains */ ?>
+
+            <?php echo getProductAlreadyItemsInCartHtml($postID); ?>
+
+        <?php endif; ?>
 
     </div>
 
-    <?php if (isset($singleProduct) && $singleProduct): /* It is single product view list added domains */ ?>
-
-        <?php echo getProductAlreadyItemsInCartHtml($postID); ?>
-
-    <?php endif; ?>
-
     <!-- start:price-delivery -->
-    <div class="price-delivery row g-3">
+    <div class="price-delivery row g-0">
 
-        <div class="col-auto column">
+        <div class="col-12 col-md-4 column">
             <div class="product-price">
                 <?php $product = wc_get_product($postID); ?>
                 $<?php echo number_format($product->get_price(), '2', '.', ','); ?>
@@ -98,12 +106,14 @@
         }
         ?>
 
-        <div class="col-auto column">
-            <div class="delivery">
-                <div class="title">Estimated Delivery To <strong>USA</strong></div>
-                <div class="date"><?php echo $date; ?></div>
-                <div class="delivery-price">$<?php echo $rate; ?></div>
-                <div class="text">You can modify the shipping options at checkout</div>
+        <div class="col-12 col-md-8 column">
+            <div class="ps-3">
+                <div class="delivery">
+                    <div class="title">Estimated Delivery To <strong>USA</strong></div>
+                    <div class="date"><?php echo $date; ?></div>
+                    <div class="delivery-price">$<?php echo $rate; ?></div>
+                    <div class="text">You can modify the shipping options at checkout</div>
+                </div>
             </div>
         </div>
 
@@ -113,7 +123,7 @@
     <!-- start:button-submit -->
     <div class="button-submit">
         <button class="btn-submit" type="submit"
-                onclick="return addProductToCart(<?php echo $postID; ?>);"><?php _e('Add to your bag', 'template'); ?></button>
+                onclick="return addProductToCart(<?php echo $postID; ?>);"><?php _e('Add to cart', 'template'); ?></button>
     </div>
     <!-- end:button-submit -->
 

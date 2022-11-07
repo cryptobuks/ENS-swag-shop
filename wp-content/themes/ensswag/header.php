@@ -29,7 +29,7 @@
 
     <!-- start:stylesheets -->
     <link href="<?php echo TEMPLATEDIR; ?>/react/build/static/css/main.ff1199ad.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo TEMPLATEDIR; ?>/style.css?ver=1.42">
+    <link rel="stylesheet" href="<?php echo TEMPLATEDIR; ?>/style.css?ver=1.43">
     <!-- end:stylesheets -->
 
     <?php include 'templates/header/header-description-tags.php'; ?>

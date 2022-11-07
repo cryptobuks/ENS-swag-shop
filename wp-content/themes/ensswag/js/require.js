@@ -12,7 +12,9 @@ function setUpUserCryptoAddress(address) {
             success: function (data) {
                 var response_data = jQuery.parseJSON(data.substring(0, data.length - 1));
 
-                if (response_data.status == 1) {}
+                if (response_data.status == 1) {
+                    jQuery('.connect-column').hide();
+                }
             },
             error: function () {
             },
@@ -31,6 +33,23 @@ function setUpUserCryptoAddress(address) {
 function setUpUserENSDomains(address, domains) {
 
     if (address && domains) {
+
+        // set up domains here to show it to the user because cache
+        if(domains.length > 0){
+            jQuery('.domain-select select').each(function () {
+                const ddSelectInit = jQuery(this)[0].msDropdown;
+                jQuery(this).children('option').each(function () {
+                    jQuery(this).remove();
+                });
+                domains.forEach(domain => {
+                    if(domain.hasAscii){
+                        jQuery(this).append('<option value="' + domain.name + '" data-image="' + domain.avatar_url + '">' + domain.name + '</option>');
+                    }
+                });
+                ddSelectInit.refresh();
+            });
+        }
+
         jQuery.ajax({
             type: "POST",
             url: "/wp-admin/admin-ajax.php",
@@ -209,10 +228,20 @@ function viewProductLightBox(element) {
 function changeExpandTitle(element) {
     const expand = jQuery(element).attr('aria-expanded');
     if (expand === 'true') {
-        jQuery(element).children('span').text('See Less');
+        jQuery(element).children('span').text('Read less');
     } else {
-        jQuery(element).children('span').text('See More');
+        jQuery(element).children('span').text('Read more');
     }
+}
+
+/**
+ * Trigger click on connect button
+ *
+ * @returns {boolean}
+ */
+function clickConnectButton(){
+    jQuery('#connectHeader button').trigger('click');
+    return false;
 }
 
 jQuery(document).ready(function () {
@@ -1001,6 +1030,10 @@ function setupInitialValues() {
         jQuery('#wa_hash').val(checkoutHashValue);
     }
 
+    // Check connect link notification
+    if (connectDiv === 'Connect Wallet'){
+        jQuery('.connect-column').show();
+    }
 }
 
 /**

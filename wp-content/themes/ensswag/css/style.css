@@ -183,7 +183,7 @@ input:focus, input.form-control:focus {
     line-height: 24px;
     letter-spacing: -0.01em;
     font-feature-settings: 'ss01' on, 'ss03' on, 'ss04' on;
-    color: rgba(255, 255, 255, 0.75);
+    color: #FFFFFF;
 }
 
 .header .connect-over .delimiter,
@@ -302,8 +302,8 @@ input:focus, input.form-control:focus {
     font-family: 'Satoshi-Bold', sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 6.875rem;
-    line-height: 7.875rem;
+    font-size: 110px;
+    line-height: 126px;
     text-align: center;
     font-feature-settings: 'ss01' on, 'ss03' on, 'ss04' on;
     color: #FFFFFF;
@@ -407,16 +407,16 @@ input:focus, input.form-control:focus {
 .home-products-desc .btn-expand {
     display: block;
     width: 100%;
-    padding: 13px 0;
+    padding: 13px 0 8px 0;
     margin: 0;
-    font-family: 'Satoshi-Medium', sans-serif;
+    font-family: 'Satoshi-Bold', sans-serif;
     font-style: normal;
-    font-weight: 500;
-    font-size: 1.5rem;
+    font-weight: 700;
+    font-size: 1.125rem;
     line-height: 1.625rem;
     font-feature-settings: 'ss01' on, 'ss03' on, 'ss04' on;
     text-align: left;
-    color: #454545;
+    color: #5298FF;
     border-bottom: 1px solid #B9DAFF;
     border-radius: 0;
     background: url("../images/arrow-down.svg") right center no-repeat;
@@ -433,7 +433,7 @@ input:focus, input.form-control:focus {
 }
 
 .product-cart-options {
-    margin: 0 0 16px 0;
+    margin: 0 0 24px 0;
 }
 
 .product-cart-options .domain-select.column,
@@ -465,7 +465,7 @@ input:focus, input.form-control:focus {
 }
 
 .product-cart-options .ms-dd {
-    max-width: 195px;
+    max-width: 236px;
     background: none;
     min-height: 44px;
 }
@@ -508,7 +508,7 @@ input:focus, input.form-control:focus {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    max-width: 146px;
+    max-width: 187px;
     overflow: hidden;
 }
 
@@ -653,24 +653,48 @@ input:focus, input.form-control:focus {
     color: #FFFFFF;
 }
 
+.connect-column{
+    display: none;
+}
+
+.connect-column button{
+    border: none;
+    background: none;
+    margin: 30px 0 0 0.5em;
+    left: calc(50% - 118px/2 + 388px);
+    top: calc(50% - 20px/2 - 301.5px);
+    font-family: 'Satoshi-Bold', Sans-Serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-feature-settings: 'ss01' on, 'ss03' on, 'ss04' on;
+    color: #5298FF;
+}
+
 .price-delivery {
-    margin: 0 0 32px 0;
+    margin: 0 0 16px 0;
 }
 
 .price-delivery .product-price {
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 100%;
     padding: 20px 50px;
-    background: #F6F6F6;
+    background: linear-gradient(330.4deg, #44BCF0 4.54%, #7298F8 59.2%, #A099FF 148.85%);
     border-radius: 8px;
-    font-family: 'Satoshi', sans-serif;
+    font-family: 'Satoshi-Bold', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 2rem;
-    line-height: 1.5;
+    font-size: 32px;
+    line-height: 140%;
+    text-align: center;
     letter-spacing: -0.04em;
-    color: #5298FF;
+    color: #FFFFFF;
 }
 
 .price-delivery .delivery {
@@ -729,14 +753,15 @@ input:focus, input.form-control:focus {
 }
 
 .button-submit .btn-submit {
-    margin: 0 0 0 8px;
-    padding: 12px 16px;
+    width: 100%;
+    margin: 0 0 24px 0;
+    padding: 16px;
     border: none;
     border-radius: 8px;
     background: #49B393;
-    font-family: 'Satoshi-Bold', sans-serif;
+    font-family: 'Satoshi', sans-serif;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 1rem;
     line-height: 1.25rem;
     text-align: center;
@@ -745,14 +770,16 @@ input:focus, input.form-control:focus {
 }
 
 .button-submit .btn-view-cart {
-    margin: 0 0 0 10px;
-    padding: 12px 16px;
+    display: block;
+    width: 100%;
+    margin: 0 0 24px 0;
+    padding: 16px;
     border: none;
     border-radius: 8px;
     background: #CF7EFF;
-    font-family: 'Satoshi-Bold', sans-serif;
+    font-family: 'Satoshi', sans-serif;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 1rem;
     line-height: 1.25rem;
     text-align: center;
