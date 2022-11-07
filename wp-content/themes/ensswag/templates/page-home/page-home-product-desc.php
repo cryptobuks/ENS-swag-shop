@@ -23,9 +23,9 @@
 
         <div class="row product-cart-options g-0">
 
-            <?php if( isset($_SESSION['ascii_status']) && trim($_SESSION['ascii_status']) != '' && has_term(27, 'product_cat') ): ?>
-                <div class="col-12 ascii_notice-over"><div class="ascii_notice">Only names shorter than 13 characters (excl. “.eth”) and ASCII characters supported.</div></div>
-            <?php endif; ?>
+<!--            --><?php //if( isset($_SESSION['ascii_status']) && trim($_SESSION['ascii_status']) != '' && has_term(27, 'product_cat') ): ?>
+<!--                <div class="col-12 ascii_notice-over"><div class="ascii_notice">Only names shorter than 13 characters (excl. “.eth”) and ASCII characters supported.</div></div>-->
+<!--            --><?php //endif; ?>
 
             <?php if( has_term(26, 'product_cat') && has_term(27, 'product_cat') ): ?>
                 <div class="col-auto domain-select column me-2">

@@ -176,6 +176,7 @@ function set_ens_domains()
                 $return_data['status'] = 1;
             }
             else{
+                $return_data['ascii_status'] = $_SESSION['ascii_status'] = 'It seems that you don\'t <a href="https://docs.ens.domains/terminology" target="_blank">control</a> any ENS names. If you already own a name, sign in with account that controls it. If you don\'t, <a href="https://ens.domains" target="_blank">buy a name</a> to purchase this product.';
                 $return_data['status'] = 2;
             }
 

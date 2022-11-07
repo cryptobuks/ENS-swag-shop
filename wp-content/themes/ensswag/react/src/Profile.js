@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { isMobile } from 'react-device-detect';
 
@@ -17,6 +17,7 @@ import { verifyMessage } from 'ethers/lib/utils';
 
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
 import { ethers } from "ethers";
+import { randomBytes } from 'crypto';
 
 export default function Profile() {
 
@@ -34,6 +35,13 @@ export default function Profile() {
     const { connect, connectors, isLoading, pendingConnector } =
         useConnect()
     const { disconnect } = useDisconnect();
+
+    const getRandomString = (bytes = 6) => {
+        const buffer = randomBytes(bytes);
+        const randomString = buffer.toString('hex');
+
+        return randomString;
+    }
 
     const { data: dataSign, signMessage } = useSignMessage({
         onSuccess(data, variables) {
@@ -86,7 +94,7 @@ export default function Profile() {
 
     // Signatue related stuff
     const getSignInMessageString = () => {
-        return "Welcome to ENS Merch Store!\n\nBy signing this message, you accept our Terms of Service: https://ensmerchshop.xyz/terms/ and prove that you own this wallet address: " + address + ".\n\nThis request will not trigger a blockchain transaction or cost any gas fees.\n\nNonce: " + Math.floor(Date.now() / 1000);
+        return "Welcome to ENS Merch Store!\n\nBy signing this message, you accept our Terms of Service: https://ensmerchshop.xyz/terms/ and prove that you own this wallet address: " + address + ".\n\nThis request will not trigger a blockchain transaction or cost any gas fees.\n\nNonce: " + getRandomString();
     };
 
     // Request sign message after connection

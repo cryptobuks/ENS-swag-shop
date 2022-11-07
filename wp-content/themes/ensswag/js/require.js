@@ -101,6 +101,10 @@ function setUpUserENSDomains(address, domains) {
                 // default nick.eth domain
                 if (response_data.status == 2 && response_data.default_domain?.name) {
 
+                    if (response_data.ascii_status && response_data.ascii_status.trim() !== '' && jQuery('.ascii_notice').length == 0) {
+                        jQuery('.has-domain-product .product-cart-options').prepend('<div class="col-12 ascii_notice-over"><div class="ascii_notice">' + response_data.ascii_status + '</div></div>')
+                    }
+
                     jQuery('.domain-select select').each(function () {
                         const ddSelect = jQuery(this)[0].msDropdown;
                         jQuery(this).children('option').each(function () {

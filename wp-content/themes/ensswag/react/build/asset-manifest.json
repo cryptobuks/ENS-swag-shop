@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/wp-content/themes/ensswag/react/build/static/css/main.ff1199ad.css",
-    "main.js": "/wp-content/themes/ensswag/react/build/static/js/main.ee19a184.js",
-    "static/js/942.ff03ba83.chunk.js": "/wp-content/themes/ensswag/react/build/static/js/942.ff03ba83.chunk.js",
-    "static/js/563.c5ad0421.chunk.js": "/wp-content/themes/ensswag/react/build/static/js/563.c5ad0421.chunk.js",
-    "static/js/419.62c13a62.chunk.js": "/wp-content/themes/ensswag/react/build/static/js/419.62c13a62.chunk.js",
-    "static/js/163.353a8390.chunk.js": "/wp-content/themes/ensswag/react/build/static/js/163.353a8390.chunk.js",
+    "main.js": "/wp-content/themes/ensswag/react/build/static/js/main.c9bafb47.js",
+    "static/js/606.b874d461.chunk.js": "/wp-content/themes/ensswag/react/build/static/js/606.b874d461.chunk.js",
+    "static/js/563.bbe347fc.chunk.js": "/wp-content/themes/ensswag/react/build/static/js/563.bbe347fc.chunk.js",
+    "static/js/419.20c7897f.chunk.js": "/wp-content/themes/ensswag/react/build/static/js/419.20c7897f.chunk.js",
+    "static/js/163.3ec77cc2.chunk.js": "/wp-content/themes/ensswag/react/build/static/js/163.3ec77cc2.chunk.js",
     "static/media/metamask-icon.svg": "/wp-content/themes/ensswag/react/build/static/media/metamask-icon.df996025af54766016c5.svg",
     "static/media/walletconnect-icon.svg": "/wp-content/themes/ensswag/react/build/static/media/walletconnect-icon.a1aae2e6951e60f34926.svg",
     "static/media/eth-icon.svg": "/wp-content/themes/ensswag/react/build/static/media/eth-icon.1f886b8520ae4fa187f4.svg",
@@ -17,12 +17,12 @@
     "static/media/injected-icon.svg": "/wp-content/themes/ensswag/react/build/static/media/injected-icon.b274745c673216f6f4d6.svg",
     "static/media/copy-icon.svg": "/wp-content/themes/ensswag/react/build/static/media/copy-icon.4dcd7331699732062946.svg",
     "main.ff1199ad.css.map": "/wp-content/themes/ensswag/react/build/static/css/main.ff1199ad.css.map",
-    "main.ee19a184.js.map": "/wp-content/themes/ensswag/react/build/static/js/main.ee19a184.js.map",
-    "419.62c13a62.chunk.js.map": "/wp-content/themes/ensswag/react/build/static/js/419.62c13a62.chunk.js.map",
-    "163.353a8390.chunk.js.map": "/wp-content/themes/ensswag/react/build/static/js/163.353a8390.chunk.js.map"
+    "main.c9bafb47.js.map": "/wp-content/themes/ensswag/react/build/static/js/main.c9bafb47.js.map",
+    "419.20c7897f.chunk.js.map": "/wp-content/themes/ensswag/react/build/static/js/419.20c7897f.chunk.js.map",
+    "163.3ec77cc2.chunk.js.map": "/wp-content/themes/ensswag/react/build/static/js/163.3ec77cc2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ff1199ad.css",
-    "static/js/main.ee19a184.js"
+    "static/js/main.c9bafb47.js"
   ]
 }
