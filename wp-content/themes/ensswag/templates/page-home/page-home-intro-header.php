@@ -49,6 +49,9 @@ $query = new WP_Query($queryArgs);
                         <div class="text">
                             <h2><?php the_title(); ?></h2>
                             <div><?php the_content(); ?></div>
+                            <div class="header-button">
+                                <a href="javascript:void(0);" onclick="return clickConnectButton();"><?php _e('Claim your ENS Merch', 'template'); ?></a>
+                            </div>
                         </div>
                         <!-- end:text -->
 

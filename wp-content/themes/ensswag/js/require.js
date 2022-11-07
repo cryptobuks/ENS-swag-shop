@@ -14,6 +14,7 @@ function setUpUserCryptoAddress(address) {
 
                 if (response_data.status == 1) {
                     jQuery('.connect-column').hide();
+                    jQuery('.header-button').hide();
                 }
             },
             error: function () {
@@ -1037,6 +1038,7 @@ function setupInitialValues() {
     // Check connect link notification
     if (connectDiv === 'Connect Wallet'){
         jQuery('.connect-column').show();
+        jQuery('.header-button').show();
     }
 }
 

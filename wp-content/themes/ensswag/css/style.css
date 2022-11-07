@@ -293,12 +293,13 @@ input:focus, input.form-control:focus {
 }
 
 .home-intro-header .text {
-    width: 40%;
+    width: 70%;
     padding-bottom: 4em;
     text-align: center;
 }
 
 .home-intro-header h2 {
+    margin: 0 0 31px 0;
     font-family: 'Satoshi-Bold', sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -310,6 +311,7 @@ input:focus, input.form-control:focus {
 }
 
 .home-intro-header .text p {
+    margin: 0;
     padding: 0 3em;
     font-family: 'Satoshi-Bold', sans-serif;
     font-style: normal;
@@ -319,6 +321,28 @@ input:focus, input.form-control:focus {
     text-align: center;
     font-feature-settings: 'ss01' on, 'ss03' on, 'ss04' on;
     color: #F9F9F9;
+}
+
+.home-intro-header .header-button{
+    display: none;
+    margin: 49px 0 0 0;
+}
+
+.home-intro-header .header-button a{
+    display: inline-block;
+    width: auto;
+    padding: 20px 43px;
+    background: #AF52DE;
+    box-shadow: 0 4px 6px rgba(125, 120, 120, 0.18);
+    border-radius: 9px;
+    font-family: 'Satoshi', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    font-feature-settings: 'ss01' on, 'ss03' on, 'ss04' on;
+    color: #FFFFFF;
 }
 
 /* ==========================================================================
@@ -1465,6 +1489,11 @@ input:focus, input.form-control:focus {
 
 @media (max-width: 1366px) {
 
+    /* Header Intro */
+    .home-intro-header .text{
+        width: 90%;
+    }
+
     /* Shipping Page */
     .page-template-page-shipping .shipping-header .text h1 {
         font-size: 4rem;
@@ -1795,6 +1824,11 @@ input:focus, input.form-control:focus {
 
 @media (max-width: 480px) {
 
+    /* Homepage product description */
+    .connect-column button{
+        margin-top: 0;
+    }
+
     /* Shipping Page */
     .page-template-page-shipping .shipping-header .over,
     .page-template-page-shipping .shipping-header {
@@ -1897,6 +1931,11 @@ input:focus, input.form-control:focus {
     /* Home Products */
     .home-products .price-delivery .column {
         width: 100%;
+        margin: 0 0 16px 0;
+    }
+
+    .home-products .price-delivery .column .ps-3{
+        padding-left: 0 !important;
     }
 
     .price-delivery .product-price {
