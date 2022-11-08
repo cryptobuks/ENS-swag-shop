@@ -160,6 +160,11 @@ class Smartcrawl_Autolinks extends Smartcrawl_Base_Controller {
 	 * @return string
 	 */
 	public function post_filter( $text ) {
+		// Do only for the main content loop.
+		if ( ! in_the_loop() ) {
+			return $text;
+		}
+
 		return $this->content_filter( $text );
 	}
 
@@ -341,9 +346,11 @@ class Smartcrawl_Autolinks extends Smartcrawl_Base_Controller {
 		}
 
 		// Return from cache if already cached.
-		$cached_content = $this->get_item_cache( get_the_ID(), $type );
-		if ( ! empty( $cached_content ) ) {
-			return $cached_content;
+		if ( $this->can_cache_content( get_post_type() ) ) {
+			$cached_content = $this->get_item_cache( get_the_ID(), $type );
+			if ( ! empty( $cached_content ) ) {
+				return $cached_content;
+			}
 		}
 
 		// Process the content and add links.
@@ -549,7 +556,7 @@ class Smartcrawl_Autolinks extends Smartcrawl_Base_Controller {
 				if ( $new_text !== $text ) {
 					$replacement_count = count( preg_split( $regex, $text ) ) - 1;
 					$replacement_count = $replacement_count > 0 ? $replacement_count : 1;
-					$links            += min( $replacement_count, $max_single );
+					$links             += min( $replacement_count, $max_single );
 					$text              = $new_text;
 					if ( ! isset( $urls[ $url ] ) ) {
 						$urls[ $url ] = 1;
@@ -646,7 +653,7 @@ class Smartcrawl_Autolinks extends Smartcrawl_Base_Controller {
 						if ( ! $max_single_url || $urls[ $url ] < $max_single_url ) {
 							$replacement_count = count( preg_split( $regex, $text ) ) - 1;
 							$replacement_count = $replacement_count > 0 ? $replacement_count : 1;
-							$links            += min( $replacement_count, $max_single );
+							$links             += min( $replacement_count, $max_single );
 							$text              = str_replace( '$$$url$$$', $url, $newtext );
 
 							if ( ! isset( $urls[ $url ] ) ) {
@@ -1277,6 +1284,30 @@ class Smartcrawl_Autolinks extends Smartcrawl_Base_Controller {
 		return $this->is_option_enabled( 'casesens' )
 			? strpos( $haystack, $needle )
 			: stripos( $haystack, $needle );
+	}
+
+	/**
+	 * Check if content cache can be used.
+	 *
+	 * @since 3.3.2
+	 *
+	 * @param string $type Post type.
+	 *
+	 * @return bool
+	 */
+	private function can_cache_content( $type = 'post' ) {
+		// If cache is not disabled.
+		$can_cache = ! $this->is_option_enabled( 'disable_content_cache' );
+
+		/**
+		 * Filter hook to modify caching of content.
+		 *
+		 * @since 3.3.2
+		 *
+		 * @param bool   $can_cache Can cache.
+		 * @param string $type      Post type.
+		 */
+		return apply_filters( 'wds_autolinks_can_cache_content', $can_cache, $type );
 	}
 
 	/**

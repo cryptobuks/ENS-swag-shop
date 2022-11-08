@@ -197,7 +197,7 @@ export default function Profile() {
                     // Check non-ascii domain data and length
                     domainData = domainData.map(domain => {
                         let hasAscii = true;
-                        if (domain.name.length > 13) {
+                        if (domain.name.length > 17) {
                             hasAscii = false;
                         }
                         if (!isAsciiString(domain.name)) {

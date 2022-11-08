@@ -383,6 +383,7 @@ input:focus, input.form-control:focus {
 }
 
 .home-products-gallery .thumbnails .carousel-indicators {
+    display: none;
     position: static;
     margin-top: 1em;
 }

@@ -30,8 +30,20 @@
             <?php if( has_term(26, 'product_cat') && has_term(27, 'product_cat') ): ?>
                 <div class="col-auto domain-select column me-2">
                     <select name="domain" id="domain-<?php echo $postID; ?>" is="ms-dropdown" data-enable-auto-filter="true" data-child-height="340">
-                        <option value="0" data-image="<?php echo TEMPLATEDIR; ?>/images/default-avatar.svg">
+                        <option value="nick.eth" data-image="<?php echo TEMPLATEDIR; ?>/images/default-avatar.svg">
                             nick.eth
+                        </option>
+                        <option value="slobo.eth" data-image="<?php echo TEMPLATEDIR; ?>/images/default-avatar.svg">
+                            slobo.eth
+                        </option>
+                        <option value="vitalik.eth" data-image="<?php echo TEMPLATEDIR; ?>/images/default-avatar.svg">
+                            vitalik.eth
+                        </option>
+                        <option value="10b57e6da0.eth" data-image="<?php echo TEMPLATEDIR; ?>/images/default-avatar.svg">
+                            10b57e6da0.eth
+                        </option>
+                        <option value="thirteenchars.eth" data-image="<?php echo TEMPLATEDIR; ?>/images/default-avatar.svg">
+                            thirteenchars.eth
                         </option>
                     </select>
                 </div>

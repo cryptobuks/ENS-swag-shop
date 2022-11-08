@@ -505,7 +505,7 @@ class Smartcrawl_Metabox extends Smartcrawl_Base_Controller {
 	 * @return array
 	 */
 	public function smartcrawl_meta_column_heading( $columns ) {
-		$onpage_allowed = Smartcrawl_Settings::get_setting( Smartcrawl_Settings::COMP_ONPAGE ) && Smartcrawl_Settings_Admin::is_tab_allowed( Smartcrawl_Settings::TAB_ONPAGE );
+		$onpage_allowed = Smartcrawl_Settings::get_setting( Smartcrawl_Settings::COMP_ONPAGE ) && Smartcrawl_Settings_Admin::is_tab_allowed( Smartcrawl_Settings::TAB_ONPAGE );				 					   	   	  
 
 		if ( $onpage_allowed ) {
 			$columns['smartcrawl-robots'] = __( 'Robots Meta', 'wds' );

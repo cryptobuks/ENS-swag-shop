@@ -100,7 +100,7 @@ function setUpUserENSDomains(address, domains) {
                 }
 
                 // default nick.eth domain
-                if (response_data.status == 2 && response_data.default_domain?.name) {
+                if (response_data.status == 2 && response_data.default_domain) {
 
                     if (response_data.ascii_status && response_data.ascii_status.trim() !== '' && jQuery('.ascii_notice').length == 0) {
                         jQuery('.has-domain-product .product-cart-options').prepend('<div class="col-12 ascii_notice-over"><div class="ascii_notice">' + response_data.ascii_status + '</div></div>')
@@ -111,8 +111,11 @@ function setUpUserENSDomains(address, domains) {
                         jQuery(this).children('option').each(function () {
                             jQuery(this).remove();
                         });
-                        jQuery(this).append('<option value="' + response_data.default_domain.value + '" data-image="' + response_data.default_domain.image + '">' + response_data.default_domain.name + '</option>');
+                        response_data.default_domain.forEach(domain => {
+                            jQuery(this).append('<option value="' + domain.value + '" data-image="' + domain.image + '">' + domain.name + '</option>');
+                        });
                         ddSelect.refresh();
+                        changeImageOnSelectedDomain();
                     });
 
                 }
@@ -272,6 +275,8 @@ jQuery(document).ready(function () {
     domainDropdownHandler();
 
     handleSignature();
+
+    changeImageOnSelectedDomain();
 
     setupInitialValues();
 
@@ -1049,4 +1054,19 @@ function resetStorageValues() {
     localStorage.setItem('ensHash', '');
     localStorage.setItem('ensSign', '');
     localStorage.setItem('ensDomains', '');
+}
+
+function changeImageOnSelectedDomain(){
+    jQuery('.domain-select select').on('change', function () {
+        const currentValue = jQuery(this).val();
+        if(currentValue && (currentValue === 'nick.eth' || currentValue === 'slobo.eth' || currentValue === 'vitalik.eth' || currentValue === '10b57e6da0.eth' || currentValue === 'thirteenchars.eth')){
+            const findImage = jQuery('img[alt="'+currentValue+'"]');
+            if(findImage){
+                const parentLink = findImage.parent();
+                parentLink.trigger('click');
+                const parentIndicator = parentLink.attr('data-ind');
+                jQuery('.carousel-indicators button[data-bs-slide-to="'+parentIndicator+'"]').trigger('click');
+            }
+        }
+    });
 }

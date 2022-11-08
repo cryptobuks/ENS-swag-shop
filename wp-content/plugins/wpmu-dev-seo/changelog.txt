@@ -2,6 +2,11 @@ Plugin Name: SmartCrawl SEO
 
 Change Log:
 ----------------------------------------------------------------------
+3.3.2 - 2022-11-7
+----------------------------------------------------------------------
+- New: Option to disable object cache for auto-linked content.
+- Fix: Autolinking conflicts with several themes and page builders.
+
 3.3.1 - 2022-11-2
 ----------------------------------------------------------------------
 - Improvement: Permission checks on config management.
@@ -1088,4 +1093,4 @@ exist yet
 - Initial Release.
 
 
-1014685-1667568223-au
+1014685-1667856591-au

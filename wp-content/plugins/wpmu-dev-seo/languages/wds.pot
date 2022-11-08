@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the SmartCrawl Pro plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: SmartCrawl Pro 3.3.1\n"
+"Project-Id-Version: SmartCrawl Pro 3.3.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/build\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-11-02T11:33:08+00:00\n"
+"POT-Creation-Date: 2022-11-07T16:19:19+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.7.1\n"
 
@@ -110,15 +110,15 @@ msgstr ""
 msgid " &amp; WP Super Cache flushed"
 msgstr ""
 
-#: includes/admin/settings/autolinks.php:109
+#: includes/admin/settings/autolinks.php:110
 msgid "Limit values must be numeric"
 msgstr ""
 
-#: includes/admin/settings/autolinks.php:222
+#: includes/admin/settings/autolinks.php:223
 msgid "SmartCrawl Wizard: Advanced Tools"
 msgstr ""
 
-#: includes/admin/settings/autolinks.php:239
+#: includes/admin/settings/autolinks.php:240
 #: includes/admin/settings/settings.php:331
 #: includes/admin/templates/advanced-tools/advanced-tools-settings.php:16
 #: includes/admin/templates/dashboard/dashboard-widget-advanced-tools.php:30
@@ -129,12 +129,12 @@ msgstr ""
 msgid "Advanced Tools"
 msgstr ""
 
-#: includes/admin/settings/autolinks.php:536
+#: includes/admin/settings/autolinks.php:537
 #: includes/assets/js/build/wds-schema-types.js:1
 msgid "Comments"
 msgstr ""
 
-#: includes/admin/settings/autolinks.php:542
+#: includes/admin/settings/autolinks.php:543
 msgid "Product Categories"
 msgstr ""
 
@@ -957,6 +957,14 @@ msgstr ""
 
 #: includes/admin/templates/advanced-tools/advanced-section-automatic-linking.php:54
 msgid "Prevent links from being added to image captions."
+msgstr ""
+
+#: includes/admin/templates/advanced-tools/advanced-section-automatic-linking.php:57
+msgid "Prevent caching for autolinked content"
+msgstr ""
+
+#: includes/admin/templates/advanced-tools/advanced-section-automatic-linking.php:58
+msgid "Some page builder plugins and themes conflict with object cache when automatic linking is enabled. Enable this option to disable object cache for autolinked content."
 msgstr ""
 
 #: includes/admin/templates/advanced-tools/advanced-section-moz.php:16

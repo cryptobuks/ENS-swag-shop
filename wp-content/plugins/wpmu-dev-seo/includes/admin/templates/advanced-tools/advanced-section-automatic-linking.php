@@ -53,6 +53,10 @@ $this->render_view(
 				'label'       => esc_html__( 'Prevent linking on image captions', 'wds' ),
 				'description' => esc_html__( 'Prevent links from being added to image captions.', 'wds' ),
 			),
+			'disable_content_cache'          => array(
+				'label'       => esc_html__( 'Prevent caching for autolinked content', 'wds' ),
+				'description' => esc_html__( 'Some page builder plugins and themes conflict with object cache when automatic linking is enabled. Enable this option to disable object cache for autolinked content.', 'wds' ),
+			),
 		),
 	)
 );

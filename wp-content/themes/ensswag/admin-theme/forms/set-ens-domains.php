@@ -14,14 +14,36 @@ function set_ens_domains()
     $return_data['ascii_status'] = '';
     $return_data['user_domains'] = [];
     $return_data['default_domain'] = [
-        'value' => 'nick.eth',
-        'name' => 'nick.eth',
-        'image' => $defaultDomainImage
+        [
+            'value' => 'nick.eth',
+            'name' => 'nick.eth',
+            'image' => $defaultDomainImage
+        ],
+        [
+            'value' => 'slobo.eth',
+            'name' => 'slobo.eth',
+            'image' => $defaultDomainImage
+        ],
+        [
+            'value' => 'vitalik.eth',
+            'name' => 'vitalik.eth',
+            'image' => $defaultDomainImage
+        ],
+        [
+            'value' => '10b57e6da0.eth',
+            'name' => '10b57e6da0.eth',
+            'image' => $defaultDomainImage
+        ],
+        [
+            'value' => 'thirteenchars.eth',
+            'name' => 'thirteenchars.eth',
+            'image' => $defaultDomainImage
+        ]
     ];
 
     // Get post data
     $address = filter_var($_POST['address']);
-    $domains = ( isset($_POST['domains']) && is_array($_POST['domains']) )? filter_var_array($_POST['domains']) : [];
+    $domains = (isset($_POST['domains']) && is_array($_POST['domains'])) ? filter_var_array($_POST['domains']) : [];
 
     if (trim($address) != '' && $address !== 'undefined' && $domains && sizeof($domains) > 0) {
 
@@ -62,11 +84,10 @@ function set_ens_domains()
                     $active = 1;
                     $nameArray = explode('.', $name);
 
-                    if(sizeof($nameArray) > 0 && strlen($nameArray[0]) > 13){
+                    if (sizeof($nameArray) > 0 && strlen($nameArray[0]) > 13) {
                         $return_data['ascii_status'] = $_SESSION['ascii_status'] = 'Only names shorter than 13 characters (excl. “.eth”) and ASCII characters supported.';
                         $active = 0;
-                    }
-                    elseif(sizeof($nameArray) > 0 && mb_detect_encoding($nameArray[0], 'ASCII', true) == FALSE){
+                    } elseif (sizeof($nameArray) > 0 && mb_detect_encoding($nameArray[0], 'ASCII', true) == FALSE) {
                         $return_data['ascii_status'] = $_SESSION['ascii_status'] = 'Only names shorter than 13 characters (excl. “.eth”) and ASCII characters supported.';
                         $active = 0;
                     }
@@ -78,7 +99,7 @@ function set_ens_domains()
                             'ens_user_id' => $userID,
                             'domain_id' => filter_var($domain['id']),
                             'name' => filter_var($domain['name']),
-                            'avatar_url' => (isset($domain['avatar_url']['linkage'][1]['content']))? filter_var($domain['avatar_url']['linkage'][1]['content']) : TEMPLATEDIR . '/images/default-avatar.svg',
+                            'avatar_url' => (isset($domain['avatar_url']['linkage'][1]['content'])) ? filter_var($domain['avatar_url']['linkage'][1]['content']) : TEMPLATEDIR . '/images/default-avatar.svg',
                             'labelName' => filter_var($domain['labelName']),
                             'labelhash' => filter_var($domain['labelhash']),
                             'resolvedAddress' => filter_var($domain['resolvedAddress']['id']),
@@ -108,7 +129,7 @@ function set_ens_domains()
                             'ens_user_id' => $userID,
                             'domain_id' => filter_var($domain['id']),
                             'name' => filter_var($domain['name']),
-                            'avatar_url' => (isset($domain['avatar_url']['linkage'][1]['content']))? filter_var($domain['avatar_url']['linkage'][1]['content']) : TEMPLATEDIR . '/images/default-avatar.svg',
+                            'avatar_url' => (isset($domain['avatar_url']['linkage'][1]['content'])) ? filter_var($domain['avatar_url']['linkage'][1]['content']) : TEMPLATEDIR . '/images/default-avatar.svg',
                             'labelName' => filter_var($domain['labelName']),
                             'labelhash' => filter_var($domain['labelhash']),
                             'resolvedAddress' => filter_var($domain['resolvedAddress']['id']),
@@ -174,9 +195,8 @@ function set_ens_domains()
             if (sizeof($query) > 0) {
                 $return_data['user_domains'] = $_SESSION['user_ens_domains'] = $query;
                 $return_data['status'] = 1;
-            }
-            else{
-                $return_data['ascii_status'] = $_SESSION['ascii_status'] = 'It seems that you don\'t <a href="https://docs.ens.domains/terminology" target="_blank">control</a> any ENS names. If you already own a name, sign in with account that controls it. If you don\'t, <a href="https://ens.domains" target="_blank">buy a name</a> to purchase this product.';
+            } else {
+                $return_data['ascii_status'] = $_SESSION['ascii_status'] = 'It seems that you don\'t <a href="https://docs.ens.domains/terminology" target="_blank">control</a> any ENS names. If you already own a name, sign in with account that controls it. If you don\'t, <a href="https://ens.domains" target="_blank">buy a name</a> to purchase this product. Check <a href="/faq">supported names</a> before buying.';
                 $return_data['status'] = 2;
             }
 
@@ -188,6 +208,10 @@ function set_ens_domains()
         }
 
     } else {
+        if (trim($address) != '') {
+            $return_data['ascii_status'] = $_SESSION['ascii_status'] = 'It seems that you don\'t <a href="https://docs.ens.domains/terminology" target="_blank">control</a> any ENS names. If you already own a name, sign in with account that controls it. If you don\'t, <a href="https://ens.domains" target="_blank">buy a name</a> to purchase this product. Check <a href="/faq">supported names</a> before buying.';
+        }
+
         $return_data['status'] = 2;
     }
 
@@ -214,7 +238,8 @@ add_action('wp_ajax_set_ens_domains', 'set_ens_domains');
  *
  * @return boolean
  */
-function removeAllCartItemsIfExist(){
+function removeAllCartItemsIfExist()
+{
 
     global $woocommerce;
     $woocommerce->cart->empty_cart();
@@ -232,14 +257,14 @@ function removeAllCartItemsIfExist(){
  *
  * @return bool
  */
-function checkItemsInCartWithAddress($user_wallet_address){
+function checkItemsInCartWithAddress($user_wallet_address)
+{
 
     foreach (WC()->cart->get_cart() as $cart_item_key => $cart_item) {
-        if(!isset($cart_item['wAddress'])){
-            WC()->cart->remove_cart_item( $cart_item_key );
-        }
-        elseif($cart_item['wAddress'] != $user_wallet_address){
-            WC()->cart->remove_cart_item( $cart_item_key );
+        if (!isset($cart_item['wAddress'])) {
+            WC()->cart->remove_cart_item($cart_item_key);
+        } elseif ($cart_item['wAddress'] != $user_wallet_address) {
+            WC()->cart->remove_cart_item($cart_item_key);
         }
     }
 

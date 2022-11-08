@@ -41,8 +41,8 @@ $imageThumb = wp_get_attachment_image_src($thumbID, 'theme-thumb-2');
                                         ?>
                                         <a id="image-preview-<?php echo $imageCounter; ?>" href="javascript:void(0);"
                                            onclick="changeProductMainImage('<?php echo $image[0]; ?>', <?php echo $imageCounter + 1; ?>);"
-                                           class="thumb">
-                                            <img src="<?php echo $imageThumb[0]; ?>" alt="" class="img-responsive" loading="lazy" />
+                                           class="thumb" data-ind="<?php echo ($chunkCounter-1); ?>">
+                                            <img src="<?php echo $imageThumb[0]; ?>" alt="<?php echo $imageAlt; ?>" class="img-responsive" loading="lazy" />
                                         </a>
                                         <a id="image-<?php echo $imageCounter; ?>" href="<?php echo $imageBig[0]; ?>"
                                            class="image_order_<?php echo $imageCounter + 1; ?> d-none"

@@ -72,6 +72,7 @@ class Smartcrawl_Autolinks_Settings extends Smartcrawl_Settings_Admin {
 				'excludeheading',
 				'exclude_no_index',
 				'exclude_image_captions',
+				'disable_content_cache',
 			);
 
 			foreach ( $booleans as $bool ) {
