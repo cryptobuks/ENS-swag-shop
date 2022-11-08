@@ -1,6 +1,6 @@
 import './polyfills';
 
-import './App.css';
+import './assets/css/App.css';
 
 import { isMobile } from 'react-device-detect';
 

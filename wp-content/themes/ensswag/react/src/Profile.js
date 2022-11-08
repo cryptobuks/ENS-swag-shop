@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 
 import { isMobile } from 'react-device-detect';
 
-
 import {
     useAccount,
     useConnect,
@@ -64,6 +63,7 @@ export default function Profile() {
     const openModal = event => {
         event.preventDefault();
         setModal(true);
+        setModalProfile(false);
     }
 
     const closeModal = (event) => {
@@ -81,6 +81,7 @@ export default function Profile() {
     const openModalProfile = event => {
         event.preventDefault();
         setModalProfile(true);
+        setModal(false);
     }
 
     const closeModalProfile = (event) => {
