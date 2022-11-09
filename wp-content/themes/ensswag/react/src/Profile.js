@@ -141,7 +141,9 @@ export default function Profile() {
     };
 
     const getDomainObjectWithAvatar = async item => {
-        const avatar_url = await getDomainAvatar(item.name);
+        // const avatar_url = await getDomainAvatar(item.name);
+        const avatar_url = (ensName && ensName === item.name) ? ensAvatar : '';
+        console.log(avatar_url);
         return {
             ...item,
             avatar_url: avatar_url
@@ -193,7 +195,16 @@ export default function Profile() {
                 })
                 .then(async (data) => {
 
-                    let domainData = await getDomainsAvatar([...data.data.domains]);
+                    // let domainData = await getDomainsAvatar([...data.data.domains]);
+                    let domainData = data.data.domains.map((item) => {
+                        const avatar_url = (ensName && ensName === item.name) ? ensAvatar : '';
+                        return {
+                            ...item,
+                            avatar_url: avatar_url
+                        }
+                    });
+
+                    console.log(domainData);
 
                     // Check non-ascii domain data and length
                     domainData = domainData.map(domain => {
@@ -224,7 +235,7 @@ export default function Profile() {
             getDomainsENS();
         }
 
-    }, [address, getDomainsAvatar]);
+    }, [address, ensName, ensAvatar]);
 
     // User changed network request Etheruem
     if (chain && chain.unsupported) {

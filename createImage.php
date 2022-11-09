@@ -51,6 +51,15 @@ $stringLength = strlen($string);
 $font = './OpenSans-Bold.ttf';
 $fontSize = 120 * (11/$stringLength);
 
+// check if name has "&" mark
+if($stringLength == 1 || str_contains($_SERVER['QUERY_STRING'], '&')){
+    $serverName = $_SERVER['QUERY_STRING'];
+    $serverName = str_replace('name=', '', $serverName);
+    $string = $serverName;
+    $stringLength = strlen($string);
+    $fontSize = 120 * (11/$stringLength);
+}
+
 $im = imagecreatetruecolor($width, $height);
 
 imagesavealpha($im, true);

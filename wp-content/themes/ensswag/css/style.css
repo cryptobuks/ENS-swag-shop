@@ -1813,7 +1813,11 @@ input:focus, input.form-control:focus {
     .page-template-page-shipping .shipping-header .over,
     .page-template-page-shipping .shipping-header {
         margin-bottom: 0;
-        min-height: 92vh;
+        min-height: 130vh;
+    }
+
+    .page-template-page-shipping .shipping-header{
+        margin-bottom: 12em;
     }
 
     /* Modal */
@@ -1833,7 +1837,7 @@ input:focus, input.form-control:focus {
     /* Shipping Page */
     .page-template-page-shipping .shipping-header .over,
     .page-template-page-shipping .shipping-header {
-        min-height: 74vh;
+        min-height: 100vh;
     }
 }
 
@@ -1880,7 +1884,7 @@ input:focus, input.form-control:focus {
     /* Shipping Page */
     .page-template-page-shipping .shipping-header .over,
     .page-template-page-shipping .shipping-header {
-        min-height: 65vh;
+        min-height: 90vh;
     }
 
     /* Home Product */
@@ -1888,6 +1892,27 @@ input:focus, input.form-control:focus {
         gap: 18px;
     }
 
+}
+
+@media (max-width: 390px) {
+
+    .page-template-page-shipping .shipping-header{
+        margin-bottom: 4em;
+    }
+
+    .page-template-page-shipping .shipping-header .text h1 {
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+
+    .page-template-page-shipping .shipping-header .text p {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .profileHolder .connectButtonName .name {
+        font-size: 14px !important;
+    }
 }
 
 @media (max-width: 375px) {
@@ -1957,7 +1982,7 @@ input:focus, input.form-control:focus {
     /* Shipping Page */
     .page-template-page-shipping .shipping-header .over,
     .page-template-page-shipping .shipping-header {
-        min-height: 54vh;
+        min-height: 85vh;
     }
 
     .page-template-page-shipping .shipping-header .text h1 {

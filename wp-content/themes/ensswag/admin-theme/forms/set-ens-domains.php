@@ -82,12 +82,12 @@ function set_ens_domains()
 
                     // If domain has non-ASCII name or its name is longer than 13 characters
                     $active = 1;
-                    $nameArray = explode('.', $name);
+//                    $nameArray = explode('.', $name);
 
-                    if (sizeof($nameArray) > 0 && strlen($nameArray[0]) > 13) {
+                    if (strlen($name) > 17) {
                         $return_data['ascii_status'] = $_SESSION['ascii_status'] = 'Only names shorter than 13 characters (excl. “.eth”) and ASCII characters supported.';
                         $active = 0;
-                    } elseif (sizeof($nameArray) > 0 && mb_detect_encoding($nameArray[0], 'ASCII', true) == FALSE) {
+                    } elseif ($name && mb_detect_encoding($name, 'ASCII', true) == FALSE) {
                         $return_data['ascii_status'] = $_SESSION['ascii_status'] = 'Only names shorter than 13 characters (excl. “.eth”) and ASCII characters supported.';
                         $active = 0;
                     }
@@ -99,10 +99,11 @@ function set_ens_domains()
                             'ens_user_id' => $userID,
                             'domain_id' => filter_var($domain['id']),
                             'name' => filter_var($domain['name']),
-                            'avatar_url' => (isset($domain['avatar_url']['linkage'][1]['content'])) ? filter_var($domain['avatar_url']['linkage'][1]['content']) : TEMPLATEDIR . '/images/default-avatar.svg',
+                            //'avatar_url' => (isset($domain['avatar_url']['linkage'][1]['content'])) ? filter_var($domain['avatar_url']['linkage'][1]['content']) : TEMPLATEDIR . '/images/default-avatar.svg',
+                            'avatar_url' => (isset($domain['avatar_url']) && trim($domain['avatar_url']) != '') ? filter_var($domain['avatar_url']) : TEMPLATEDIR . '/images/default-avatar.svg',
                             'labelName' => filter_var($domain['labelName']),
                             'labelhash' => filter_var($domain['labelhash']),
-                            'resolvedAddress' => filter_var($domain['resolvedAddress']['id']),
+                            'resolvedAddress' => (isset($domain['resolvedAddress']['id']))? filter_var($domain['resolvedAddress']['id']) : '',
                             'active' => $active,
                         ];
 
@@ -129,10 +130,11 @@ function set_ens_domains()
                             'ens_user_id' => $userID,
                             'domain_id' => filter_var($domain['id']),
                             'name' => filter_var($domain['name']),
-                            'avatar_url' => (isset($domain['avatar_url']['linkage'][1]['content'])) ? filter_var($domain['avatar_url']['linkage'][1]['content']) : TEMPLATEDIR . '/images/default-avatar.svg',
+//                            'avatar_url' => (isset($domain['avatar_url']['linkage'][1]['content'])) ? filter_var($domain['avatar_url']['linkage'][1]['content']) : TEMPLATEDIR . '/images/default-avatar.svg',
+                            'avatar_url' => (isset($domain['avatar_url']) && trim($domain['avatar_url']) != '') ? filter_var($domain['avatar_url']) : TEMPLATEDIR . '/images/default-avatar.svg',
                             'labelName' => filter_var($domain['labelName']),
                             'labelhash' => filter_var($domain['labelhash']),
-                            'resolvedAddress' => filter_var($domain['resolvedAddress']['id']),
+                            'resolvedAddress' => (isset($domain['resolvedAddress']['id']))? filter_var($domain['resolvedAddress']['id']) : '',
                             'active' => $active,
                             'created_at' => date("Y-m-d H:i:s"),
                         ];
