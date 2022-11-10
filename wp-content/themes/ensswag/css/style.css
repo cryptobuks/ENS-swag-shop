@@ -1604,6 +1604,11 @@ input:focus, input.form-control:focus {
         padding: 50px 20px;
     }
 
+    /* Contact page */
+    #contact-form{
+        margin: 0 2em;
+    }
+
 }
 
 @media (max-width: 800px) {
@@ -1839,6 +1844,15 @@ input:focus, input.form-control:focus {
     .page-template-page-shipping .shipping-header {
         min-height: 100vh;
     }
+
+    .content-single-main .single-main-inside{
+        margin: 0 1em 5em 1em;
+    }
+
+    /* Contact page */
+    #contact-form{
+        margin: 0 1em;
+    }
 }
 
 @media (max-width: 425px) {
@@ -1913,6 +1927,12 @@ input:focus, input.form-control:focus {
     .profileHolder .connectButtonName .name {
         font-size: 14px !important;
     }
+
+    .single-main-inside .text h3{
+        font-size: 1.125rem;
+        line-height: 1.8rem;
+    }
+
 }
 
 @media (max-width: 375px) {

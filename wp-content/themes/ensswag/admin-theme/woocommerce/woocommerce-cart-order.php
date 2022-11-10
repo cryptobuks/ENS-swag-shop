@@ -199,7 +199,7 @@ function ens_checkout_processed($order_id)
                     "type" => $postMetaData->first_file_placement,
                     "url" =>
                         (filter_var($postMetaData->first_file_image_url, FILTER_VALIDATE_URL) === FALSE) ?
-                            get_site_url() . '/createImage.php?name=' . $ensName . '&width=' . $postMetaData->first_file_width . '&height=' . $postMetaData->first_file_height :
+                            get_site_url() . '/createImage.php?name=' . $ensName :
                             $postMetaData->first_file_image_url,
                     "visible" => true,
                     "position" =>
@@ -236,7 +236,7 @@ function ens_checkout_processed($order_id)
                     "type" => $postMetaData->second_file_placement,
                     "url" =>
                         (filter_var($postMetaData->second_file_image_url, FILTER_VALIDATE_URL) === FALSE) ?
-                            get_site_url() . '/createImage.php?name=' . $ensName . '&width=' . $postMetaData->second_file_width . '&height=' . $postMetaData->second_file_height :
+                            get_site_url() . '/createImage.php?name=' . $ensName :
                             $postMetaData->second_file_image_url,
                     "visible" => true,
                     "position" =>
@@ -272,7 +272,7 @@ function ens_checkout_processed($order_id)
                     "type" => $postMetaData->third_file_placement,
                     "url" =>
                         (filter_var($postMetaData->third_file_image_url, FILTER_VALIDATE_URL) === FALSE) ?
-                            get_site_url() . '/createImage.php?name=' . $ensName . '&width=' . $postMetaData->third_file_width . '&height=' . $postMetaData->third_file_height :
+                            get_site_url() . '/createImage.php?name=' . $ensName :
                             $postMetaData->third_file_image_url,
                     "visible" => true,
                     "position" =>
