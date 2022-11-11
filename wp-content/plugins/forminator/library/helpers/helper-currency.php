@@ -48,7 +48,11 @@ function forminator_pp_currency_list() {
  *
  * @since  1.0
  * @since  1.15 Added new supported currencies and removed unsupported
- * @url    https://stripe.com/docs/currencies
+ * @since  1.20 Added JOD
+ *
+ * @url    Stripe Currencies: https://stripe.com/docs/currencies
+ * @url    Unicode hex table: https://gist.github.com/mroyce/a7e37ced540f45104de4cc03224937c7
+ *
  * @return array
  */
 function forminator_currency_list() {
@@ -122,6 +126,7 @@ function forminator_currency_list() {
 			// 'IMP' => array( 'Isle of Man, Pounds', 'a3' ), // currently not supported.
 			'ILS' => array( 'Israel, New Shekels', '20aa' ),
 			'JMD' => array( 'Jamaica, Dollars', '4a, 24' ),
+			'JOD' => array( 'Jordan, Dinars', '4a, 44' ),
 			'JPY' => array( 'Japan, Yen', 'a5' ),
 			// 'JEP' => array( 'Jersey, Pounds', 'a3' ), // currently not supported.
 			'KZT' => array( 'Kazakhstan, Tenge', '43b, 432' ),

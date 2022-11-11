@@ -1,1 +1,0 @@
-(self.webpackChunkreact_wagmi_only=self.webpackChunkreact_wagmi_only||[]).push([[563],{6563:function(){}}]);

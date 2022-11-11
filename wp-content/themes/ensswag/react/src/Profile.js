@@ -49,13 +49,14 @@ export default function Profile() {
             if (address_validate === address) {// validation ok
                 localStorage.setItem('ensSign', data);
                 localStorage.setItem('ensHash', variables.message);
-                window.dispatchEvent(new Event('storage.hashvalidate'));
+                const eventValidate = new CustomEvent('storageHashValidate');
+                window.dispatchEvent(eventValidate);
             }
         },
         onError(error) {
             if (error.action === "signMessage" && error.code === "ACTION_REJECTED") {
-                localStorage.setItem('ensSign', 'rejected');
-                window.dispatchEvent(new Event('storage.hashrejected'));
+                const eventRejected = new CustomEvent('storageHashRejected');
+                window.dispatchEvent(eventRejected);
             }
         },
     });
@@ -101,7 +102,8 @@ export default function Profile() {
     // Request sign message after connection
     useEffect(() => {
         if (isConnected && address && !isMobile) {
-            window.dispatchEvent(new Event('storage.hash'));
+            const eventStored = new CustomEvent('storageHash');
+            window.dispatchEvent(eventStored);
             const message = getSignInMessageString();
             signMessage({ message });
         }
@@ -110,7 +112,8 @@ export default function Profile() {
     // request sing in again
     const requestSignAgain = () => {
         if (isConnected && address) {
-            window.dispatchEvent(new Event('storage.hash'));
+            const eventStored = new CustomEvent('storageHash');
+            window.dispatchEvent(eventStored);
             const message = getSignInMessageString();
             signMessage({ message });
         }
@@ -141,9 +144,7 @@ export default function Profile() {
     };
 
     const getDomainObjectWithAvatar = async item => {
-        // const avatar_url = await getDomainAvatar(item.name);
-        const avatar_url = (ensName && ensName === item.name) ? ensAvatar : '';
-        console.log(avatar_url);
+        const avatar_url = await getDomainAvatar(item.name);
         return {
             ...item,
             avatar_url: avatar_url
@@ -196,18 +197,10 @@ export default function Profile() {
                 .then(async (data) => {
 
                     // let domainData = await getDomainsAvatar([...data.data.domains]);
-                    let domainData = data.data.domains.map((item) => {
-                        const avatar_url = (ensName && ensName === item.name) ? ensAvatar : '';
-                        return {
-                            ...item,
-                            avatar_url: avatar_url
-                        }
-                    });
 
-                    console.log(domainData);
-
-                    // Check non-ascii domain data and length
-                    domainData = domainData.map(domain => {
+                    // Check non-ascii domain data and length and avatar
+                    let domainData = data.data.domains.map(domain => {
+                        const avatar_url = (ensName && ensName === domain.name) ? ensAvatar : '';
                         let hasAscii = true;
                         if (domain.name.length > 17) {
                             hasAscii = false;
@@ -217,6 +210,7 @@ export default function Profile() {
                         }
                         return {
                             ...domain,
+                            avatar_url: avatar_url,
                             hasAscii: hasAscii
                         };
                     });

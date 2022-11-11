@@ -39,110 +39,179 @@ class Forminator_Admin_L10n {
 	public function admin_l10n() {
 		$properties = array(
 			'popup'         => array(
-				'form_name_label'         => __( 'Name your form', 'forminator' ),
-				'form_name_placeholder'   => __( 'E.g., Contact Form', 'forminator' ),
-				'name'                    => __( 'Name', 'forminator' ),
-				'fields'                  => __( 'Fields', 'forminator' ),
-				'date'                    => __( 'Date', 'forminator' ),
-				'clear_all'               => __( 'Clear All', 'forminator' ),
-				'your_exports'            => __( 'Your exports', 'forminator' ),
-				'edit_login_form'         => __( 'Edit Login or Register form', 'forminator' ),
-				'edit_scheduled_export'   => __( 'Edit Scheduled Export', 'forminator' ),
-				'frequency'               => __( 'Frequency', 'forminator' ),
-				'daily'                   => __( 'Daily', 'forminator' ),
-				'weekly'                  => __( 'Weekly', 'forminator' ),
-				'monthly'                 => __( 'Monthly', 'forminator' ),
-				'week_day'                => __( 'Day of the week', 'forminator' ),
-				'monday'                  => __( 'Monday', 'forminator' ),
-				'tuesday'                 => __( 'Tuesday', 'forminator' ),
-				'wednesday'               => __( 'Wednesday', 'forminator' ),
-				'thursday'                => __( 'Thursday', 'forminator' ),
-				'friday'                  => __( 'Friday', 'forminator' ),
-				'saturday'                => __( 'Saturday', 'forminator' ),
-				'sunday'                  => __( 'Sunday', 'forminator' ),
-				'day_time'                => __( 'Time of the day', 'forminator' ),
-				'email_to'                => __( 'Email export data to', 'forminator' ),
-				'email_placeholder'       => __( 'E.g., john@doe.com', 'forminator' ),
-				'schedule_help'           => __( "Leave blank if you don't want to receive exports via email.", 'forminator' ),
-				'congratulations'         => __( 'Congratulations!', 'forminator' ),
-				'is_ready'                => __( 'is ready!', 'forminator' ),
-				'new_form_desc'           => __( 'Add it to any post / page by clicking Forminator button, or set it up as a Widget.', 'forminator' ),
-				'paypal_settings'         => __( 'Edit PayPal credentials', 'forminator' ),
-				'preview_cforms'          => __( 'Preview Custom Form', 'forminator' ),
-				'preview_polls'           => __( 'Preview Poll', 'forminator' ),
-				'preview_quizzes'         => __( 'Preview Quiz', 'forminator' ),
-				'captcha_settings'        => __( 'Edit reCAPTCHA credentials', 'forminator' ),
-				'currency_settings'       => __( 'Edit default currency', 'forminator' ),
-				'pagination_entries'      => __( 'Submissions | Pagination Settings', 'forminator' ),
-				'pagination_listings'     => __( 'Listings | Pagination Settings', 'forminator' ),
-				'email_settings'          => __( 'Email Settings', 'forminator' ),
-				'uninstall_settings'      => __( 'Uninstall Settings', 'forminator' ),
-				'privacy_settings'        => __( 'Privacy Settings', 'forminator' ),
-				'validate_form_name'      => __( 'Form name cannot be empty! Please pick a name for your form.', 'forminator' ),
-				'close'                   => __( 'Close', 'forminator' ),
-				'close_label'             => __( 'Close this dialog window', 'forminator' ),
-				'go_back'                 => __( 'Go back', 'forminator' ),
-				'records'                 => __( 'Records', 'forminator' ),
-				'delete'                  => __( 'Delete', 'forminator' ),
-				'confirm'                 => __( 'Confirm', 'forminator' ),
-				'are_you_sure'            => __( 'Are you sure?', 'forminator' ),
-				'cannot_be_reverted'      => __( 'Have in mind this action cannot be reverted.', 'forminator' ),
-				'are_you_sure_form'       => __( 'Are you sure you wish to permanently delete this form?', 'forminator' ),
-				'are_you_sure_poll'       => __( 'Are you sure you wish to permanently delete this poll?', 'forminator' ),
-				'are_you_sure_quiz'       => __( 'Are you sure you wish to permanently delete this quiz?', 'forminator' ),
-				'delete_form'             => __( 'Delete Form', 'forminator' ),
-				'delete_poll'             => __( 'Delete Poll', 'forminator' ),
-				'delete_quiz'             => __( 'Delete Quiz', 'forminator' ),
-				'confirm_action'          => __( 'Please confirm that you want to do this action.', 'forminator' ),
-				'confirm_title'           => __( 'Confirm Action', 'forminator' ),
-				'confirm_field_delete'    => __( 'Please confirm that you want to delete this field', 'forminator' ),
-				'cancel'                  => __( 'Cancel', 'forminator' ),
-				'save_alert'              => __( 'The changes you made may be lost if you navigate away from this page.', 'forminator' ),
-				'save_changes'            => __( 'Save Changes', 'forminator' ),
-				'save'                    => __( 'Save', 'forminator' ),
-				'export_form'             => __( 'Export Form', 'forminator' ),
-				'export_poll'             => __( 'Export Poll', 'forminator' ),
-				'export_quiz'             => __( 'Export Quiz', 'forminator' ),
-				'import_form'             => __( 'Import Form', 'forminator' ),
-				'import_form_cf7'         => __( 'Import', 'forminator' ),
-				'import_form_ninja'       => __( 'Import Ninja Forms', 'forminator' ),
-				'import_form_gravity'     => __( 'Import Gravity Forms', 'forminator' ),
-				'import_poll'             => __( 'Import Poll', 'forminator' ),
-				'import_quiz'             => __( 'Import Quiz', 'forminator' ),
-				'enable_scheduled_export' => __( 'Enable scheduled exports', 'forminator' ),
-				'scheduled_export_if_new' => __( 'Send email only if there are new submissions', 'forminator' ),
-				'download_csv'            => __( 'Download CSV', 'forminator' ),
-				'scheduled_exports'       => __( 'Scheduled Exports', 'forminator' ),
-				'manual_exports'          => __( 'Manual Exports', 'forminator' ),
-				'manual_description'      => __( 'Download the submissions list in .csv format.', 'forminator' ),
-				'scheduled_description'   => __( 'Enable scheduled exports to get the submissions list in your email.', 'forminator' ),
-				'disable'                 => __( 'Disable', 'forminator' ),
-				'enable'                  => __( 'Enable', 'forminator' ),
-				'enter_name'              => __( 'Enter a name', 'forminator' ),
-				'new_form_desc2'          => __( 'Name your new form, then let\'s start building!', 'forminator' ),
-				'new_poll_desc2'          => __( 'Name your new poll, then let\'s start building!', 'forminator' ),
-				'new_quiz_desc2'          => __( 'Choose whether you want to collect participants details (e.g. name, email, etc.) on your quiz.' ),
-				'learn_more'              => __( 'Learn more', 'forminator' ),
-				'input_label'             => __( 'Input Label', 'forminator' ),
-				'form_name_validation'    => __( 'Form name cannot be empty.', 'forminator' ),
-				'poll_name_validation'    => __( 'Poll name cannot be empty.', 'forminator' ),
-				'quiz_name_validation'    => __( 'Quiz name cannot be empty.', 'forminator' ),
-				'new_form_placeholder'    => __( 'E.g., Blank Form', 'forminator' ),
-				'new_poll_placeholder'    => __( 'E.g., Blank Poll', 'forminator' ),
-				'new_quiz_placeholder'    => __( 'E.g., My Awesome Quiz', 'forminator' ),
-				'create'                  => __( 'Create', 'forminator' ),
-				'reset'                   => __( 'RESET', 'forminator' ),
-				'disconnect'              => __( 'Disconnect', 'forminator' ),
-				'apply_submission_filter' => __( 'Apply Submission Filters', 'forminator' ),
-				'registration_notice'     => __( "This template allows you to create your own registration form and insert it on a custom page. This doesn't modify the default registration form.", 'forminator' ),
-				'login_notice'            => __( "This template allows you to create your own login form and insert it on a custom page. This doesn't modify the default login form.", 'forminator' ),
-				'approve_user'            => __( 'Approve', 'forminator' ),
-				'registration_name'       => __( 'User Registration', 'forminator' ),
-				'login_name'              => __( 'User Login', 'forminator' ),
-				'deactivate'              => __( 'Deactivate', 'forminator' ),
-				'deactivateContent'       => __( 'Are you sure you want to deactivate this Add-on?', 'forminator' ),
-				'deactivateAnyway'        => __( 'Deactivate Anyway', 'forminator' ),
-				'forms'                   => __( 'Forms', 'forminator' ),
+				'form_name_label'              => __( 'Name your form', 'forminator' ),
+				'form_name_placeholder'        => __( 'E.g., Contact Form', 'forminator' ),
+				'name'                         => __( 'Name', 'forminator' ),
+				'fields'                       => __( 'Fields', 'forminator' ),
+				'date'                         => __( 'Date', 'forminator' ),
+				'clear_all'                    => __( 'Clear All', 'forminator' ),
+				'your_exports'                 => __( 'Your exports', 'forminator' ),
+				'edit_login_form'              => __( 'Edit Login or Register form', 'forminator' ),
+				'edit_scheduled_export'        => __( 'Edit Scheduled Export', 'forminator' ),
+				'frequency'                    => __( 'Frequency', 'forminator' ),
+				'daily'                        => __( 'Daily', 'forminator' ),
+				'weekly'                       => __( 'Weekly', 'forminator' ),
+				'monthly'                      => __( 'Monthly', 'forminator' ),
+				'week_day'                     => __( 'Day of the week', 'forminator' ),
+				'month_day'                    => __( 'Day of the month', 'forminator' ),
+				'month_year'                   => __( 'Month of the year', 'forminator' ),
+				'monday'                       => __( 'Monday', 'forminator' ),
+				'tuesday'                      => __( 'Tuesday', 'forminator' ),
+				'wednesday'                    => __( 'Wednesday', 'forminator' ),
+				'thursday'                     => __( 'Thursday', 'forminator' ),
+				'friday'                       => __( 'Friday', 'forminator' ),
+				'saturday'                     => __( 'Saturday', 'forminator' ),
+				'sunday'                       => __( 'Sunday', 'forminator' ),
+				'day_time'                     => __( 'Time of the day', 'forminator' ),
+				'email_to'                     => __( 'Email export data to', 'forminator' ),
+				'email_placeholder'            => __( 'E.g., john@doe.com', 'forminator' ),
+				'schedule_help'                => __( "Leave blank if you don't want to receive exports via email.", 'forminator' ),
+				'congratulations'              => __( 'Congratulations!', 'forminator' ),
+				'is_ready'                     => __( 'is ready!', 'forminator' ),
+				'new_form_desc'                => __( 'Add it to any post / page by clicking Forminator button, or set it up as a Widget.', 'forminator' ),
+				'paypal_settings'              => __( 'Edit PayPal credentials', 'forminator' ),
+				'preview_cforms'               => __( 'Preview Custom Form', 'forminator' ),
+				'preview_polls'                => __( 'Preview Poll', 'forminator' ),
+				'preview_quizzes'              => __( 'Preview Quiz', 'forminator' ),
+				'captcha_settings'             => __( 'Edit reCAPTCHA credentials', 'forminator' ),
+				'currency_settings'            => __( 'Edit default currency', 'forminator' ),
+				'pagination_entries'           => __( 'Submissions | Pagination Settings', 'forminator' ),
+				'pagination_listings'          => __( 'Listings | Pagination Settings', 'forminator' ),
+				'email_settings'               => __( 'Email Settings', 'forminator' ),
+				'uninstall_settings'           => __( 'Uninstall Settings', 'forminator' ),
+				'privacy_settings'             => __( 'Privacy Settings', 'forminator' ),
+				'validate_form_name'           => __( 'Form name cannot be empty! Please pick a name for your form.', 'forminator' ),
+				'close'                        => __( 'Close', 'forminator' ),
+				'close_label'                  => __( 'Close this dialog window', 'forminator' ),
+				'go_back'                      => __( 'Go back', 'forminator' ),
+				'records'                      => __( 'Records', 'forminator' ),
+				'delete'                       => __( 'Delete', 'forminator' ),
+				'confirm'                      => __( 'Confirm', 'forminator' ),
+				'are_you_sure'                 => __( 'Are you sure?', 'forminator' ),
+				'cannot_be_reverted'           => __( 'Have in mind this action cannot be reverted.', 'forminator' ),
+				'are_you_sure_form'            => __( 'Are you sure you wish to permanently delete this form?', 'forminator' ),
+				'are_you_sure_poll'            => __( 'Are you sure you wish to permanently delete this poll?', 'forminator' ),
+				'are_you_sure_quiz'            => __( 'Are you sure you wish to permanently delete this quiz?', 'forminator' ),
+				'delete_form'                  => __( 'Delete Form', 'forminator' ),
+				'delete_poll'                  => __( 'Delete Poll', 'forminator' ),
+				'delete_quiz'                  => __( 'Delete Quiz', 'forminator' ),
+				'confirm_action'               => __( 'Please confirm that you want to do this action.', 'forminator' ),
+				'confirm_title'                => __( 'Confirm Action', 'forminator' ),
+				'confirm_field_delete'         => __( 'Please confirm that you want to delete this field', 'forminator' ),
+				'cancel'                       => __( 'Cancel', 'forminator' ),
+				'save_alert'                   => __( 'The changes you made may be lost if you navigate away from this page.', 'forminator' ),
+				'save_changes'                 => __( 'Save Changes', 'forminator' ),
+				'save'                         => __( 'Save', 'forminator' ),
+				'export_form'                  => __( 'Export Form', 'forminator' ),
+				'export_poll'                  => __( 'Export Poll', 'forminator' ),
+				'export_quiz'                  => __( 'Export Quiz', 'forminator' ),
+				'import_form'                  => __( 'Import Form', 'forminator' ),
+				'import_form_cf7'              => __( 'Import', 'forminator' ),
+				'import_form_ninja'            => __( 'Import Ninja Forms', 'forminator' ),
+				'import_form_gravity'          => __( 'Import Gravity Forms', 'forminator' ),
+				'import_poll'                  => __( 'Import Poll', 'forminator' ),
+				'import_quiz'                  => __( 'Import Quiz', 'forminator' ),
+				'enable_scheduled_export'      => __( 'Enable scheduled exports', 'forminator' ),
+				'scheduled_export_if_new'      => __( 'Send email only if there are new submissions', 'forminator' ),
+				'download_csv'                 => __( 'Download CSV', 'forminator' ),
+				'scheduled_exports'            => __( 'Scheduled Exports', 'forminator' ),
+				'manual_exports'               => __( 'Manual Exports', 'forminator' ),
+				'manual_description'           => __( 'Download the submissions list in .csv format.', 'forminator' ),
+				'scheduled_description'        => __( 'Enable scheduled exports to get the submissions list in your email.', 'forminator' ),
+				'disable'                      => __( 'Disable', 'forminator' ),
+				'enable'                       => __( 'Enable', 'forminator' ),
+				'enter_name'                   => __( 'Enter a name', 'forminator' ),
+				'new_form_desc2'               => __( 'Name your new form, then let\'s start building!', 'forminator' ),
+				'new_poll_desc2'               => __( 'Name your new poll, then let\'s start building!', 'forminator' ),
+				'new_quiz_desc2'               => __( 'Choose whether you want to collect participants details (e.g. name, email, etc.) on your quiz.' ),
+				'learn_more'                   => __( 'Learn more', 'forminator' ),
+				'input_label'                  => __( 'Input Label', 'forminator' ),
+				'form_name_validation'         => __( 'Form name cannot be empty.', 'forminator' ),
+				'poll_name_validation'         => __( 'Poll name cannot be empty.', 'forminator' ),
+				'quiz_name_validation'         => __( 'Quiz name cannot be empty.', 'forminator' ),
+				'new_form_placeholder'         => __( 'E.g., Blank Form', 'forminator' ),
+				'new_poll_placeholder'         => __( 'E.g., Blank Poll', 'forminator' ),
+				'new_quiz_placeholder'         => __( 'E.g., My Awesome Quiz', 'forminator' ),
+				'create'                       => __( 'Create', 'forminator' ),
+				'reset'                        => __( 'RESET', 'forminator' ),
+				'disconnect'                   => __( 'Disconnect', 'forminator' ),
+				'apply_submission_filter'      => __( 'Apply Submission Filters', 'forminator' ),
+				'registration_notice'          => __( "This template allows you to create your own registration form and insert it on a custom page. This doesn't modify the default registration form.", 'forminator' ),
+				'login_notice'                 => __( "This template allows you to create your own login form and insert it on a custom page. This doesn't modify the default login form.", 'forminator' ),
+				'approve_user'                 => __( 'Approve', 'forminator' ),
+				'registration_name'            => __( 'User Registration', 'forminator' ),
+				'login_name'                   => __( 'User Login', 'forminator' ),
+				'deactivate'                   => __( 'Deactivate', 'forminator' ),
+				'deactivateContent'            => __( 'Are you sure you want to deactivate this Add-on?', 'forminator' ),
+				'deactivateAnyway'             => __( 'Deactivate Anyway', 'forminator' ),
+				'forms'                        => __( 'Forms', 'forminator' ),
+				'quizzes'                      => __( 'Quizzes', 'forminator' ),
+				'polls'                        => __( 'Polls', 'forminator' ),
+				'back'                         => __( 'Back', 'forminator' ),
+				'settings_label'               => __( 'Settings', 'forminator' ),
+				'settings_description'         => __( 'Configure and customize the content of your report.', 'forminator' ),
+				'label_description'            => __( 'The label is to help you identify this report notification.', 'forminator' ),
+				'module_description'           => __( 'Choose a module for this report.', 'forminator' ),
+				'select_forms'                 => __( 'Select forms', 'forminator' ),
+				'select_forms_description'     => __( 'Choose the forms you want to include in this report.', 'forminator' ),
+				'all_forms'                    => __( 'All Forms', 'forminator' ),
+				'selected_forms'               => __( 'Selected Forms', 'forminator' ),
+				'selected_forms_description'   => __( 'Select one or more forms to include in this report.', 'forminator' ),
+				'all_quizzes'                  => __( 'All Quizzes', 'forminator' ),
+				'select_quizzes'               => __( 'Select quizzes', 'forminator' ),
+				'selected_quizzes'             => __( 'Selected quizzes', 'forminator' ),
+				'select_quizzes_description'   => __( 'Choose the quizzes you want to include in this report.', 'forminator' ),
+				'selected_quizzes_description' => __( 'Select one or more quizzes to include in this report.', 'forminator' ),
+				'all_polls'                    => __( 'All Polls', 'forminator' ),
+				'select_polls'                 => __( 'Select polls', 'forminator' ),
+				'selected_polls'               => __( 'Selected polls', 'forminator' ),
+				'select_polls_description'     => __( 'Choose the polls you want to include in this report.', 'forminator' ),
+				'selected_polls_description'   => __( 'Select one or more polls to include in this report.', 'forminator' ),
+				'report_stats'                 => __( 'Report stats', 'forminator' ),
+				'all_stats'                    => __( 'All stats', 'forminator' ),
+				'stats'                        => __( 'Stats', 'forminator' ),
+				'stats_description'            => __( 'Select the stats data to show in this reports.', 'forminator' ),
+				'views'                        => __( 'Views', 'forminator' ),
+				'bounce_rates'                 => __( 'Bounce rates', 'forminator' ),
+				'submissions'                  => __( 'Submissions', 'forminator' ),
+				'conversion_rates'             => __( 'Conversion rates', 'forminator' ),
+				'payments'                     => __( 'Payments', 'forminator' ),
+				'leads'                        => __( 'Leads', 'forminator' ),
+				'schedule_label'               => __( 'Schedule', 'forminator' ),
+				'schedule_description'         => __( 'Choose how often you want to receive this report email.', 'forminator' ),
+				'frequency_description'        => __( 'Choose the frequency of receiving the report email.', 'forminator' ),
+				'frequency_time'               => self::get_timezone_string(),
+				'recipients_label'             => __( 'Recipients', 'forminator' ),
+				'recipients_description'       => __( 'Add the report email recipients below.', 'forminator' ),
+				'add_users'                    => __( 'Add users', 'forminator' ),
+				'add_by_email'                 => __( 'Add by email', 'forminator' ),
+				'search_user'                  => __( 'Search users', 'forminator' ),
+				'users'                        => __( 'Users', 'forminator' ),
+				'search_placeholder'           => __( 'Type username', 'forminator' ),
+				'no_recipients'                => __( "You've not added the users. In order to activate the notification you need to add users first.", 'forminator' ),
+				'no_recipient_disable'         => __( "You've removed all recipients.", 'forminator' ),
+				'recipient_exists'             => __( 'Recipient already exists.', 'forminator' ),
+				'add_user'                     => __( 'Add user', 'forminator' ),
+				'added_users'                  => __( 'Added users', 'forminator' ),
+				'remove_user'                  => __( 'Remove user', 'forminator' ),
+				'resend_invite'                => __( 'Resend invite email', 'forminator' ),
+				'awaiting_confirmation'        => __( 'Awaiting confirmation', 'forminator' ),
+				'invite_description'           => __( 'Add recipient details.', 'forminator' ),
+				'first_name'                   => __( 'First name', 'forminator' ),
+				'email_address'                => __( 'Email address', 'forminator' ),
+				'add_recipient'                => __( 'Add recipient', 'forminator' ),
+				'adding_recipient'             => __( 'Adding recipient', 'forminator' ),
+				'name_placeholder'             => __( 'E.g. John', 'forminator' ),
+				'invite_no_recipient'          => __( 'No recipients added. Please add one or more recipients above to finish scheduling the report.', 'forminator' ),
+				'status_label'                 => __( 'Activate report', 'forminator' ),
+				'configure'                    => __( 'Configure', 'forminator' ),
+				'deactivate_report'            => __( 'Deactivate report', 'forminator' ),
+				'activate_report'              => __( 'Activate report', 'forminator' ),
+				'time_interval'                => self::get_times(),
+				'week_days'                    => forminator_week_days(),
+				'month_days'                   => self::get_months(),
+				'fetch_nonce'                  => wp_create_nonce( 'forminator-fetch' ),
+				'save_nonce'                   => wp_create_nonce( 'forminator-save' ),
 			),
 			'quiz'          => array(
 				'choose_quiz_title'       => __( 'Create Quiz', 'forminator' ),
@@ -393,6 +462,7 @@ class Forminator_Admin_L10n {
 	 * Maybe add notices to properties
 	 *
 	 * @param array $properties Properties.
+	 *
 	 * @return array
 	 */
 	private static function add_notice( $properties ) {
@@ -438,8 +508,8 @@ class Forminator_Admin_L10n {
 	/**
 	 * Get short days names html escaped and translated
 	 *
-	 * @since 1.5.4
 	 * @return array
+	 * @since 1.5.4
 	 */
 	public static function get_short_days_names() {
 		return array(
@@ -456,8 +526,8 @@ class Forminator_Admin_L10n {
 	/**
 	 * Get months names html escaped and translated
 	 *
-	 * @since 1.5.4
 	 * @return array
+	 * @since 1.5.4
 	 */
 	public static function get_months_names() {
 		return array(
@@ -477,4 +547,73 @@ class Forminator_Admin_L10n {
 
 	}
 
+	/**
+	 * Return times frame for select box
+	 *
+	 * @return mixed
+	 * @since 1.20.0
+	 *
+	 */
+	private static function get_times() {
+		$data = array();
+		for ( $i = 0; $i < 24; $i ++ ) {
+			foreach ( apply_filters( 'forminator_get_times_interval', array( '00' ) ) as $min ) {
+				$time_key   = $i . ':' . $min;
+				$time_value = date_format( date_create( $time_key ), 'h:i A' );
+				$data[]     = apply_filters( 'forminator_get_times_hour_min', $time_value );
+			}
+		}
+
+		return apply_filters( 'forminator_get_times', $data );
+	}
+
+	/**
+	 * Return time zone string.
+	 *
+	 * @return string
+	 * @since 3.1.1
+	 *
+	 */
+	private static function get_timezone_string() {
+		$current_offset = get_option( 'gmt_offset' );
+		$tzstring       = get_option( 'timezone_string' );
+
+		if ( empty( $tzstring ) ) { // Create a UTC+- zone if no timezone string exists.
+			if ( 0 === $current_offset ) {
+				$tzstring = 'UTC+0';
+			} elseif ( $current_offset < 0 ) {
+				$tzstring = 'UTC' . $current_offset;
+			} else {
+				$tzstring = 'UTC+' . $current_offset;
+			}
+		}
+
+		$timezone_string = sprintf(
+		/* translators: %1$s - time zone, %2$s - current time */
+			esc_html__( 'Your site\'s current time is %1$s %2$s based on your %3$sWordPress Settings%4$s', 'forminator' ),
+			'<strong>' . esc_html( date_i18n( 'h:i a' ) ) . '</strong>',
+			'<strong>' . esc_html( $tzstring ) . '</strong>',
+			'<a href="' . esc_url( network_admin_url( 'options-general.php' ) ) . '" target="_blank">',
+			'</a>'
+		);
+
+		return $timezone_string;
+	}
+
+	/**
+	 * Return months frame for select box
+	 *
+	 * @return mixed
+	 * @since 1.20.0
+	 *
+	 */
+	private static function get_months() {
+		$days_data = array();
+		$days      = range( 1, 28 );
+		foreach ( $days as $day ) {
+			$days_data[] = $day;
+		}
+
+		return apply_filters( 'forminator_get_months', $days_data );
+	}
 }

@@ -104,7 +104,7 @@ class PayoutService extends \Forminator\Stripe\Service\AbstractService
      */
     public function reverse($id, $params = null, $opts = null)
     {
-        return $this->request('post', $this->buildPath('/v1/payouts/%s/reverse', $id), $params, $opts);	 				 					    	 		 	
+        return $this->request('post', $this->buildPath('/v1/payouts/%s/reverse', $id), $params, $opts);
     }
 
     /**

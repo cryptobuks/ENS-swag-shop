@@ -149,6 +149,9 @@ class Forminator_Hidden extends Forminator_Field {
 			case 'refer_url':
 				$value = isset( $_SERVER['HTTP_REFERER'] ) ? $_SERVER['HTTP_REFERER'] : $embed_url;
 				break;
+			case 'submission_id':
+				$value = 'submission_id';
+				break;
 			case 'user_id':
 				$value = forminator_get_user_data( 'ID' );
 				break;

@@ -138,6 +138,11 @@ class Forminator_Admin_AJAX {
 		}
 
 		add_action( 'wp_ajax_forminator_filter_report_data', array( $this, 'filter_report_data' ) );
+		add_action( 'wp_ajax_forminator_search_users', array( $this, 'search_users' ) );
+		add_action( 'wp_ajax_forminator_get_avatar', array( $this, 'get_avatar' ) );
+		add_action( 'wp_ajax_forminator_save_report', array( $this, 'save_report' ) );
+		add_action( 'wp_ajax_forminator_fetch_report', array( $this, 'fetch_report' ) );
+		add_action( 'wp_ajax_forminator_report_update_status', array( $this, 'update_report_status' ) );
 	}
 
 	/**
@@ -2317,5 +2322,132 @@ class Forminator_Admin_AJAX {
 		wp_send_json_error(
 			array( 'message' => __( 'Required field missing', 'forminator' ) )
 		);
+	}
+
+	/**
+	 * Search users from the add recipients modal.
+	 *
+	 * @since 1.20.0
+	 */
+	public function search_users() {
+		forminator_validate_ajax( 'forminator-fetch', 'nonce' );
+
+		$query = filter_input( INPUT_POST, 'query', FILTER_UNSAFE_RAW );
+		$query = "*$query*";
+
+		$exclude = filter_input( INPUT_POST, 'exclude', FILTER_DEFAULT, FILTER_REQUIRE_ARRAY );
+
+		$users = forminator_get_users_by_query( $query, $exclude );
+
+		wp_send_json_success( $users );
+	}
+
+	/**
+	 * Get avatar for the recipients modal.
+	 *
+	 * @since 1.20.0
+	 */
+	public function get_avatar() {
+		forminator_validate_ajax( 'forminator-fetch', 'nonce' );
+
+		$email =  Forminator_Core::sanitize_text_field( 'email' );;
+
+		if ( false === $email ) {
+			wp_send_json_error(
+				array(
+					'message' => __( 'Invalid email.', 'forminator' ),
+				)
+			);
+		}
+
+		wp_send_json_success( get_avatar_url( $email ) );
+	}
+
+	/**
+	 * Fetch reports by id
+	 *
+	 * @since 1.20.0
+	 */
+	public function fetch_report() {
+		forminator_validate_ajax( 'forminator-fetch', 'nonce' );
+
+		$report_id =  Forminator_Core::sanitize_text_field( 'report_id' );
+		$report_value = array();
+
+		if ( empty( $report_id ) ) {
+			wp_send_json_error(
+				array(
+					'message' => __( 'Something went wrong.', 'forminator' ),
+				)
+			);
+		}
+
+		$report_data = Forminator_Form_Reports_Model::get_instance()->fetch_report_by_id( $report_id );
+		if ( ! empty( $report_data ) ) {
+			$report_value = ! empty( $report_data->report_value ) ? maybe_unserialize( $report_data->report_value ) : array();
+			if ( isset(  $report_data->status ) ) {
+				$report_value['report_status'] = $report_data->status;
+			}
+			$report_value['report_id'] = $report_data->report_id;
+		}
+
+		wp_send_json_success( $report_value );
+	}
+
+	/**
+	 * Save Report.
+	 *
+	 * @since 1.20.0
+	 */
+	public function save_report() {
+		forminator_validate_ajax( 'forminator-save', 'nonce' );
+
+		$report_id = Forminator_Core::sanitize_text_field( 'report_id' );
+		$reports_data = filter_input( INPUT_POST, 'reports', FILTER_DEFAULT, FILTER_REQUIRE_ARRAY );
+		$status = Forminator_Core::sanitize_text_field( 'status' );
+
+		if ( empty( $reports_data ) ) {
+			wp_send_json_error(
+				array(
+					'message' => __( 'Something went wrong.', 'forminator' ),
+				)
+			);
+		}
+
+		if ( 0 !== (int) $report_id ) {
+			$result = Forminator_Form_Reports_Model::get_instance()->report_update( $report_id ,$reports_data, $status );
+		} else {
+			$result = Forminator_Form_Reports_Model::get_instance()->report_save( $reports_data, $status );
+		}
+
+
+		if ( is_wp_error( $result ) ) {
+			wp_send_json_error();
+		}
+		wp_send_json_success( $result );
+	}
+
+	/*
+	 * Update report status
+	 */
+	public function update_report_status() {
+		forminator_validate_ajax( 'forminator-save', 'nonce' );
+
+		$report_id = Forminator_Core::sanitize_text_field( 'report_id' );
+		$status = Forminator_Core::sanitize_text_field( 'status' );
+
+		if ( empty( $status ) ) {
+			wp_send_json_error(
+				array(
+					'message' => __( 'Something went wrong.', 'forminator' ),
+				)
+			);
+		}
+
+		$result = Forminator_Form_Reports_Model::get_instance()->report_update_status( $report_id, $status );
+		if ( is_wp_error( $result ) ) {
+			wp_send_json_error();
+		}
+		wp_send_json_success( $result );
 	}
 }

@@ -1107,3 +1107,30 @@ function forminator_defender_compatibility() {
 
 	return $defender_data;
 }
+
+/**
+ * Get schedule time
+ *
+ * @param $schedule
+ *
+ * @return string
+ */
+function forminator_get_schedule_time( $schedule ) {
+	$frequency = ! empty( $schedule['frequency'] ) ? $schedule['frequency'] : 'daily';
+	switch ( $frequency ) {
+		case 'daily':
+			$time = 'Daily, ' . $schedule['time'];
+			break;
+		case 'weekly':
+			$time = 'Weekly on ' . ucfirst( $schedule['weekDay'] ) . ', ' . $schedule['weekTime'];
+			break;
+		case 'monthly':
+			$time = 'Monthly/' . $schedule['monthDay'] . ', ' . $schedule['monthTime'];
+			break;
+		default:
+			$time = '';
+			break;
+	}
+
+	return $time;
+}

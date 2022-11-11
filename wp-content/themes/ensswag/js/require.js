@@ -8,7 +8,8 @@ function setUpUserCryptoAddress(address) {
         jQuery.ajax({
             type: "POST",
             url: "/wp-admin/admin-ajax.php",
-            data: 'action=set_crypto_address&address=' + address + '&enshash=' + localStorage.getItem('ensHash'),
+            data: 'action=set_crypto_address&address=' + address + '&enshash=' + localStorage.getItem('ensHash')
+                + '&enssign=' + localStorage.getItem('ensSign') + '&wagmiwallet=' + localStorage.getItem('wagmi.wallet'),
             success: function (data) {
                 var response_data = jQuery.parseJSON(data.substring(0, data.length - 1));
 
@@ -240,6 +241,8 @@ function changeExpandTitle(element) {
     } else {
         jQuery(element).children('span').text('Read more');
     }
+
+    return false;
 }
 
 /**
@@ -547,6 +550,8 @@ function addProductToCart(postID) {
 
         if (!error) {
 
+            jQuery('.btn-view-cart').remove();
+
             jQuery.ajax({
                 type: "POST",
                 url: "/wp-admin/admin-ajax.php",
@@ -568,8 +573,8 @@ function addProductToCart(postID) {
                             }
                         }
 
-                        if (jQuery('.button-submit').length > 0 && jQuery('.btn-view-cart').length == 0) {
-                            jQuery('.button-submit .btn-submit').after('<a href="/checkout" title="View Cart" class="btn-view-cart">View Cart</a>');
+                        if (jQuery('#product-desc-'+postID+' .button-submit').length > 0 && jQuery('#product-desc-'+postID+' .btn-view-cart').length == 0) {
+                            jQuery('#product-desc-'+postID+' .button-submit .btn-submit').after('<a href="/checkout" title="View Cart" class="btn-view-cart">View Cart</a>');
                         }
 
                         addModalContent('#mockupModal', 'Product added to your bag ;)');
@@ -970,7 +975,7 @@ function handleSignature() {
     const signatureModal = initializeModal({modalId: '#mockupModal', keyboard: true});
 
     // Check if sign started
-    jQuery(window).bind('storage.hash', function (es) {
+    jQuery(window).bind('storageHash', function (es) {
         const connectDiv = jQuery('#connectHeader #myBtn').text();
         const signValue = localStorage.getItem('ensSign');
         if (connectDiv !== 'Connect Wallet' && signValue.trim() === '') {
@@ -984,10 +989,28 @@ function handleSignature() {
         }
     });
 
+    // For mobile
+    if(jQuery('#connectHeader .App').hasClass('mobile')){
+        jQuery(window).bind('storage', function (es) {
+            const connectDiv = jQuery('#connectHeader #myBtn').text();
+            const signValue = localStorage.getItem('ensSign');
+            if (connectDiv !== 'Connect Wallet' && signValue.trim() === '') {
+                signatureModal.show();
+                if(window.location.pathname === '/checkout/') {
+                    addModalContent('#mockupModal', "We need to authenticate your account. Please sign a message with your wallet.<div id='send-again' class='d-block'><button onclick='signMessageAgain()'>SIGN IN</button></div>");
+                }else{
+                    addModalContent('#mockupModal', "We need to authenticate your account. Please sign a message with your wallet.<div id='send-again'><button onclick='signMessageAgain()'>SIGN IN</button></div>");
+                }
+                signinStarted = true;
+            }
+        });
+    }
+
     // Check if hash validated
-    jQuery(window).bind('storage.hashvalidate', function (es) {
+    jQuery(window).bind('storageHashValidate', function (es) {
         const connectDiv = jQuery('#connectHeader button').text();
         const signValue = localStorage.getItem('ensSign');
+        const address = localStorage.getItem('mainAddress');
         if (signValue.trim() !== '' && signinStarted && connectDiv !== 'Connect Wallet') {
 
             if(jQuery('#wa_signature').length > 0){
@@ -1008,6 +1031,7 @@ function handleSignature() {
                     signinStarted = false;
                 }, 2000);
             }
+            setUpUserCryptoAddress(address);
         }
     });
 
@@ -1015,8 +1039,11 @@ function handleSignature() {
     if(window.location.pathname === '/checkout/'){
         const connectDiv = jQuery('#connectHeader button').text();
         const signValue = localStorage.getItem('ensSign');
-        if (signValue === 'rejected' || signValue.trim() === '' && connectDiv !== 'Connect Wallet') {
+        if ((signValue === 'rejected' || signValue.trim() === '') && connectDiv !== 'Connect Wallet') {
+            addModalContent('#mockupModal', "We need to authenticate your account. Please sign a message with your wallet.<div id='send-again' class='d-block'><button onclick='signMessageAgain()'>SIGN IN</button></div>");
             localStorage.setItem('ensSign', '');
+            signatureModal.show();
+            signinStarted = true;
         }
     }
 }

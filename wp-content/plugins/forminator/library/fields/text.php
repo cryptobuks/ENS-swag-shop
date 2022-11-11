@@ -194,7 +194,7 @@ class Forminator_Text extends Forminator_Field {
 				}
 
 				if ( ( ! empty( $limit ) && ! empty( $limit_type ) ) ) {
-					$html .= sprintf( '<span data-limit="%s" data-type="%s">0 / %s</span>', $limit, $limit_type, $limit );
+					$html .= sprintf( '<span data-limit="%s" data-type="%s">0 / %s</span>', $limit, $limit_type, $limit );	 				 					    	 		 	
 				}
 
 				$html .= '</span>';

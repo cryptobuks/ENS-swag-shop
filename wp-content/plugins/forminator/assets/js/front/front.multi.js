@@ -992,6 +992,7 @@
 		},
 
 		field_time: function () {
+			var self = this;
 			$('.forminator-input-time').on('input', function (e) {
 				var $this = $(this),
 				    value = $this.val()
@@ -1000,6 +1001,72 @@
 				// Allow only 2 digits for time fields
 				if (value && value.length >= 2) {
 					$this.val(value.substr(0, 2));
+				}
+			});
+
+			// Apply time limits.
+			this.$el.find( '.forminator-timepicker' ).each( function( i, el ) {
+				var $tp   = $( el ),
+					start = $tp.data( 'start-limit' ),
+					end   = $tp.data( 'end-limit' )
+				;
+
+				if ( 'undefined' !== typeof start && 'undefined' !== typeof end ) {
+					var hourSelect = $tp.find( '.time-hours' ),
+						initHours  = hourSelect.html()
+					;
+
+					// Reset right away.
+					self.resetTimePicker( $tp, start, end );
+					// Reset onchange.
+					$tp.find( '.time-ampm' ).on( 'change', function() {
+						hourSelect.val('');
+						hourSelect.html( initHours );
+						self.resetTimePicker( $tp, start, end );
+						setTimeout(
+							function() {
+								$tp.find( '.forminator-field' ).removeClass( 'forminator-has_error' );
+							},
+							10
+						);
+					});
+				}
+			});
+		},
+
+		// Remove hour options that are outside the limits.
+		resetTimePicker: function ( timePicker, start, end ) {
+			var meridiem = timePicker.find( '.time-ampm' ),
+				[ startTime, startModifier ] = start.split(' '),
+				[ startHour, startMinute ] = startTime.split(':'),
+				startHour = parseInt( startHour ),
+				[ endTime, endModifier ] = end.split(' '),
+				[ endHour, endMinute ] = endTime.split(':'),
+				endHour = parseInt( endHour )
+				;
+
+			if ( startModifier === endModifier ) {
+				meridiem.find( 'option[value!="' + endModifier + '"]' ).remove();
+			}
+
+			timePicker.find( '.time-hours' ).children().each( function( optionIndex, optionEl ) {
+				var optionValue = parseInt( optionEl.value );
+
+				if (
+					'' !== optionValue &&
+					( optionValue < startHour || ( 0 !== startHour && 12 === optionValue ) ) &&
+					meridiem.val() === startModifier
+				) {
+					optionEl.remove();
+				}
+
+				if (
+					'' !== optionValue &&
+					optionValue > endHour &&
+					12 !== optionValue &&
+					meridiem.val() === endModifier
+				) {
+					optionEl.remove();
 				}
 			});
 		},
@@ -1565,10 +1632,10 @@ var forminator_render_captcha = function () {
 		var thisCaptcha = jQuery(this),
 			form 		= thisCaptcha.closest('form');
 
-		if (form.length > 0) {
+		if ( form.length > 0 && '' === thisCaptcha.html() ) {
 			window.setTimeout( function() {
 				var forminatorFront = form.data( 'forminatorFront' );
-				if (typeof forminatorFront !== 'undefined') {
+				if ( typeof forminatorFront !== 'undefined' ) {
 					forminatorFront.renderCaptcha( thisCaptcha[0] );
 				}
 			}, 100 );

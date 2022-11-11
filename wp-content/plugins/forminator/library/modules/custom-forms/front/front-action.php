@@ -917,6 +917,7 @@ class Forminator_CForm_Front_Action extends Forminator_Front_Action {
 	 */
 	private static function save_entry_fields( $entry ) {
 		self::remove_password();
+		self::handle_hidden_fields_after_entry_save( $entry );
 
 		/**
 		 * Action called before setting fields to database
@@ -2162,6 +2163,19 @@ class Forminator_CForm_Front_Action extends Forminator_Front_Action {
 			}
 			if ( 'submission_time' === $field_settings['default_value'] ) {
 				self::$prepared_data[ $field_settings['element_id'] ] = date_i18n( 'g:i:s a, T', forminator_local_timestamp(), true );
+			}
+		}
+	}
+
+	/**
+	 * Apply updated values to hidden-type fields after entry is saved
+	 *
+	 * @param array $field_settings Field settings.
+	 */
+	private static function handle_hidden_fields_after_entry_save( $entry ) {
+		foreach( self::$info['field_data_array'] as $key => $field ) {
+			if ( 0 === strpos( $field['name'], 'hidden-' ) && 'submission_id' === $field['value'] ) {
+				self::$info['field_data_array'][ $key ]['value'] = $entry->entry_id;
 			}
 		}
 	}

@@ -499,7 +499,9 @@ class Forminator_Export {
 								$row[] = 1 === $i ? $entry->time_created : '';
 								$row[] = ! empty( $answer['question'] ) ? sprintf( '"%s"', $answer['question'] ) : '';
 								$row[] = $answer['answer'];
-								$row[] = $meta['result']['title'];
+								if ( isset( $meta['result'] ) && isset( $meta['result']['title'] ) ) {
+									$row[] = $meta['result']['title'];
+								}
 
 								if ( ! empty( $lead_data ) ) {
 									foreach ( $lead_headers as $headers_id => $lead_header ) {

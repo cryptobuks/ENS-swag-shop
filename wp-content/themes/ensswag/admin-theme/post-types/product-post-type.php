@@ -130,12 +130,6 @@ add_action('add_meta_boxes', 'wpdocs_register_meta_boxes');
 function wpdocs_my_display_callback($post)
 {
     // Display code/markup goes here. Don't forget to include nonces!
-
-//    echo '<pre>';
-//    print_r($post);
-//    echo '</pre>';
-    // $post->ID
-
     global $wpdb;
 
     $metaData = $wpdb->get_row(
@@ -486,6 +480,16 @@ function wpdocs_my_display_callback($post)
         </tr>
     ';
 
+    $files_value = ($metaData && isset($metaData->files)) ? $metaData->files : '';
+
+    echo '
+        <tr>
+            <td style="width: 7%;"><label for="third_file_thread_position_colors"><strong>Third File Thread Position Colors</strong></label></td>
+            <td><textarea type="text" name="files" style="width: 400px;">' . str_replace('\"', '"', $files_value) . '</textarea></td>
+            <td>e.g. JSON Printful product data</td>
+        </tr>
+    ';
+
     echo '</table>';
 
 }
@@ -557,6 +561,8 @@ function wpdocs_save_meta_box($post_id)
             'third_file_left' => filter_var($_POST['third_file_left']),
             'third_file_thread_position' => filter_var($_POST['third_file_thread_position']),
             'third_file_thread_position_colors' => filter_var($_POST['third_file_thread_position_colors']),
+
+            'files' => filter_var($_POST['files']),
         ];
 
         $format = [
@@ -596,6 +602,8 @@ function wpdocs_save_meta_box($post_id)
             '%s',
             '%s',
             '%s',
+            '%s',
+
             '%s',
         ];
 

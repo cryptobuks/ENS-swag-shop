@@ -33,6 +33,76 @@ class Forminator_Admin_Report_Page {
 	}
 
 	/**
+	 * Forminator_Admin_Report_Page constructor.
+	 *
+	 * @since 1.0
+	 */
+	public function __construct() {
+		// Include all necessary files.
+		$this->processRequest();
+	}
+
+	/**
+	 * Process request
+	 *
+	 * @since 1.0
+	 */
+	public function processRequest() {
+		$action = Forminator_Core::sanitize_text_field( 'forminator_action' );
+		if ( ! $action ) {
+			return;
+		}
+		$page = Forminator_Core::sanitize_text_field( 'page' );
+		// Check if the page is not the relevant.
+		if ( 'forminator-reports' !== $page ) {
+			return;
+		}
+
+		$id = filter_input( INPUT_POST, 'id', FILTER_VALIDATE_INT );
+
+		// Verify nonce.
+		$nonce = filter_input( INPUT_POST, 'forminatorNonce' );
+		if ( ! $nonce || ! wp_verify_nonce( $nonce, 'forminator-report-action' ) ) {
+			return;
+		}
+
+		$ids         = Forminator_Core::sanitize_text_field( 'ids' );
+		$report_ids  = ! empty( $ids ) ? explode( ',', $ids ) : array();
+		$form_report = Forminator_Form_Reports_Model::get_instance();
+
+		switch ( $action ) {
+			case 'delete-report':
+				if ( ! empty( $id ) ) {
+					$form_report->report_delete( $id );
+				}
+				break;
+			case 'bulk-delete':
+				if ( ! empty( $report_ids ) ) {
+					foreach ( $report_ids as $report_id ) {
+						$form_report->report_delete( $report_id );
+					}
+				}
+				break;
+			case 'bulk-active':
+				if ( ! empty( $report_ids ) ) {
+					foreach ( $report_ids as $report_id ) {
+						$form_report->report_update_status( $report_id, 'active' );
+					}
+				}
+				break;
+			case 'bulk-inactive':
+				if ( ! empty( $report_ids ) ) {
+					foreach ( $report_ids as $report_id ) {
+						$form_report->report_update_status( $report_id, 'inactive' );
+					}
+				}
+				break;
+			default:
+				break;
+		}
+	}
+
+	/**
 	 * Get Reports data
 	 *
 	 * @param $form_id
@@ -456,5 +526,43 @@ class Forminator_Admin_Report_Page {
 		$wizard_link = admin_url( 'admin.php?page=' . $wizard_slug . '&id=' . $module_id );
 
 		return $wizard_link;
+	}
+
+	/**
+	 * Fetch Reports
+	 *
+	 * @return array|object|stdClass[]|null
+	 */
+	public function fetch_reports() {
+		$form_reports = Forminator_Form_Reports_Model::get_instance();
+
+		return $form_reports->fetch_all_report();
+	}
+
+	/**
+	 * Get total forms
+	 *
+	 * @param $module
+	 *
+	 * @return int
+	 */
+	public function get_total_forms( $module ) {
+
+		switch ( $module ) {
+			case 'forms':
+				$total = forminator_cforms_total( 'publish' );
+				break;
+			case 'quizzes':
+				$total = forminator_quizzes_total( 'publish' );
+				break;
+			case 'polls':
+				$total = forminator_polls_total( 'publish' );
+				break;
+			default:
+				$total = 0;
+				break;
+		}
+
+		return $total;
 	}
 }

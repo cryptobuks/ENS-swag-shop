@@ -43,6 +43,44 @@ function ens_woocommerce_checkout_create_order_action( $order, $data ){
         }
     }
 
+    // Check sign hash message from database if fail - Ledger problem
+    if($orderSignError){
+        $address = filter_var($_SESSION['user_wallet_address']);
+        $enssign = filter_var($_POST['wa_signature']);
+
+        global $wpdb;
+
+        $query = $wpdb->get_row(
+            "
+                SELECT * FROM wenp_ens_user_logs
+                WHERE user_address='{$address}' AND user_sign='{$enssign}' LIMIT 1
+        ");
+
+        if (isset($query->id) && $query->id > 0) {
+            $dbSignature = $query->user_sign;
+
+            $lastTwoCharacterSign = substr($dbSignature, -2);
+            if($lastTwoCharacterSign == '00' || $lastTwoCharacterSign == '01') {
+
+                $dbSignature = ($lastTwoCharacterSign == '00') ? substr($dbSignature, 0, -2) . '1B' : $dbSignature;
+                $dbSignature = ($lastTwoCharacterSign == '01') ? substr($dbSignature, 0, -2) . '1C' : $dbSignature;
+
+                $is_valid = $signature->verify(
+                    $_SESSION['wa_hash'],
+                    $dbSignature,
+                    $_SESSION['user_wallet_address']
+                );
+
+                $return_data['drugi sign'] = $is_valid;
+
+                if($is_valid){
+                    $orderSignError = false;
+                }
+            }
+
+        }
+    }
+
     if($orderSignError){
         $_SESSION['wa_hash'] = '';
         $_SESSION['user_wallet_address'] = '';
@@ -299,6 +337,14 @@ function ens_checkout_processed($order_id)
                         "id" => trim($postMetaData->third_file_thread_position),
                         "value" => $threadColorsArray
                     ];
+                }
+            }
+
+            // Check if we have files JSON object
+            if(trim($postMetaData->files) !== ''){
+                $jsonFiles = json_decode(str_replace('\"', '"', $postMetaData->files), TRUE);
+                if(sizeof($jsonFiles) > 0){
+                    $printfulOrderData['items'][$itemsKey]['files'] = $jsonFiles;
                 }
             }
 

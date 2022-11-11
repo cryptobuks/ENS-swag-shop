@@ -29,7 +29,7 @@
 
     <!-- start:stylesheets -->
     <link href="<?php echo TEMPLATEDIR; ?>/react/build/static/css/main.ff1199ad.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo TEMPLATEDIR; ?>/style.css?ver=1.50">
+    <link rel="stylesheet" href="<?php echo TEMPLATEDIR; ?>/style.css?ver=1.51">
     <!-- end:stylesheets -->
 
     <?php include 'templates/header/header-description-tags.php'; ?>
@@ -41,7 +41,7 @@
     <script src="<?php echo TEMPLATEDIR; ?>/js/bootstrap-select.min.js" defer></script>
     <script src="<?php echo TEMPLATEDIR; ?>/js/dd.min.js" defer></script>
     <script src="<?php echo TEMPLATEDIR; ?>/js/lightbox.min.js" defer></script>
-    <script src="<?php echo TEMPLATEDIR; ?>/js/require.js?ver=1.74" defer></script>
+    <script src="<?php echo TEMPLATEDIR; ?>/js/require.js?ver=1.81" defer></script>
     <!-- end:scripts -->
 
     <?php include 'templates/header/header-google-head.php'; ?>

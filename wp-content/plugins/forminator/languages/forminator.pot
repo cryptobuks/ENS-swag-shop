@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Forminator Pro package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Forminator Pro 1.19.0\n"
+"Project-Id-Version: Forminator Pro 1.20.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/forminator\n"
-"POT-Creation-Date: 2022-10-13 13:23:11+00:00\n"
+"POT-Creation-Date: 2022-11-09 16:44:57+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -284,8 +284,9 @@ msgstr ""
 #: addons/pro/webhook/class-forminator-addon-webhook-form-settings.php:147
 #: addons/pro/webhook/class-forminator-addon-webhook-poll-settings.php:134
 #: addons/pro/webhook/class-forminator-addon-webhook-quiz-settings.php:134
-#: admin/classes/class-admin-l10n.php:142 admin/views/addons/addons-list.php:90
+#: admin/classes/class-admin-l10n.php:144 admin/views/addons/addons-list.php:90
 #: admin/views/addons/addons-list.php:215
+#: admin/views/common/reports/tab-notification.php:37
 msgid "Deactivate"
 msgstr ""
 
@@ -526,7 +527,7 @@ msgstr ""
 #: addons/pro/webhook/class-forminator-addon-webhook-form-settings.php:154
 #: addons/pro/webhook/class-forminator-addon-webhook-poll-settings.php:141
 #: addons/pro/webhook/class-forminator-addon-webhook-quiz-settings.php:141
-#: admin/classes/class-admin-l10n.php:102
+#: admin/classes/class-admin-l10n.php:104
 #: library/modules/custom-forms/admin/admin-loader.php:139
 msgid "Save"
 msgstr ""
@@ -563,7 +564,7 @@ msgstr ""
 #: addons/pro/mailchimp/class-forminator-addon-mailchimp-quiz-settings.php:425
 #: addons/pro/slack/class-forminator-addon-slack-quiz-settings.php:467
 #: addons/pro/trello/class-forminator-addon-trello-quiz-settings.php:489
-#: admin/classes/class-admin-l10n.php:150 admin/locale.php:1391
+#: admin/classes/class-admin-l10n.php:219 admin/locale.php:1391
 #: library/helpers/helper-fields.php:2074
 #: library/modules/quizzes/admin/admin-loader.php:642
 msgid "Quiz Name"
@@ -669,7 +670,7 @@ msgstr ""
 #: addons/pro/slack/class-forminator-addon-slack.php:445
 #: addons/pro/trello/views/settings/success-authorize.php:15
 #: addons/pro/webhook/class-forminator-addon-webhook.php:175
-#: admin/classes/class-admin-l10n.php:82 admin/locale.php:1283
+#: admin/classes/class-admin-l10n.php:84 admin/locale.php:1283
 #: admin/views/addons/addon-details.php:282
 #: admin/views/addons/addons-activate-popup.php:37
 #: admin/views/common/popup/export.php:60
@@ -685,7 +686,7 @@ msgstr ""
 #: addons/pro/slack/class-forminator-addon-slack.php:281
 #: addons/pro/trello/class-forminator-addon-trello.php:363
 #: addons/pro/webhook/class-forminator-addon-webhook.php:180
-#: admin/classes/class-admin-l10n.php:135
+#: admin/classes/class-admin-l10n.php:137
 #: admin/views/settings/payments/section-paypal.php:121
 #: admin/views/settings/payments/section-stripe.php:152
 msgid "Disconnect"
@@ -1300,7 +1301,7 @@ msgstr ""
 #: addons/pro/mailchimp/class-forminator-addon-mailchimp-quiz-settings.php:451
 #: addons/pro/mailchimp/class-forminator-addon-mailchimp-quiz-settings.php:479
 #: addons/pro/mailchimp/class-forminator-addon-mailchimp-quiz-settings.php:500
-#: admin/classes/class-admin-l10n.php:318 admin/locale.php:124
+#: admin/classes/class-admin-l10n.php:387 admin/locale.php:124
 #: library/addon/class-addon-settings-abstract.php:21
 msgid "None"
 msgstr ""
@@ -1771,7 +1772,7 @@ msgstr ""
 #: addons/pro/googlesheet/class-forminator-addon-googlesheet-form-settings.php:281
 #: addons/pro/googlesheet/class-forminator-addon-googlesheet-poll-settings.php:253
 #: addons/pro/googlesheet/class-forminator-addon-googlesheet-quiz-settings.php:253
-#: admin/classes/class-admin-l10n.php:133
+#: admin/classes/class-admin-l10n.php:135
 #: admin/views/common/dashboard/widget.php:46
 #: admin/views/common/dashboard/widget.php:215
 #: admin/views/common/list/empty_content.php:47
@@ -1813,14 +1814,14 @@ msgstr ""
 #: addons/pro/googlesheet/class-forminator-addon-googlesheet-quiz-hooks.php:247
 #: addons/pro/slack/class-forminator-addon-slack-quiz-hooks.php:290
 #: admin/views/quiz/entries/content-leads-none.php:167
-#: admin/views/quiz/entries/content-leads.php:338 library/class-export.php:542
+#: admin/views/quiz/entries/content-leads.php:338 library/class-export.php:544
 msgid "Correct"
 msgstr ""
 
 #: addons/pro/googlesheet/class-forminator-addon-googlesheet-quiz-hooks.php:247
 #: addons/pro/slack/class-forminator-addon-slack-quiz-hooks.php:290
 #: admin/views/quiz/entries/content-leads-none.php:169
-#: admin/views/quiz/entries/content-leads.php:340 library/class-export.php:542
+#: admin/views/quiz/entries/content-leads.php:340 library/class-export.php:544
 msgid "Incorrect"
 msgstr ""
 
@@ -2229,8 +2230,8 @@ msgstr ""
 
 #: addons/pro/hubspot/class-forminator-addon-hubspot-form-settings.php:210
 #: addons/pro/hubspot/class-forminator-addon-hubspot-quiz-settings.php:229
-#: admin/classes/class-admin-l10n.php:163
-#: admin/classes/class-admin-l10n.php:171
+#: admin/classes/class-admin-l10n.php:232
+#: admin/classes/class-admin-l10n.php:240
 #: library/modules/polls/admin/admin-loader.php:195
 #: library/modules/quizzes/admin/admin-loader.php:588
 msgid "Continue"
@@ -2266,6 +2267,7 @@ msgstr ""
 #: addons/pro/webhook/class-forminator-addon-webhook.php:184
 #: admin/views/addons/addons-activate-popup.php:48
 #: admin/views/addons/addons-list.php:52 admin/views/addons/addons-list.php:238
+#: admin/views/common/reports/tab-notification.php:36
 msgid "Activate"
 msgstr ""
 
@@ -2646,6 +2648,7 @@ msgstr ""
 #: addons/pro/mailchimp/class-forminator-addon-mailchimp-form-settings.php:538
 #: addons/pro/mailchimp/class-forminator-addon-mailchimp-form-settings.php:861
 #: addons/pro/mailchimp/class-forminator-addon-mailchimp-quiz-settings.php:372
+#: admin/classes/class-admin-l10n.php:150
 #: library/modules/polls/admin/admin-loader.php:193
 #: library/modules/quizzes/admin/admin-loader.php:586
 msgid "Back"
@@ -2839,8 +2842,8 @@ msgid "is connected successfully."
 msgstr ""
 
 #: addons/pro/mailchimp/class-forminator-addon-mailchimp.php:669
-#: admin/classes/class-admin-ajax.php:1922
-#: admin/classes/class-admin-ajax.php:2048
+#: admin/classes/class-admin-ajax.php:1927
+#: admin/classes/class-admin-ajax.php:2053
 msgid "Connect"
 msgstr ""
 
@@ -2996,7 +2999,7 @@ msgstr ""
 
 #: addons/pro/slack/class-forminator-addon-slack-poll-hooks.php:274
 #: addons/pro/trello/class-forminator-addon-trello-poll-hooks.php:383
-#: library/class-export.php:593
+#: library/class-export.php:595
 msgid "Extra"
 msgstr ""
 
@@ -3079,7 +3082,7 @@ msgstr ""
 #: addons/pro/slack/views/quiz-settings/select-target.php:52
 #: addons/pro/slack/views/quiz-settings/select-type.php:51 admin/locale.php:420
 #: admin/views/common/entries/content.php:34
-#: admin/views/common/reports/tab-dashboard.php:24
+#: admin/views/common/reports/tab-dashboard.php:23
 msgid "Type"
 msgstr ""
 
@@ -3504,38 +3507,38 @@ msgstr ""
 msgid "Due Date"
 msgstr ""
 
-#: addons/pro/trello/views/form-settings/setup-card.php:133
-#: addons/pro/trello/views/poll-settings/setup-card.php:133
-#: addons/pro/trello/views/quiz-settings/setup-card.php:143
+#: addons/pro/trello/views/form-settings/setup-card.php:134
+#: addons/pro/trello/views/poll-settings/setup-card.php:134
+#: addons/pro/trello/views/quiz-settings/setup-card.php:144
 msgid "Select a due date"
 msgstr ""
 
-#: addons/pro/trello/views/form-settings/setup-card.php:149
+#: addons/pro/trello/views/form-settings/setup-card.php:150
 msgid "You don't have a datepicker field in your form."
 msgstr ""
 
-#: addons/pro/trello/views/form-settings/setup-card.php:166
+#: addons/pro/trello/views/form-settings/setup-card.php:167
 msgid "Card Position"
 msgstr ""
 
-#: addons/pro/trello/views/form-settings/setup-card.php:185
-#: addons/pro/trello/views/poll-settings/setup-card.php:168
-#: addons/pro/trello/views/quiz-settings/setup-card.php:179
+#: addons/pro/trello/views/form-settings/setup-card.php:186
+#: addons/pro/trello/views/poll-settings/setup-card.php:169
+#: addons/pro/trello/views/quiz-settings/setup-card.php:180
 #: admin/locale.php:916
 msgid "Labels"
 msgstr ""
 
-#: addons/pro/trello/views/form-settings/setup-card.php:195
+#: addons/pro/trello/views/form-settings/setup-card.php:196
 msgid "Click here to add labels"
 msgstr ""
 
-#: addons/pro/trello/views/form-settings/setup-card.php:234
-#: addons/pro/trello/views/poll-settings/setup-card.php:217
-#: addons/pro/trello/views/quiz-settings/setup-card.php:225
+#: addons/pro/trello/views/form-settings/setup-card.php:235
+#: addons/pro/trello/views/poll-settings/setup-card.php:218
+#: addons/pro/trello/views/quiz-settings/setup-card.php:226
 msgid "Members"
 msgstr ""
 
-#: addons/pro/trello/views/form-settings/setup-card.php:244
+#: addons/pro/trello/views/form-settings/setup-card.php:245
 msgid "Click here to add members"
 msgstr ""
 
@@ -3552,18 +3555,18 @@ msgstr ""
 msgid "Assign List"
 msgstr ""
 
-#: addons/pro/trello/views/poll-settings/setup-card.php:148
-#: addons/pro/trello/views/quiz-settings/setup-card.php:159
+#: addons/pro/trello/views/poll-settings/setup-card.php:149
+#: addons/pro/trello/views/quiz-settings/setup-card.php:160
 msgid "Position"
 msgstr ""
 
-#: addons/pro/trello/views/poll-settings/setup-card.php:178
-#: addons/pro/trello/views/quiz-settings/setup-card.php:189
+#: addons/pro/trello/views/poll-settings/setup-card.php:179
+#: addons/pro/trello/views/quiz-settings/setup-card.php:190
 msgid "Enter label name"
 msgstr ""
 
-#: addons/pro/trello/views/poll-settings/setup-card.php:225
-#: addons/pro/trello/views/quiz-settings/setup-card.php:235
+#: addons/pro/trello/views/poll-settings/setup-card.php:226
+#: addons/pro/trello/views/quiz-settings/setup-card.php:236
 msgid "Enter member name"
 msgstr ""
 
@@ -3800,8 +3803,8 @@ msgstr ""
 
 #: admin/abstracts/class-admin-import-mediator.php:236
 #: admin/abstracts/class-admin-import-mediator.php:240
-#: admin/classes/class-admin-ajax.php:1217
-#: admin/classes/class-admin-ajax.php:1221
+#: admin/classes/class-admin-ajax.php:1222
+#: admin/classes/class-admin-ajax.php:1226
 msgid ""
 "Oops, looks like we found an issue. Import text can not include whitespace "
 "or special characters."
@@ -3847,7 +3850,7 @@ msgid "Open list settings"
 msgstr ""
 
 #: admin/abstracts/class-admin-module-edit-page.php:282
-#: admin/classes/class-admin-l10n.php:291 admin/locale.php:922
+#: admin/classes/class-admin-l10n.php:360 admin/locale.php:922
 #: admin/views/common/dashboard/widget.php:134
 #: library/modules/polls/admin/admin-loader.php:178
 #: library/modules/quizzes/admin/admin-loader.php:529
@@ -3862,17 +3865,19 @@ msgstr ""
 #: admin/abstracts/class-admin-module-edit-page.php:309 admin/locale.php:828
 #: library/modules/custom-forms/admin/admin-page-view.php:31
 #: library/modules/polls/admin/admin-page-view.php:58
+#: library/modules/quizzes/admin/admin-page-view.php:112
 msgid "Unpublish"
 msgstr ""
 
 #: admin/abstracts/class-admin-module-edit-page.php:311 admin/locale.php:831
 #: library/modules/custom-forms/admin/admin-page-view.php:30
 #: library/modules/polls/admin/admin-page-view.php:57
+#: library/modules/quizzes/admin/admin-page-view.php:111
 msgid "Publish"
 msgstr ""
 
 #: admin/abstracts/class-admin-module-edit-page.php:319 admin/locale.php:1567
-#: admin/views/common/dashboard/widget.php:141 library/class-export.php:1461
+#: admin/views/common/dashboard/widget.php:141 library/class-export.php:1463
 msgid "View Submissions"
 msgstr ""
 
@@ -3902,7 +3907,7 @@ msgstr ""
 #: admin/abstracts/class-admin-module-edit-page.php:347 admin/locale.php:1570
 #: library/modules/custom-forms/admin/admin-page-view.php:33
 #: library/modules/polls/admin/admin-page-view.php:60
-#: library/modules/quizzes/admin/admin-page-view.php:112
+#: library/modules/quizzes/admin/admin-page-view.php:114
 msgid "Reset Tracking Data"
 msgstr ""
 
@@ -3950,14 +3955,15 @@ msgid "Are you sure you wish to permanently delete this %s?"
 msgstr ""
 
 #: admin/abstracts/class-admin-module-edit-page.php:400
-#: admin/classes/class-admin-l10n.php:86 admin/classes/class-admin-l10n.php:179
-#: admin/classes/class-admin-l10n.php:224 admin/locale.php:201
+#: admin/classes/class-admin-l10n.php:88 admin/classes/class-admin-l10n.php:248
+#: admin/classes/class-admin-l10n.php:293 admin/locale.php:201
 #: admin/views/addons/addons-list.php:63 admin/views/addons/addons-list.php:255
 #: admin/views/common/dashboard/widget.php:193
+#: admin/views/common/reports/tab-notification.php:38
 #: admin/views/quiz/entries/content-leads.php:538
 #: library/modules/custom-forms/admin/admin-page-view.php:36
 #: library/modules/polls/admin/admin-page-view.php:62
-#: library/modules/quizzes/admin/admin-page-view.php:114
+#: library/modules/quizzes/admin/admin-page-view.php:116
 msgid "Delete"
 msgstr ""
 
@@ -3966,7 +3972,9 @@ msgid "Open item"
 msgstr ""
 
 #: admin/abstracts/class-admin-module-edit-page.php:424
+#: admin/classes/class-admin-l10n.php:174
 #: admin/views/common/reports/chart-content.php:25
+#: admin/views/common/reports/email-report.php:117
 #: admin/views/common/reports/report-content.php:26
 msgid "Views"
 msgstr ""
@@ -3977,12 +3985,13 @@ msgstr ""
 
 #: admin/abstracts/class-admin-module-edit-page.php:433
 #: admin/abstracts/class-admin-module-edit-page.php:449
-#: admin/classes/class-admin.php:244 admin/locale.php:243
-#: admin/pages/reports-page.php:205
+#: admin/classes/class-admin-l10n.php:176 admin/classes/class-admin.php:244
+#: admin/locale.php:243 admin/pages/reports-page.php:205
 #: admin/views/common/entries/content-none.php:2
 #: admin/views/common/entries/header.php:2
 #: admin/views/common/list/chart_script.php:37
 #: admin/views/common/reports/chart-content.php:29
+#: admin/views/common/reports/email-report.php:118
 #: admin/views/common/reports/report-content.php:81
 #: admin/views/settings/content.php:34 admin/views/settings/content.php:56
 #: admin/views/settings/tab-pagination.php:33
@@ -4091,13 +4100,13 @@ msgid "Membership"
 msgstr ""
 
 #: admin/abstracts/class-admin-page.php:270
-#: admin/classes/class-admin-l10n.php:338 admin/locale.php:1428
+#: admin/classes/class-admin-l10n.php:407 admin/locale.php:1428
 #: library/modules/quizzes/admin/admin-loader.php:625
 msgid "Facebook"
 msgstr ""
 
 #: admin/abstracts/class-admin-page.php:274
-#: admin/classes/class-admin-l10n.php:339 admin/locale.php:1429
+#: admin/classes/class-admin-l10n.php:408 admin/locale.php:1429
 #: library/modules/quizzes/admin/admin-loader.php:626
 msgid "Twitter"
 msgstr ""
@@ -4127,7 +4136,7 @@ msgid ""
 msgstr ""
 
 #: admin/abstracts/class-admin-page.php:588
-#: admin/classes/class-admin-l10n.php:145
+#: admin/classes/class-admin-l10n.php:147
 #: admin/views/custom-form/list/header.php:2
 #: admin/views/custom-form/popup/import-cf7.php:34
 #: admin/views/dashboard/widgets/widget-cform.php:3
@@ -4139,6 +4148,7 @@ msgid "Forms"
 msgstr ""
 
 #: admin/abstracts/class-admin-page.php:593
+#: admin/classes/class-admin-l10n.php:149
 #: admin/views/dashboard/widgets/widget-poll.php:3
 #: admin/views/poll/list/header.php:2 admin/views/settings/tab-dashboard.php:18
 #: library/class-modules.php:58 library/class-shortcode-generator.php:221
@@ -4149,6 +4159,7 @@ msgid "Polls"
 msgstr ""
 
 #: admin/abstracts/class-admin-page.php:598
+#: admin/classes/class-admin-l10n.php:148
 #: admin/views/dashboard/widgets/widget-quiz.php:3
 #: admin/views/quiz/list/header.php:2 admin/views/settings/tab-dashboard.php:19
 #: library/class-modules.php:63 library/class-shortcode-generator.php:232
@@ -4164,6 +4175,7 @@ msgid "Showing %$1s of %$2s fields"
 msgstr ""
 
 #: admin/abstracts/class-admin-view-page.php:308
+#: admin/views/common/reports/tab-notification.php:35
 msgid "Bulk Actions"
 msgstr ""
 
@@ -4178,6 +4190,7 @@ msgstr ""
 #: admin/abstracts/class-admin-view-page.php:317 admin/locale.php:479
 #: admin/views/common/entries/filter.php:280
 #: admin/views/common/list/main_content.php:41
+#: admin/views/common/reports/tab-notification.php:41
 msgid "Apply"
 msgstr ""
 
@@ -4243,16 +4256,16 @@ msgstr ""
 msgid "Use conditional logic to process payments based on form input field values."
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:151
-#: admin/classes/class-admin-ajax.php:207
-#: admin/classes/class-admin-ajax.php:247 library/addon/admin/class-ajax.php:89
+#: admin/classes/class-admin-ajax.php:156
+#: admin/classes/class-admin-ajax.php:212
+#: admin/classes/class-admin-ajax.php:252 library/addon/admin/class-ajax.php:89
 #: library/class-export.php:179 library/helpers/helper-core.php:116
-#: library/modules/custom-forms/front/front-action.php:2363
+#: library/modules/custom-forms/front/front-action.php:2377
 msgid "Invalid request, you are not allowed to do that action."
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:278
-#: admin/classes/class-admin-ajax.php:350 library/class-api.php:290
+#: admin/classes/class-admin-ajax.php:283
+#: admin/classes/class-admin-ajax.php:355 library/class-api.php:290
 #: library/class-api.php:329 library/class-api.php:450
 #: library/class-api.php:492 library/class-api.php:527
 #: library/class-api.php:567 library/class-api.php:611
@@ -4262,192 +4275,199 @@ msgstr ""
 msgid "Form model doesn't exist"
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:434 admin/locale.php:1220
+#: admin/classes/class-admin-ajax.php:439
+#: admin/classes/class-admin-ajax.php:2380
+#: admin/classes/class-admin-ajax.php:2412
+#: admin/classes/class-admin-ajax.php:2442 admin/locale.php:1220
 #: library/abstracts/abstract-class-front-action.php:984
 msgid "Something went wrong."
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:437
+#: admin/classes/class-admin-ajax.php:442
 msgid "Preset successfully applied to %d form(s)."
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:474
+#: admin/classes/class-admin-ajax.php:479
 msgid "Preset Name is empty."
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:499
+#: admin/classes/class-admin-ajax.php:504
 msgid "Preset ID is empty."
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:502
+#: admin/classes/class-admin-ajax.php:507
 msgid "Preset ID is incorrect."
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:525
+#: admin/classes/class-admin-ajax.php:530
 msgid "Appearance preset id doesn't exist"
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:535
+#: admin/classes/class-admin-ajax.php:540
 msgid "The preset has been successfully updated."
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:725
+#: admin/classes/class-admin-ajax.php:730
 msgid "You have to first save your credentials to load the reCAPTCHA . "
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:756
+#: admin/classes/class-admin-ajax.php:761
 msgid "Save your API keys to load the hCAPTCHA preview."
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:794
-#: admin/classes/class-admin-ajax.php:1614
-#: admin/classes/class-admin-ajax.php:1697
+#: admin/classes/class-admin-ajax.php:799
+#: admin/classes/class-admin-ajax.php:1619
+#: admin/classes/class-admin-ajax.php:1702
 msgid "Limit per page can not be less than one."
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:906
+#: admin/classes/class-admin-ajax.php:911
 msgid "Not valid module ID provided."
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:922
+#: admin/classes/class-admin-ajax.php:927
 msgid "No ID was provided."
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:928
+#: admin/classes/class-admin-ajax.php:933
 msgid "Exports cleared."
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:930
+#: admin/classes/class-admin-ajax.php:935
 msgid "Exports couldn't be cleared."
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:1176
+#: admin/classes/class-admin-ajax.php:1181
 msgid "Required id parameter is not set."
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:1181
+#: admin/classes/class-admin-ajax.php:1186
 msgid "Tracking Data has been reset successfully."
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:1191
-#: admin/classes/class-admin-ajax.php:1388
-#: admin/classes/class-admin-ajax.php:1454
-#: admin/classes/class-admin-ajax.php:1521
+#: admin/classes/class-admin-ajax.php:1196
+#: admin/classes/class-admin-ajax.php:1393
+#: admin/classes/class-admin-ajax.php:1459
+#: admin/classes/class-admin-ajax.php:1526
 msgid "Import Export Feature disabled."
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:1213
+#: admin/classes/class-admin-ajax.php:1218
 msgid "Import text can not be empty."
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:1232
+#: admin/classes/class-admin-ajax.php:1237
 msgid ""
 "Failed to import module, please make sure import text is valid, and try "
 "again."
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:1420
+#: admin/classes/class-admin-ajax.php:1425
 msgid "Can't find form to import"
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:1424
-#: admin/classes/class-admin-ajax.php:1493
+#: admin/classes/class-admin-ajax.php:1429
+#: admin/classes/class-admin-ajax.php:1498
 msgid "Could not import the forms. Check if the selected form plugin is active"
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:1723
+#: admin/classes/class-admin-ajax.php:1728
 msgid "Stripe account disconnected successfully."
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:1750
+#: admin/classes/class-admin-ajax.php:1755
 msgid "PayPal account disconnected successfully."
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:1876
+#: admin/classes/class-admin-ajax.php:1881
 msgid ""
 "Stripe account connected successfully. You can now add the Stripe field to "
 "your forms and start collecting payments."
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:1886
+#: admin/classes/class-admin-ajax.php:1891
 msgid "Please input test publishable key"
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:1889
+#: admin/classes/class-admin-ajax.php:1894
 msgid "Please input test secret key"
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:1892
+#: admin/classes/class-admin-ajax.php:1897
 msgid "Please input live publishable key"
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:1895
-#: admin/classes/class-admin-ajax.php:2021
+#: admin/classes/class-admin-ajax.php:1900
+#: admin/classes/class-admin-ajax.php:2026
 msgid "Please input live secret key"
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:1898
+#: admin/classes/class-admin-ajax.php:1903
 msgid "You've entered an invalid test secret key"
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:1901
-#: admin/classes/class-admin-ajax.php:2027
+#: admin/classes/class-admin-ajax.php:1906
+#: admin/classes/class-admin-ajax.php:2032
 msgid "You've entered an invalid live secret key"
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:1904
+#: admin/classes/class-admin-ajax.php:1909
 msgid "You've entered an invalid test publishable key"
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:1907
+#: admin/classes/class-admin-ajax.php:1912
 msgid "You've entered an invalid live publishable key"
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:2002
+#: admin/classes/class-admin-ajax.php:2007
 msgid ""
 "PayPal account connected successfully. You can now add the PayPal field to "
 "your forms and start collecting payments."
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:2012
+#: admin/classes/class-admin-ajax.php:2017
 msgid "Please input sandbox client id"
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:2015
+#: admin/classes/class-admin-ajax.php:2020
 msgid "Please input sandbox secret key"
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:2018
+#: admin/classes/class-admin-ajax.php:2023
 msgid "Please input live client id"
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:2024
+#: admin/classes/class-admin-ajax.php:2029
 msgid "You've entered an invalid sandbox secret key"
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:2030
+#: admin/classes/class-admin-ajax.php:2035
 msgid "You've entered an invalid sandbox client id"
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:2033
+#: admin/classes/class-admin-ajax.php:2038
 msgid "You've entered an invalid live client id"
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:2217
+#: admin/classes/class-admin-ajax.php:2222
 msgid "All the submissions deleted successfully."
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:2224
+#: admin/classes/class-admin-ajax.php:2229
 msgid "Submission delete failed."
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:2267
-#: admin/classes/class-admin-ajax.php:2318
+#: admin/classes/class-admin-ajax.php:2272
+#: admin/classes/class-admin-ajax.php:2323
 msgid "Required field missing"
 msgstr ""
 
-#: admin/classes/class-admin-ajax.php:2277
+#: admin/classes/class-admin-ajax.php:2282
 msgid "Unexpected action, we could not handle it."
+msgstr ""
+
+#: admin/classes/class-admin-ajax.php:2358 library/class-export.php:217
+msgid "Invalid email."
 msgstr ""
 
 #: admin/classes/class-admin-l10n.php:42 admin/locale.php:788
@@ -4462,9 +4482,9 @@ msgstr ""
 msgid "Fields"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:46 admin/classes/class-admin-l10n.php:246
+#: admin/classes/class-admin-l10n.php:46 admin/classes/class-admin-l10n.php:315
 #: admin/locale.php:238 library/class-export.php:445
-#: library/class-export.php:591 library/fields/date.php:70
+#: library/class-export.php:593 library/fields/date.php:70
 msgid "Date"
 msgstr ""
 
@@ -4504,193 +4524,201 @@ msgstr ""
 msgid "Day of the week"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:56 admin/locale.php:1115
+#: admin/classes/class-admin-l10n.php:56
+msgid "Day of the month"
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:57
+msgid "Month of the year"
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:58 admin/locale.php:1115
 #: library/helpers/helper-core.php:875 library/helpers/helper-fields.php:446
 msgid "Monday"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:57 admin/locale.php:1117
+#: admin/classes/class-admin-l10n.php:59 admin/locale.php:1117
 #: library/helpers/helper-core.php:876 library/helpers/helper-fields.php:447
 msgid "Tuesday"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:58 admin/locale.php:1113
+#: admin/classes/class-admin-l10n.php:60 admin/locale.php:1113
 #: library/helpers/helper-core.php:877 library/helpers/helper-fields.php:448
 msgid "Wednesday"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:59 admin/locale.php:1116
+#: admin/classes/class-admin-l10n.php:61 admin/locale.php:1116
 #: library/helpers/helper-core.php:878 library/helpers/helper-fields.php:449
 msgid "Thursday"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:60 admin/locale.php:1118
+#: admin/classes/class-admin-l10n.php:62 admin/locale.php:1118
 #: library/helpers/helper-core.php:879 library/helpers/helper-fields.php:450
 msgid "Friday"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:61 admin/locale.php:1114
+#: admin/classes/class-admin-l10n.php:63 admin/locale.php:1114
 #: library/helpers/helper-core.php:880 library/helpers/helper-fields.php:451
 msgid "Saturday"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:62 admin/locale.php:1112
+#: admin/classes/class-admin-l10n.php:64 admin/locale.php:1112
 #: library/helpers/helper-core.php:881 library/helpers/helper-fields.php:445
 msgid "Sunday"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:63
+#: admin/classes/class-admin-l10n.php:65
 msgid "Time of the day"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:64
+#: admin/classes/class-admin-l10n.php:66
 msgid "Email export data to"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:65
+#: admin/classes/class-admin-l10n.php:67
 msgid "E.g., john@doe.com"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:66
+#: admin/classes/class-admin-l10n.php:68
 msgid "Leave blank if you don't want to receive exports via email."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:67
+#: admin/classes/class-admin-l10n.php:69
 msgid "Congratulations!"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:68
+#: admin/classes/class-admin-l10n.php:70
 msgid "is ready!"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:69
+#: admin/classes/class-admin-l10n.php:71
 msgid ""
 "Add it to any post / page by clicking Forminator button, or set it up as a "
 "Widget."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:70
+#: admin/classes/class-admin-l10n.php:72
 msgid "Edit PayPal credentials"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:71
+#: admin/classes/class-admin-l10n.php:73
 #: admin/views/custom-form/list/content.php:21
 #: admin/views/dashboard/widgets/widget-cform.php:6
 msgid "Preview Custom Form"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:72
+#: admin/classes/class-admin-l10n.php:74
 #: admin/views/dashboard/widgets/widget-poll.php:6
 #: admin/views/poll/list/content.php:21
 msgid "Preview Poll"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:73
+#: admin/classes/class-admin-l10n.php:75
 #: admin/views/dashboard/widgets/widget-quiz.php:6
 #: admin/views/quiz/list/content.php:27
 #: library/modules/quizzes/admin/admin-loader.php:530
 msgid "Preview Quiz"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:74
+#: admin/classes/class-admin-l10n.php:76
 msgid "Edit reCAPTCHA credentials"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:75
+#: admin/classes/class-admin-l10n.php:77
 msgid "Edit default currency"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:76
+#: admin/classes/class-admin-l10n.php:78
 msgid "Submissions | Pagination Settings"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:77
+#: admin/classes/class-admin-l10n.php:79
 msgid "Listings | Pagination Settings"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:78
+#: admin/classes/class-admin-l10n.php:80
 msgid "Email Settings"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:79
+#: admin/classes/class-admin-l10n.php:81
 msgid "Uninstall Settings"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:80
+#: admin/classes/class-admin-l10n.php:82
 msgid "Privacy Settings"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:81
+#: admin/classes/class-admin-l10n.php:83
 msgid "Form name cannot be empty! Please pick a name for your form."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:83 admin/locale.php:837
+#: admin/classes/class-admin-l10n.php:85 admin/locale.php:837
 msgid "Close this dialog window"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:84
+#: admin/classes/class-admin-l10n.php:86
 msgid "Go back"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:85
+#: admin/classes/class-admin-l10n.php:87
 msgid "Records"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:87
+#: admin/classes/class-admin-l10n.php:89
 msgid "Confirm"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:88
+#: admin/classes/class-admin-l10n.php:90
 msgid "Are you sure?"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:89
+#: admin/classes/class-admin-l10n.php:91
 msgid "Have in mind this action cannot be reverted."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:90
+#: admin/classes/class-admin-l10n.php:92
 #: admin/views/dashboard/widgets/widget-cform.php:8
 msgid "Are you sure you wish to permanently delete this form?"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:91
+#: admin/classes/class-admin-l10n.php:93
 #: admin/views/dashboard/widgets/widget-poll.php:8
 msgid "Are you sure you wish to permanently delete this poll?"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:92
+#: admin/classes/class-admin-l10n.php:94
 #: admin/views/dashboard/widgets/widget-quiz.php:8
 msgid "Are you sure you wish to permanently delete this quiz?"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:93
+#: admin/classes/class-admin-l10n.php:95
 #: admin/views/dashboard/widgets/widget-cform.php:7
 msgid "Delete Form"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:94
+#: admin/classes/class-admin-l10n.php:96
 #: admin/views/dashboard/widgets/widget-poll.php:7
 msgid "Delete Poll"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:95
+#: admin/classes/class-admin-l10n.php:97
 #: admin/views/dashboard/widgets/widget-quiz.php:7
 msgid "Delete Quiz"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:96
+#: admin/classes/class-admin-l10n.php:98
 msgid "Please confirm that you want to do this action."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:97
+#: admin/classes/class-admin-l10n.php:99
 msgid "Confirm Action"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:98
+#: admin/classes/class-admin-l10n.php:100
 msgid "Please confirm that you want to delete this field"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:99 admin/locale.php:856
+#: admin/classes/class-admin-l10n.php:101 admin/locale.php:856
 #: admin/views/common/popup/import.php:50
 #: admin/views/custom-form/popup/import-cf7.php:503
 #: admin/views/custom-form/popup/import-gravityforms.php:43
@@ -4700,31 +4728,31 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:100
+#: admin/classes/class-admin-l10n.php:102
 msgid "The changes you made may be lost if you navigate away from this page."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:101
+#: admin/classes/class-admin-l10n.php:103
 msgid "Save Changes"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:103
+#: admin/classes/class-admin-l10n.php:105
 msgid "Export Form"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:104
+#: admin/classes/class-admin-l10n.php:106
 msgid "Export Poll"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:105
+#: admin/classes/class-admin-l10n.php:107
 msgid "Export Quiz"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:106
+#: admin/classes/class-admin-l10n.php:108
 msgid "Import Form"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:107 admin/locale.php:1163
+#: admin/classes/class-admin-l10n.php:109 admin/locale.php:1163
 #: admin/views/common/list/empty_content.php:54
 #: admin/views/common/list/header.php:15 admin/views/common/popup/import.php:57
 #: admin/views/custom-form/popup/import-gravityforms.php:50
@@ -4734,410 +4762,661 @@ msgstr ""
 msgid "Import"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:108
+#: admin/classes/class-admin-l10n.php:110
 #: admin/views/settings/tab-import.php:85
 msgid "Import Ninja Forms"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:109
+#: admin/classes/class-admin-l10n.php:111
 #: admin/views/settings/tab-import.php:107
 msgid "Import Gravity Forms"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:110
+#: admin/classes/class-admin-l10n.php:112
 msgid "Import Poll"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:111
+#: admin/classes/class-admin-l10n.php:113
 msgid "Import Quiz"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:112
+#: admin/classes/class-admin-l10n.php:114
 msgid "Enable scheduled exports"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:113
+#: admin/classes/class-admin-l10n.php:115
 msgid "Send email only if there are new submissions"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:114
+#: admin/classes/class-admin-l10n.php:116
 msgid "Download CSV"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:115
+#: admin/classes/class-admin-l10n.php:117
 msgid "Scheduled Exports"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:116
+#: admin/classes/class-admin-l10n.php:118
 msgid "Manual Exports"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:117
+#: admin/classes/class-admin-l10n.php:119
 msgid "Download the submissions list in .csv format."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:118
+#: admin/classes/class-admin-l10n.php:120
 msgid "Enable scheduled exports to get the submissions list in your email."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:119 admin/locale.php:476
+#: admin/classes/class-admin-l10n.php:121 admin/locale.php:476
 msgid "Disable"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:120
-#: admin/classes/class-admin-l10n.php:286 admin/locale.php:457
+#: admin/classes/class-admin-l10n.php:122
+#: admin/classes/class-admin-l10n.php:355 admin/locale.php:457
 #: admin/views/settings/tab-editor.php:24
 #: library/modules/quizzes/admin/admin-loader.php:630
 msgid "Enable"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:121
+#: admin/classes/class-admin-l10n.php:123
 msgid "Enter a name"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:122
+#: admin/classes/class-admin-l10n.php:124
 msgid "Name your new form, then let's start building!"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:123
+#: admin/classes/class-admin-l10n.php:125
 msgid "Name your new poll, then let's start building!"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:124
+#: admin/classes/class-admin-l10n.php:126
 msgid ""
 "Choose whether you want to collect participants details (e.g. name, email, "
 "etc.) on your quiz."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:125 admin/classes/class-admin.php:583
+#: admin/classes/class-admin-l10n.php:127 admin/classes/class-admin.php:583
 #: admin/views/dashboard/footer-free.php:64
 msgid "Learn more"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:126
+#: admin/classes/class-admin-l10n.php:128
 msgid "Input Label"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:127
+#: admin/classes/class-admin-l10n.php:129
 msgid "Form name cannot be empty."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:128
+#: admin/classes/class-admin-l10n.php:130
 msgid "Poll name cannot be empty."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:129
+#: admin/classes/class-admin-l10n.php:131
 msgid "Quiz name cannot be empty."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:130
+#: admin/classes/class-admin-l10n.php:132
 msgid "E.g., Blank Form"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:131
+#: admin/classes/class-admin-l10n.php:133
 msgid "E.g., Blank Poll"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:132
+#: admin/classes/class-admin-l10n.php:134
 msgid "E.g., My Awesome Quiz"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:134 admin/views/settings/tab-data.php:76
+#: admin/classes/class-admin-l10n.php:136 admin/views/settings/tab-data.php:76
 msgid "RESET"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:136
+#: admin/classes/class-admin-l10n.php:138
 msgid "Apply Submission Filters"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:137
+#: admin/classes/class-admin-l10n.php:139
 msgid ""
 "This template allows you to create your own registration form and insert it "
 "on a custom page. This doesn't modify the default registration form."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:138
+#: admin/classes/class-admin-l10n.php:140
 msgid ""
 "This template allows you to create your own login form and insert it on a "
 "custom page. This doesn't modify the default login form."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:139
+#: admin/classes/class-admin-l10n.php:141
 msgid "Approve"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:140 admin/locale.php:8
+#: admin/classes/class-admin-l10n.php:142 admin/locale.php:8
 msgid "User Registration"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:141
-#: admin/classes/class-admin-l10n.php:254 admin/locale.php:9
+#: admin/classes/class-admin-l10n.php:143
+#: admin/classes/class-admin-l10n.php:323 admin/locale.php:9
 #: library/helpers/helper-fields.php:380
 msgid "User Login"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:143
+#: admin/classes/class-admin-l10n.php:145
 msgid "Are you sure you want to deactivate this Add-on?"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:144
+#: admin/classes/class-admin-l10n.php:146
 msgid "Deactivate Anyway"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:148
+#: admin/classes/class-admin-l10n.php:151 admin/classes/class-admin.php:222
+#: admin/classes/class-admin.php:729 admin/locale.php:186
+#: admin/views/settings/header.php:2
+#: library/modules/quizzes/admin/admin-loader.php:527
+msgid "Settings"
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:152
+msgid "Configure and customize the content of your report."
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:153
+msgid "The label is to help you identify this report notification."
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:154
+msgid "Choose a module for this report."
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:155
+msgid "Select forms"
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:156
+msgid "Choose the forms you want to include in this report."
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:157
+#: admin/views/custom-form/popup/import-gravityforms.php:19
+#: admin/views/custom-form/popup/import-ninjaforms.php:19
+msgid "All Forms"
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:158
+msgid "Selected Forms"
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:159
+msgid "Select one or more forms to include in this report."
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:160
+msgid "All Quizzes"
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:161
+msgid "Select quizzes"
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:162
+msgid "Selected quizzes"
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:163
+msgid "Choose the quizzes you want to include in this report."
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:164
+msgid "Select one or more quizzes to include in this report."
+msgstr ""
+
 #: admin/classes/class-admin-l10n.php:165
+msgid "All Polls"
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:166
+msgid "Select polls"
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:167
+msgid "Selected polls"
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:168
+msgid "Choose the polls you want to include in this report."
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:169
+msgid "Select one or more polls to include in this report."
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:170
+msgid "Report stats"
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:171
+msgid "All stats"
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:172
+msgid "Stats"
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:173
+msgid "Select the stats data to show in this reports."
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:175
+msgid "Bounce rates"
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:177
+msgid "Conversion rates"
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:178 admin/locale.php:244
+#: admin/views/common/reports/email-report.php:121
+#: admin/views/common/reports/report-content.php:51
+#: admin/views/settings/content.php:38 admin/views/settings/content.php:57
+#: admin/views/settings/tab-payments.php:10
+msgid "Payments"
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:179 admin/locale.php:1453
+#: admin/views/common/reports/report-content.php:65
+msgid "Leads"
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:180
+#: admin/views/common/reports/tab-notification.php:74
+msgid "Schedule"
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:181
+msgid "Choose how often you want to receive this report email."
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:182
+msgid "Choose the frequency of receiving the report email."
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:184 admin/locale.php:888
+#: admin/views/common/reports/tab-notification.php:73
+msgid "Recipients"
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:185
+msgid "Add the report email recipients below."
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:186
+msgid "Add users"
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:187
+msgid "Add by email"
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:188
+msgid "Search users"
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:189
+msgid "Users"
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:190
+msgid "Type username"
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:191
+msgid ""
+"You've not added the users. In order to activate the notification you need "
+"to add users first."
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:192
+msgid "You've removed all recipients."
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:193
+msgid "Recipient already exists."
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:194
+msgid "Add user"
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:195
+msgid "Added users"
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:196
+msgid "Remove user"
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:197
+msgid "Resend invite email"
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:198
+msgid "Awaiting confirmation"
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:199
+msgid "Add recipient details."
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:200
+msgid "First name"
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:201 admin/locale.php:676
+msgid "Email address"
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:202
+msgid "Add recipient"
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:203
+msgid "Adding recipient"
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:204 library/fields/name.php:70
+#: library/modules/custom-forms/form-templates/template-contact-form.php:46
+#: library/modules/custom-forms/form-templates/template-contact-form.php:49
+#: library/modules/custom-forms/form-templates/template-leads.php:75
+#: library/modules/custom-forms/form-templates/template-leads.php:78
+#: library/modules/custom-forms/form-templates/template-newsletter.php:46
+#: library/modules/custom-forms/form-templates/template-newsletter.php:49
+#: library/modules/custom-forms/form-templates/template-quote.php:93
+#: library/modules/custom-forms/form-templates/template-quote.php:96
+msgid "E.g. John"
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:205
+msgid ""
+"No recipients added. Please add one or more recipients above to finish "
+"scheduling the report."
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:206
+#: admin/classes/class-admin-l10n.php:209
+#: admin/views/common/reports/tab-notification.php:154
+msgid "Activate report"
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:207 admin/views/addons/addons-list.php:75
+#: admin/views/addons/addons-list.php:194
+#: admin/views/common/reports/tab-notification.php:174
+#: admin/views/settings/payments/section-paypal.php:138
+#: admin/views/settings/payments/section-stripe.php:169
+msgid "Configure"
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:208
+#: admin/views/common/reports/tab-notification.php:154
+msgid "Deactivate report"
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:217
+#: admin/classes/class-admin-l10n.php:234
 msgid "Create Quiz"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:149
+#: admin/classes/class-admin-l10n.php:218
 msgid ""
 "Let's start by giving your quiz a name and choosing the appropriate quiz "
 "type based on your goal."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:151
+#: admin/classes/class-admin-l10n.php:220
 msgid "Quiz Type"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:152
+#: admin/classes/class-admin-l10n.php:221
 msgid "Collect Leads"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:153 admin/locale.php:1398
+#: admin/classes/class-admin-l10n.php:222 admin/locale.php:1398
 msgid "No Pagination"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:154 admin/locale.php:1399
+#: admin/classes/class-admin-l10n.php:223 admin/locale.php:1399
 msgid "Paginated Quiz"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:155
+#: admin/classes/class-admin-l10n.php:224
 msgid "Presentation"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:156
+#: admin/classes/class-admin-l10n.php:225
 msgid "Quiz Presentation"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:157
+#: admin/classes/class-admin-l10n.php:226
 msgid ""
 "How do you want the quiz questions to be presented to your users? You can "
 "break your quiz questions into pages, and display a number of questions at "
 "a time or show all questions at once."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:158
+#: admin/classes/class-admin-l10n.php:227
 msgid ""
 "You can adjust this configuration at any time in the Behavior settings for "
 "your quiz."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:159
+#: admin/classes/class-admin-l10n.php:228
 msgid "Knowledge Quiz"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:160
+#: admin/classes/class-admin-l10n.php:229
 msgid ""
 "Test the knowledge of your visitors on a subject and final score is "
 "calculated based on number of right answers. E.g., Test your music "
 "knowledge."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:161
+#: admin/classes/class-admin-l10n.php:230
 msgid "Personality Quiz"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:162
+#: admin/classes/class-admin-l10n.php:231
 msgid ""
 "Show different outcomes depending on the visitor's answers. There are no "
 "wrong answers. E.g., Which superhero are you?"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:164
+#: admin/classes/class-admin-l10n.php:233
 msgid "Collect leads on your quiz"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:166
+#: admin/classes/class-admin-l10n.php:235
 msgid ""
 "We will automatically create a default lead generation form for you. The "
 "lead generation form uses the Forms module, and some of the settings are "
 "shared between this quiz and the leads form."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:169
+#: admin/classes/class-admin-l10n.php:238
 msgid "Choose a template"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:170
+#: admin/classes/class-admin-l10n.php:239
 msgid "Customize one of our pre-made form templates, or start from scratch."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:172
+#: admin/classes/class-admin-l10n.php:241
 msgid "result"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:173
+#: admin/classes/class-admin-l10n.php:242
 msgid "results"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:176
-#: admin/classes/class-admin-l10n.php:323 admin/locale.php:66
+#: admin/classes/class-admin-l10n.php:245
+#: admin/classes/class-admin-l10n.php:392 admin/locale.php:66
 msgid "Label"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:177
-#: admin/classes/class-admin-l10n.php:324 admin/locale.php:223
+#: admin/classes/class-admin-l10n.php:246
+#: admin/classes/class-admin-l10n.php:393 admin/locale.php:223
 msgid "Value"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:178 admin/locale.php:1156
+#: admin/classes/class-admin-l10n.php:247 admin/locale.php:1156
 msgid "Add Option"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:180
+#: admin/classes/class-admin-l10n.php:249
 msgid "Pick a field"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:181
+#: admin/classes/class-admin-l10n.php:250
 msgid "This field will be"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:182 admin/locale.php:305
+#: admin/classes/class-admin-l10n.php:251 admin/locale.php:305
 msgid "if"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:183
+#: admin/classes/class-admin-l10n.php:252
 msgid "Shown"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:184 admin/locale.php:336
+#: admin/classes/class-admin-l10n.php:253 admin/locale.php:336
 #: library/fields/custom.php:125
 msgid "Hidden"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:187
+#: admin/classes/class-admin-l10n.php:256
 msgid "Poll shadow"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:188
+#: admin/classes/class-admin-l10n.php:257
 msgid "Title text"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:189
+#: admin/classes/class-admin-l10n.php:258
 msgid "Question text"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:190
+#: admin/classes/class-admin-l10n.php:259
 msgid "Answer text"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:191
+#: admin/classes/class-admin-l10n.php:260
 msgid "Input field bg"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:192
+#: admin/classes/class-admin-l10n.php:261
 msgid "Input field border"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:193
+#: admin/classes/class-admin-l10n.php:262
 msgid "Input field placeholder"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:194
+#: admin/classes/class-admin-l10n.php:263
 msgid "Input field text"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:195
+#: admin/classes/class-admin-l10n.php:264
 msgid "Button background"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:196 admin/locale.php:956
+#: admin/classes/class-admin-l10n.php:265 admin/locale.php:956
 msgid "Button text"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:197
+#: admin/classes/class-admin-l10n.php:266
 #: library/modules/polls/admin/admin-loader.php:203
 msgid "Results link"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:200
+#: admin/classes/class-admin-l10n.php:269
 #: library/modules/quizzes/admin/admin-loader.php:544
 msgid "Browse"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:201 library/helpers/helper-core.php:275
+#: admin/classes/class-admin-l10n.php:270 library/helpers/helper-core.php:275
 #: library/modules/quizzes/admin/admin-loader.php:545
 msgid "Clear"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:202
+#: admin/classes/class-admin-l10n.php:271
 msgid "You don't have any results yet."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:203
+#: admin/classes/class-admin-l10n.php:272
 msgid "Select result"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:204
+#: admin/classes/class-admin-l10n.php:273
 msgid "You don't have any answer yet."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:205
+#: admin/classes/class-admin-l10n.php:274
 msgid "Click browse to add image..."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:206
+#: admin/classes/class-admin-l10n.php:275
 msgid "Click on browse to add an image"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:207
+#: admin/classes/class-admin-l10n.php:276
 msgid "Add an answer here"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:208
+#: admin/classes/class-admin-l10n.php:277
 msgid "You don't have any questions yet."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:209 admin/locale.php:1438
+#: admin/classes/class-admin-l10n.php:278 admin/locale.php:1438
 msgid "Add Question"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:210
+#: admin/classes/class-admin-l10n.php:279
 msgid "Add New Question"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:211
+#: admin/classes/class-admin-l10n.php:280
 msgid "Question title"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:212
+#: admin/classes/class-admin-l10n.php:281
 msgid "Question title cannot be empty! Please, add some content to your question."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:213 admin/locale.php:1244
+#: admin/classes/class-admin-l10n.php:282 admin/locale.php:1244
 #: admin/views/quiz/entries/content-leads-none.php:109
 #: library/modules/quizzes/admin/admin-loader.php:583
 msgid "Answers"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:214 admin/locale.php:1319
+#: admin/classes/class-admin-l10n.php:283 admin/locale.php:1319
 #: library/modules/polls/admin/admin-loader.php:169
 msgid "Add Answer"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:215
+#: admin/classes/class-admin-l10n.php:284
 msgid "Add New Answer"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:216
+#: admin/classes/class-admin-l10n.php:285
 msgid "Add Result"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:217
+#: admin/classes/class-admin-l10n.php:286
 msgid "Delete Result"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:218 admin/locale.php:605
+#: admin/classes/class-admin-l10n.php:287 admin/locale.php:605
 #: library/field-autofill-providers/class-wp-post.php:30
 #: library/helpers/helper-fields.php:1135
 #: library/model/class-form-entry-model.php:1599
@@ -5147,11 +5426,11 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:219
+#: admin/classes/class-admin-l10n.php:288
 msgid "Image (optional)"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:220 admin/locale.php:68
+#: admin/classes/class-admin-l10n.php:289 admin/locale.php:68
 #: admin/views/addons/addon-details.php:180
 #: library/field-autofill-providers/class-wp-user.php:47
 #: library/modules/polls/admin/admin-loader.php:181
@@ -5159,606 +5438,614 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:221
+#: admin/classes/class-admin-l10n.php:290
 msgid "Delete this answer"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:222
+#: admin/classes/class-admin-l10n.php:291
 #: library/modules/quizzes/admin/admin-loader.php:589
 msgid "Correct answer"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:223
+#: admin/classes/class-admin-l10n.php:292
 msgid "You don't have any options yet."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:225
+#: admin/classes/class-admin-l10n.php:294
 msgid "Restricted dates:"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:226 admin/locale.php:857
+#: admin/classes/class-admin-l10n.php:295 admin/locale.php:857
 msgid "Add"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:227
+#: admin/classes/class-admin-l10n.php:296
 msgid "Pick custom date(s) to restrict:"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:228 admin/locale.php:1505
+#: admin/classes/class-admin-l10n.php:297 admin/locale.php:1505
 msgid "Form Data"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:229 admin/locale.php:2216
+#: admin/classes/class-admin-l10n.php:298 admin/locale.php:2216
 msgid "Required Fields"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:230 admin/locale.php:2217
+#: admin/classes/class-admin-l10n.php:299 admin/locale.php:2217
 msgid "Optional Fields"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:231
+#: admin/classes/class-admin-l10n.php:300
 msgid "All Submitted Fields"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:232 admin/locale.php:2220
+#: admin/classes/class-admin-l10n.php:301 admin/locale.php:2220
 msgid "Form Name"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:233 admin/locale.php:2218
+#: admin/classes/class-admin-l10n.php:302 admin/locale.php:2218
 msgid "Misc Data"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:234 admin/locale.php:2223
+#: admin/classes/class-admin-l10n.php:303 admin/locale.php:2223
 msgid "Add form data"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:235
+#: admin/classes/class-admin-l10n.php:304
 msgid "has been saved."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:236
+#: admin/classes/class-admin-l10n.php:305
 msgid "has been published."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:237
+#: admin/classes/class-admin-l10n.php:306
 msgid "Error! Form cannot be saved."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:238
+#: admin/classes/class-admin-l10n.php:307
 msgid "Default Value"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:240
+#: admin/classes/class-admin-l10n.php:309
 msgid "Delete this question"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:241
+#: admin/classes/class-admin-l10n.php:310
 msgid "Remove image"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:242
+#: admin/classes/class-admin-l10n.php:311
 msgid "Show extra settings"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:243
+#: admin/classes/class-admin-l10n.php:312
 msgid "Add New Result"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:244
+#: admin/classes/class-admin-l10n.php:313
 msgid ""
 "You need to add at least one result for this quiz so you can re-order the "
 "results priority."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:245 library/helpers/helper-fields.php:366
+#: admin/classes/class-admin-l10n.php:314 library/helpers/helper-fields.php:366
 msgid "User IP Address"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:247 library/helpers/helper-fields.php:371
+#: admin/classes/class-admin-l10n.php:316 library/helpers/helper-fields.php:371
 msgid "Embed Post/Page ID"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:248 library/helpers/helper-fields.php:372
+#: admin/classes/class-admin-l10n.php:317 library/helpers/helper-fields.php:372
 msgid "Embed Post/Page Title"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:249 library/helpers/helper-fields.php:373
+#: admin/classes/class-admin-l10n.php:318 library/helpers/helper-fields.php:373
 msgid "Embed URL"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:250 library/helpers/helper-fields.php:375
+#: admin/classes/class-admin-l10n.php:319 library/helpers/helper-fields.php:375
 msgid "HTTP User Agent"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:251 library/helpers/helper-fields.php:376
+#: admin/classes/class-admin-l10n.php:320 library/helpers/helper-fields.php:376
 msgid "HTTP Refer URL"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:252 library/helpers/helper-fields.php:378
+#: admin/classes/class-admin-l10n.php:321 library/helpers/helper-fields.php:378
 msgid "User Display Name"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:253 library/helpers/helper-fields.php:379
+#: admin/classes/class-admin-l10n.php:322 library/helpers/helper-fields.php:379
 msgid "User Email"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:255 admin/locale.php:951
+#: admin/classes/class-admin-l10n.php:324 admin/locale.php:951
 msgid "Shortcode has been copied successfully."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:256
+#: admin/classes/class-admin-l10n.php:325
 msgid "URI has been copied successfully."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:259 admin/locale.php:49
+#: admin/classes/class-admin-l10n.php:328 admin/locale.php:49
 #: library/modules/quizzes/admin/admin-loader.php:610
 msgid "Color"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:260 admin/locale.php:10
+#: admin/classes/class-admin-l10n.php:329 admin/locale.php:10
 msgid "Colors"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:261 admin/locale.php:58
+#: admin/classes/class-admin-l10n.php:330 admin/locale.php:58
 msgid "Border color"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:262
+#: admin/classes/class-admin-l10n.php:331
 msgid "Border color (hover)"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:263
+#: admin/classes/class-admin-l10n.php:332
 msgid "Border color (active)"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:264
+#: admin/classes/class-admin-l10n.php:333
 msgid "Border color (correct)"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:265
+#: admin/classes/class-admin-l10n.php:334
 msgid "Border color (incorrect)"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:266
+#: admin/classes/class-admin-l10n.php:335
 msgid "Border width"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:267
+#: admin/classes/class-admin-l10n.php:336
 msgid "Border style"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:268 admin/locale.php:44
+#: admin/classes/class-admin-l10n.php:337 admin/locale.php:44
 #: library/modules/quizzes/admin/admin-loader.php:602
 msgid "Background"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:269
+#: admin/classes/class-admin-l10n.php:338
 msgid "Background (hover)"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:270
+#: admin/classes/class-admin-l10n.php:339
 msgid "Background (active)"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:271
+#: admin/classes/class-admin-l10n.php:340
 msgid "Background (correct)"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:272
+#: admin/classes/class-admin-l10n.php:341
 msgid "Background (incorrect)"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:273
+#: admin/classes/class-admin-l10n.php:342
 #: library/modules/quizzes/admin/admin-loader.php:543
 msgid "Font color"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:274
+#: admin/classes/class-admin-l10n.php:343
 msgid "Font color (hover)"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:275
+#: admin/classes/class-admin-l10n.php:344
 msgid "Font color (active)"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:276
+#: admin/classes/class-admin-l10n.php:345
 msgid "Font color (correct)"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:277
+#: admin/classes/class-admin-l10n.php:346
 msgid "Font color (incorrect)"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:278
+#: admin/classes/class-admin-l10n.php:347
 msgid "Font background"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:279
+#: admin/classes/class-admin-l10n.php:348
 msgid "Font background (hover)"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:280
+#: admin/classes/class-admin-l10n.php:349
 msgid "Font background (active)"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:281
+#: admin/classes/class-admin-l10n.php:350
 #: library/modules/custom-forms/admin/admin-loader.php:156
 msgid "Font family"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:282 admin/locale.php:1089
+#: admin/classes/class-admin-l10n.php:351 admin/locale.php:1089
 msgid "Custom font family"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:283
+#: admin/classes/class-admin-l10n.php:352
 msgid "E.g., 'Arial', sans-serif"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:284
+#: admin/classes/class-admin-l10n.php:353
 msgid "Here you can type the font family you want to use, as you would in CSS."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:285 admin/locale.php:1545
+#: admin/classes/class-admin-l10n.php:354 admin/locale.php:1545
 msgid "Icon size"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:287 admin/locale.php:145
+#: admin/classes/class-admin-l10n.php:356 admin/locale.php:145
 #: library/fields/custom.php:105
 msgid "Dropdown"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:288 admin/locale.php:4
+#: admin/classes/class-admin-l10n.php:357 admin/locale.php:4
 #: library/modules/polls/admin/admin-loader.php:177
 #: library/modules/quizzes/admin/admin-loader.php:528
 msgid "Appearance"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:289
+#: admin/classes/class-admin-l10n.php:358
 msgid "Expand"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:290 admin/locale.php:92
+#: admin/classes/class-admin-l10n.php:359 admin/locale.php:92
 msgid "Placeholder"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:292 admin/locale.php:73
+#: admin/classes/class-admin-l10n.php:361 admin/locale.php:73
 msgid "Icon color"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:293
+#: admin/classes/class-admin-l10n.php:362
 msgid "Icon color (hover)"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:294
+#: admin/classes/class-admin-l10n.php:363
 msgid "Icon color (active)"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:295
+#: admin/classes/class-admin-l10n.php:364
 msgid "Icon color (correct)"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:296
+#: admin/classes/class-admin-l10n.php:365
 msgid "Icon color (incorrect)"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:297 admin/locale.php:1246
+#: admin/classes/class-admin-l10n.php:366 admin/locale.php:1246
 msgid "Box shadow"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:298
+#: admin/classes/class-admin-l10n.php:367
 msgid "Enable settings"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:299
+#: admin/classes/class-admin-l10n.php:368
 #: library/modules/custom-forms/admin/admin-loader.php:157
 msgid "Font size"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:300
+#: admin/classes/class-admin-l10n.php:369
 #: library/modules/custom-forms/admin/admin-loader.php:158
 msgid "Font weight"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:301
+#: admin/classes/class-admin-l10n.php:370
 msgid "Text align"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:302 admin/locale.php:1547
+#: admin/classes/class-admin-l10n.php:371 admin/locale.php:1547
 msgid "Regular"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:303 admin/locale.php:1548
+#: admin/classes/class-admin-l10n.php:372 admin/locale.php:1548
 msgid "Medium"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:304 admin/locale.php:1549
+#: admin/classes/class-admin-l10n.php:373 admin/locale.php:1549
 msgid "Large"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:305 admin/locale.php:371
+#: admin/classes/class-admin-l10n.php:374 admin/locale.php:371
 msgid "Light"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:306 admin/locale.php:369
+#: admin/classes/class-admin-l10n.php:375 admin/locale.php:369
 msgid "Normal"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:307 admin/locale.php:122
+#: admin/classes/class-admin-l10n.php:376 admin/locale.php:122
 msgid "Bold"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:308
+#: admin/classes/class-admin-l10n.php:377
 msgid "Typography"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:309
+#: admin/classes/class-admin-l10n.php:378
 msgid "Top padding"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:310
+#: admin/classes/class-admin-l10n.php:379
 msgid "Right padding"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:311
+#: admin/classes/class-admin-l10n.php:380
 msgid "Bottom padding"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:312
+#: admin/classes/class-admin-l10n.php:381
 msgid "Left padding"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:313
+#: admin/classes/class-admin-l10n.php:382
 msgid "Border radius"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:314 admin/locale.php:239
+#: admin/classes/class-admin-l10n.php:383 admin/locale.php:239
 msgid "20 April 2018"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:315 admin/locale.php:170
+#: admin/classes/class-admin-l10n.php:384 admin/locale.php:170
 msgid "Left"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:316 admin/locale.php:1368
+#: admin/classes/class-admin-l10n.php:385 admin/locale.php:1368
 msgid "Center"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:317 admin/locale.php:171
+#: admin/classes/class-admin-l10n.php:386 admin/locale.php:171
 msgid "Right"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:319 admin/locale.php:164
+#: admin/classes/class-admin-l10n.php:388 admin/locale.php:164
 msgid "Solid"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:320 admin/locale.php:165
+#: admin/classes/class-admin-l10n.php:389 admin/locale.php:165
 msgid "Dashed"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:321 admin/locale.php:166
+#: admin/classes/class-admin-l10n.php:390 admin/locale.php:166
 msgid "Dotted"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:322 admin/locale.php:1137
+#: admin/classes/class-admin-l10n.php:391 admin/locale.php:1137
 msgid "Delete option"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:325
+#: admin/classes/class-admin-l10n.php:394
 msgid "Re-order this option"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:326
+#: admin/classes/class-admin-l10n.php:395
 msgid "Forminator UI"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:327
+#: admin/classes/class-admin-l10n.php:396
 msgid "Forminator Bold"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:328
+#: admin/classes/class-admin-l10n.php:397
 msgid "Forminator Flat"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:329
+#: admin/classes/class-admin-l10n.php:398
 msgid "Material Design"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:330
+#: admin/classes/class-admin-l10n.php:399
 #: library/abstracts/abstract-class-field.php:738
 #: library/abstracts/abstract-class-field.php:739
 #: library/helpers/helper-core.php:430
 msgid "No file chosen"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:331
+#: admin/classes/class-admin-l10n.php:400
 msgid "saved succesfully!"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:332
+#: admin/classes/class-admin-l10n.php:401
 msgid "Error! Settings were not saved."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:333
+#: admin/classes/class-admin-l10n.php:402
 msgid "User approved succesfully."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:334
+#: admin/classes/class-admin-l10n.php:403
 msgid "Something went wrong!"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:335
+#: admin/classes/class-admin-l10n.php:404
 msgid "Error! User was not approved."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:340
+#: admin/classes/class-admin-l10n.php:409
 msgid "Google+"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:341 admin/locale.php:1430
+#: admin/classes/class-admin-l10n.php:410 admin/locale.php:1430
 #: library/modules/quizzes/admin/admin-loader.php:628
 msgid "LinkedIn"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:345
-#: admin/classes/class-admin-l10n.php:446
+#: admin/classes/class-admin-l10n.php:414
+#: admin/classes/class-admin-l10n.php:516
 #: library/modules/custom-forms/front/front-render.php:2292
 msgid "Su"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:346
-#: admin/classes/class-admin-l10n.php:447
+#: admin/classes/class-admin-l10n.php:415
+#: admin/classes/class-admin-l10n.php:517
 #: library/modules/custom-forms/front/front-render.php:2293
 msgid "Mo"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:347
-#: admin/classes/class-admin-l10n.php:448
+#: admin/classes/class-admin-l10n.php:416
+#: admin/classes/class-admin-l10n.php:518
 #: library/modules/custom-forms/front/front-render.php:2294
 msgid "Tu"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:348
-#: admin/classes/class-admin-l10n.php:449
+#: admin/classes/class-admin-l10n.php:417
+#: admin/classes/class-admin-l10n.php:519
 #: library/modules/custom-forms/front/front-render.php:2295
 msgid "We"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:349
-#: admin/classes/class-admin-l10n.php:450
+#: admin/classes/class-admin-l10n.php:418
+#: admin/classes/class-admin-l10n.php:520
 #: library/modules/custom-forms/front/front-render.php:2296
 msgid "Th"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:350
-#: admin/classes/class-admin-l10n.php:451
+#: admin/classes/class-admin-l10n.php:419
+#: admin/classes/class-admin-l10n.php:521
 #: library/modules/custom-forms/front/front-render.php:2297
 msgid "Fr"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:351
-#: admin/classes/class-admin-l10n.php:452
+#: admin/classes/class-admin-l10n.php:420
+#: admin/classes/class-admin-l10n.php:522
 #: library/modules/custom-forms/front/front-render.php:2298
 msgid "Sa"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:354
-#: admin/classes/class-admin-l10n.php:464
+#: admin/classes/class-admin-l10n.php:423
+#: admin/classes/class-admin-l10n.php:534
 msgid "January"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:355
-#: admin/classes/class-admin-l10n.php:465
+#: admin/classes/class-admin-l10n.php:424
+#: admin/classes/class-admin-l10n.php:535
 msgid "February"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:356
-#: admin/classes/class-admin-l10n.php:466
+#: admin/classes/class-admin-l10n.php:425
+#: admin/classes/class-admin-l10n.php:536
 msgid "March"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:357
-#: admin/classes/class-admin-l10n.php:467
+#: admin/classes/class-admin-l10n.php:426
+#: admin/classes/class-admin-l10n.php:537
 msgid "April"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:358
-#: admin/classes/class-admin-l10n.php:468
+#: admin/classes/class-admin-l10n.php:427
+#: admin/classes/class-admin-l10n.php:538
 #: library/modules/custom-forms/front/front-render.php:2305
 msgid "May"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:359
-#: admin/classes/class-admin-l10n.php:469
+#: admin/classes/class-admin-l10n.php:428
+#: admin/classes/class-admin-l10n.php:539
 msgid "June"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:360
-#: admin/classes/class-admin-l10n.php:470
+#: admin/classes/class-admin-l10n.php:429
+#: admin/classes/class-admin-l10n.php:540
 msgid "July"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:361
-#: admin/classes/class-admin-l10n.php:471
+#: admin/classes/class-admin-l10n.php:430
+#: admin/classes/class-admin-l10n.php:541
 msgid "August"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:362
-#: admin/classes/class-admin-l10n.php:472
+#: admin/classes/class-admin-l10n.php:431
+#: admin/classes/class-admin-l10n.php:542
 msgid "September"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:363
-#: admin/classes/class-admin-l10n.php:473
+#: admin/classes/class-admin-l10n.php:432
+#: admin/classes/class-admin-l10n.php:543
 msgid "October"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:364
-#: admin/classes/class-admin-l10n.php:474
+#: admin/classes/class-admin-l10n.php:433
+#: admin/classes/class-admin-l10n.php:544
 msgid "November"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:365
-#: admin/classes/class-admin-l10n.php:475
+#: admin/classes/class-admin-l10n.php:434
+#: admin/classes/class-admin-l10n.php:545
 msgid "December"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:381 admin/locale.php:880
+#: admin/classes/class-admin-l10n.php:450 admin/locale.php:880
 msgid "No Result Found"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:382 admin/locale.php:879
+#: admin/classes/class-admin-l10n.php:451 admin/locale.php:879
 msgid "Searching"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:422
+#: admin/classes/class-admin-l10n.php:492
 msgid "Data and settings have been reset successfully!"
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:423
+#: admin/classes/class-admin-l10n.php:493
 msgid "Form successfully deleted."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:424
+#: admin/classes/class-admin-l10n.php:494
 msgid "Poll successfully deleted."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:425
+#: admin/classes/class-admin-l10n.php:495
 msgid "Quiz successfully deleted."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:426
+#: admin/classes/class-admin-l10n.php:496
 msgid "Form successfully duplicated."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:427
+#: admin/classes/class-admin-l10n.php:497
 msgid "Poll successfully duplicated."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:428
+#: admin/classes/class-admin-l10n.php:498
 msgid "Quiz successfully duplicated."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:429
+#: admin/classes/class-admin-l10n.php:499
 msgid "Form tracking data successfully reset."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:430
+#: admin/classes/class-admin-l10n.php:500
 msgid "Poll tracking data successfully reset."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:431
+#: admin/classes/class-admin-l10n.php:501
 msgid "Quiz tracking data successfully reset."
 msgstr ""
 
-#: admin/classes/class-admin-l10n.php:432
+#: admin/classes/class-admin-l10n.php:502
 msgid "The selected preset has been successfully deleted."
+msgstr ""
+
+#: admin/classes/class-admin-l10n.php:593
+#. translators: %1$s - time zone, %2$s - current time
+msgid ""
+"Your site's current time is %1$s %2$s based on your %3$sWordPress "
+"Settings%4$s"
 msgstr ""
 
 #: admin/classes/class-admin.php:163 admin/views/addons/content-empty.php:15
 #: admin/views/common/entries/content-none.php:18
 #: admin/views/common/entries/content.php:68
-#: admin/views/common/reports/content-none.php:7 library/class-export.php:1467
-#: library/helpers/helper-core.php:659
+#: admin/views/common/reports/content-none.php:7
+#: admin/views/common/reports/email-report.php:149
+#: library/class-export.php:1469 library/helpers/helper-core.php:659
 msgid "Forminator"
 msgstr ""
 
@@ -5767,24 +6054,18 @@ msgid "Forminator Dashboard"
 msgstr ""
 
 #: admin/classes/class-admin.php:169 admin/views/common/reports/content.php:8
-#: admin/views/common/reports/content.php:21 admin/views/dashboard/header.php:2
+#: admin/views/common/reports/content.php:20 admin/views/dashboard/header.php:2
 #: admin/views/settings/tab-dashboard.php:4
 msgid "Dashboard"
 msgstr ""
 
 #: admin/classes/class-admin.php:190 admin/classes/class-admin.php:191
-#: admin/locale.php:795 admin/views/integrations/header.php:2
+#: admin/locale.php:797 admin/views/integrations/header.php:2
 msgid "Integrations"
 msgstr ""
 
 #: admin/classes/class-admin.php:222
 msgid "Global Settings"
-msgstr ""
-
-#: admin/classes/class-admin.php:222 admin/classes/class-admin.php:729
-#: admin/locale.php:186 admin/views/settings/header.php:2
-#: library/modules/quizzes/admin/admin-loader.php:527
-msgid "Settings"
 msgstr ""
 
 #: admin/classes/class-admin.php:243
@@ -6761,7 +7042,7 @@ msgid "Select option"
 msgstr ""
 
 #: admin/locale.php:222 admin/views/common/dashboard/widget.php:63
-#: admin/views/settings/dashboard/content.php:35 library/class-export.php:1085
+#: admin/views/settings/dashboard/content.php:35 library/class-export.php:1087
 #: library/modules/custom-forms/admin/admin-page-entries.php:480
 #: library/modules/custom-forms/admin/admin-page-entries.php:503
 msgid "Status"
@@ -6841,12 +7122,6 @@ msgstr ""
 msgid ""
 "Add some custom message for users to see when your form stops appearing or "
 "leave empty to show nothing (just an empty space)."
-msgstr ""
-
-#: admin/locale.php:244 admin/views/common/reports/report-content.php:51
-#: admin/views/settings/content.php:38 admin/views/settings/content.php:57
-#: admin/views/settings/tab-payments.php:10
-msgid "Payments"
 msgstr ""
 
 #: admin/locale.php:245
@@ -6994,7 +7269,7 @@ msgid "Email input label"
 msgstr ""
 
 #: admin/locale.php:275
-#: library/modules/custom-forms/front/front-action.php:1086
+#: library/modules/custom-forms/front/front-action.php:1087
 msgid "Send draft link to"
 msgstr ""
 
@@ -7003,7 +7278,7 @@ msgid "Placeholder (Optional)"
 msgstr ""
 
 #: admin/locale.php:277
-#: library/modules/custom-forms/front/front-action.php:1087
+#: library/modules/custom-forms/front/front-action.php:1088
 msgid "E.g., johndoe@gmail.com"
 msgstr ""
 
@@ -7012,7 +7287,7 @@ msgid "Send link button label"
 msgstr ""
 
 #: admin/locale.php:279
-#: library/modules/custom-forms/front/front-action.php:1088
+#: library/modules/custom-forms/front/front-action.php:1089
 msgid "Send draft link"
 msgstr ""
 
@@ -7578,7 +7853,7 @@ msgstr ""
 msgid "Enter default value"
 msgstr ""
 
-#: admin/locale.php:408 library/class-export.php:1073
+#: admin/locale.php:408 library/class-export.php:1075
 #: library/fields/currency.php:66 library/fields/currency.php:84
 #: library/modules/custom-forms/admin/admin-page-entries.php:463
 #: library/modules/custom-forms/admin/admin-page-entries.php:512
@@ -8749,10 +9024,6 @@ msgid ""
 "payments. {{link}}Customize email template{{/link}}."
 msgstr ""
 
-#: admin/locale.php:676
-msgid "Email address"
-msgstr ""
-
 #: admin/locale.php:677 library/fields/email.php:72
 #: library/modules/custom-forms/form-templates/template-contact-form.php:66
 #: library/modules/custom-forms/form-templates/template-leads.php:60
@@ -8892,12 +9163,12 @@ msgid "Try Pro for 30% Off"
 msgstr ""
 
 #: admin/locale.php:706 admin/views/custom-form/entries/content.php:586
-#: library/fields/stripe.php:1065
+#: library/fields/stripe.php:1072
 #: library/modules/custom-forms/front/front-mail.php:618
 msgid "One Time"
 msgstr ""
 
-#: admin/locale.php:707 library/fields/stripe.php:1068
+#: admin/locale.php:707 library/fields/stripe.php:1075
 msgid "Subscription"
 msgstr ""
 
@@ -8937,7 +9208,7 @@ msgstr ""
 msgid "Plan Name is required."
 msgstr ""
 
-#: admin/locale.php:717 library/class-export.php:1065
+#: admin/locale.php:717 library/class-export.php:1067
 #: library/modules/custom-forms/admin/admin-page-entries.php:455
 msgid "Payment type"
 msgstr ""
@@ -8954,13 +9225,13 @@ msgstr ""
 msgid "E.g., 20.00"
 msgstr ""
 
-#: admin/locale.php:721 library/class-export.php:1069
+#: admin/locale.php:721 library/class-export.php:1071
 #: library/modules/custom-forms/admin/admin-page-entries.php:459
 #: library/modules/custom-forms/admin/admin-page-entries.php:508
 msgid "Amount"
 msgstr ""
 
-#: admin/locale.php:722 library/class-export.php:1077
+#: admin/locale.php:722 library/class-export.php:1079
 #: library/modules/custom-forms/admin/admin-page-entries.php:467
 msgid "Quantity"
 msgstr ""
@@ -9129,11 +9400,11 @@ msgstr ""
 msgid "Start Time"
 msgstr ""
 
-#: admin/locale.php:761 library/fields/time.php:347
+#: admin/locale.php:761 library/fields/time.php:361
 msgid "AM"
 msgstr ""
 
-#: admin/locale.php:762 library/fields/time.php:352
+#: admin/locale.php:762 library/fields/time.php:366
 msgid "PM"
 msgstr ""
 
@@ -9264,43 +9535,43 @@ msgid "Please, enter a valid name."
 msgstr ""
 
 #: admin/locale.php:791
-msgid "Send data if"
+msgid "Send"
 msgstr ""
 
 #: admin/locale.php:792
-msgid "Fetching integration list…"
+msgid "Don't send"
 msgstr ""
 
 #: admin/locale.php:793
-msgid "You need to save this form before using integrations."
+msgid "data if"
 msgstr ""
 
 #: admin/locale.php:794
+msgid "Fetching integration list…"
+msgstr ""
+
+#: admin/locale.php:795
+msgid "You need to save this form before using integrations."
+msgstr ""
+
+#: admin/locale.php:796
 msgid "Try Again"
 msgstr ""
 
-#: admin/locale.php:796 admin/views/integrations/content.php:10
+#: admin/locale.php:798 admin/views/integrations/content.php:10
 #: admin/views/integrations/content.php:20
 #: admin/views/integrations/content.php:34
 msgid "Applications"
 msgstr ""
 
-#: admin/locale.php:797
+#: admin/locale.php:799
 msgid ""
 "You can send this form's data to any of the connected third party apps. "
 "Connect to more apps on the {{link}}Integrations{{/link}} page."
 msgstr ""
 
-#: admin/locale.php:798
-msgid "Send"
-msgstr ""
-
-#: admin/locale.php:799
-msgid "Don't Send"
-msgstr ""
-
 #: admin/locale.php:800
-msgid "data if"
+msgid "Don't Send"
 msgstr ""
 
 #: admin/locale.php:801
@@ -9660,10 +9931,6 @@ msgstr ""
 msgid "Email"
 msgstr ""
 
-#: admin/locale.php:888
-msgid "Recipients"
-msgstr ""
-
 #: admin/locale.php:889
 msgid "Advanced"
 msgstr ""
@@ -9957,7 +10224,7 @@ msgid ""
 "this form and the parent quiz."
 msgstr ""
 
-#: admin/locale.php:960 admin/views/common/reports/content.php:19
+#: admin/locale.php:960 admin/views/common/reports/content.php:18
 #: admin/views/settings/content.php:47
 msgid "Navigate"
 msgstr ""
@@ -11585,7 +11852,9 @@ msgid ""
 "choice. Simply copy and paste the shortcode below to display it!"
 msgstr ""
 
-#: admin/locale.php:1344
+#: admin/locale.php:1344 admin/views/common/reports/content.php:12
+#: admin/views/common/reports/content.php:21
+#: admin/views/common/reports/tab-notification.php:11
 msgid "Notifications"
 msgstr ""
 
@@ -12048,10 +12317,6 @@ msgstr ""
 msgid "Personalities"
 msgstr ""
 
-#: admin/locale.php:1453 admin/views/common/reports/report-content.php:65
-msgid "Leads"
-msgstr ""
-
 #: admin/locale.php:1454
 msgid "Capture Leads"
 msgstr ""
@@ -12435,7 +12700,7 @@ msgstr ""
 #: admin/locale.php:1539 admin/views/quiz/entries/content-leads-none.php:193
 #: admin/views/quiz/entries/content-leads.php:302
 #: admin/views/quiz/entries/content-leads.php:364 library/class-export.php:447
-#: library/class-export.php:592
+#: library/class-export.php:594
 #: library/modules/quizzes/admin/admin-loader.php:654
 msgid "Answer"
 msgstr ""
@@ -13406,12 +13671,6 @@ msgstr ""
 msgid "Deleting"
 msgstr ""
 
-#: admin/views/addons/addons-list.php:75 admin/views/addons/addons-list.php:194
-#: admin/views/settings/payments/section-paypal.php:138
-#: admin/views/settings/payments/section-stripe.php:169
-msgid "Configure"
-msgstr ""
-
 #: admin/views/addons/addons-list.php:82 admin/views/addons/addons-list.php:205
 msgid "Connect %s Account"
 msgstr ""
@@ -13721,8 +13980,45 @@ msgstr ""
 msgid "Loading data..."
 msgstr ""
 
-#: admin/views/common/reports/content.php:12
-msgid "Notification"
+#: admin/views/common/reports/email-report.php:4
+msgid "Email template"
+msgstr ""
+
+#: admin/views/common/reports/email-report.php:93
+msgid "Your Forminator %1$s summary for %2$s"
+msgstr ""
+
+#: admin/views/common/reports/email-report.php:101
+#: library/class-export.php:1434
+msgid "Hi %s,"
+msgstr ""
+
+#: admin/views/common/reports/email-report.php:104
+msgid ""
+"Here is the %1$s summary of how your form(s) are performing on %2$s. View "
+"the full reports %3$shere%4$s."
+msgstr ""
+
+#: admin/views/common/reports/email-report.php:119
+msgid "Conversions"
+msgstr ""
+
+#: admin/views/common/reports/email-report.php:144
+msgid ""
+"You can change the frequency of receiving this email in Forminator's  "
+"%1$sReport - Notification%2$s section."
+msgstr ""
+
+#: admin/views/common/reports/email-report.php:150
+msgid "WPMU DEV Team"
+msgstr ""
+
+#: admin/views/common/reports/email-report.php:183
+msgid "Follow us"
+msgstr ""
+
+#: admin/views/common/reports/email-report.php:247
+msgid "INCSUB PO BOX 163, ALBERT PARK, VICTORIA.3206 AUSTRALIA"
 msgstr ""
 
 #: admin/views/common/reports/integration-report.php:4
@@ -13805,26 +14101,84 @@ msgstr ""
 msgid "Monthly average"
 msgstr ""
 
-#: admin/views/common/reports/tab-dashboard.php:34
+#: admin/views/common/reports/tab-dashboard.php:33
 msgid "View Reports"
 msgstr ""
 
-#: admin/views/common/reports/tab-dashboard.php:41
+#: admin/views/common/reports/tab-dashboard.php:40
 msgid "Date range"
 msgstr ""
 
-#: admin/views/common/reports/tab-dashboard.php:45
+#: admin/views/common/reports/tab-dashboard.php:44
 msgid "Select date range"
 msgstr ""
 
-#: admin/views/common/reports/tab-dashboard.php:68
+#: admin/views/common/reports/tab-dashboard.php:67
 msgid "Select a form, poll, or quiz to view its report."
 msgstr ""
 
-#: admin/views/common/reports/tab-dashboard.php:79
+#: admin/views/common/reports/tab-dashboard.php:76
 msgid ""
 "You haven't created any forms, polls, or quizzes yet. When you do, you'll "
 "be able to view their reports here."
+msgstr ""
+
+#: admin/views/common/reports/tab-notification.php:15
+msgid ""
+"Keep an eye on the performance of your forms, quizzes, and polls. \n"
+"                Get daily, weekly or monthly report notifications sent "
+"directly \n"
+"                to your inbox."
+msgstr ""
+
+#: admin/views/common/reports/tab-notification.php:25
+msgid "Add New report"
+msgstr ""
+
+#: admin/views/common/reports/tab-notification.php:47
+msgid ""
+"No report has been added to your scheduled report yet. Click on the button "
+"above to add one now."
+msgstr ""
+
+#: admin/views/common/reports/tab-notification.php:53
+msgid ""
+"You haven't created any forms, polls, or quizzes yet. When you do, you’ll "
+"be able to schedule notifications here."
+msgstr ""
+
+#: admin/views/common/reports/tab-notification.php:66
+msgid "Report"
+msgstr ""
+
+#: admin/views/common/reports/tab-notification.php:68
+msgid "Select all notifications"
+msgstr ""
+
+#: admin/views/common/reports/tab-notification.php:72
+msgid "Module"
+msgstr ""
+
+#: admin/views/common/reports/tab-notification.php:107
+msgid "All %s"
+msgstr ""
+
+#: admin/views/common/reports/tab-notification.php:108
+msgid "Selected %s"
+msgstr ""
+
+#: admin/views/common/reports/tab-notification.php:139
+#. translators: %d - number of recipients
+msgid "+%d more"
+msgstr ""
+
+#: admin/views/common/reports/tab-notification.php:179
+#: admin/views/common/reports/tab-notification.php:185
+msgid "Delete Report"
+msgstr ""
+
+#: admin/views/common/reports/tab-notification.php:180
+msgid "Are you sure you wish to permanently delete this report?"
 msgstr ""
 
 #: admin/views/custom-form/entries/content.php:15
@@ -14093,11 +14447,6 @@ msgstr ""
 msgid "Retry Import"
 msgstr ""
 
-#: admin/views/custom-form/popup/import-gravityforms.php:19
-#: admin/views/custom-form/popup/import-ninjaforms.php:19
-msgid "All Forms"
-msgstr ""
-
 #: admin/views/custom-form/popup/import-gravityforms.php:34
 #: admin/views/custom-form/popup/import-ninjaforms.php:33
 msgid "Select the form."
@@ -14158,27 +14507,27 @@ msgstr ""
 msgid "Try pro features for free!"
 msgstr ""
 
-#: admin/views/dashboard/new-feature-notice.php:33
+#: admin/views/dashboard/new-feature-notice.php:32
 #: admin/views/dashboard/promote-free-plan.php:31
 msgid "Close this dialog."
 msgstr ""
 
-#: admin/views/dashboard/new-feature-notice.php:36
-msgid "New: Now You Can Group and Repeat Fields!"
+#: admin/views/dashboard/new-feature-notice.php:35
+msgid "New! Forminator Scheduled Reports"
 msgstr ""
 
-#: admin/views/dashboard/new-feature-notice.php:42
-#. translators: 1. User name. 2. Open a tag. 3. Close a tag.
+#: admin/views/dashboard/new-feature-notice.php:38
 msgid ""
-"Hey %1$s! You asked for it and we've delivered. Take a look at the new "
-"Field Group and Repeater options which let you group multiple reusable "
-"fields together and collect repeated data like event attendees, "
-"education/employment history, address lists, etc. Check out this "
-"%2$sTutorial%3$s to learn more about grouping and repeating fields."
+"Put an end to wondering how well your forms, quizzes, \n"
+"\t\t\t\t\tand polls are doing! We've added a new scheduled report feature "
+"to Forminator \n"
+"\t\t\t\t\treports, so you can now get daily, weekly, or monthly report "
+"notifications sent \n"
+"\t\t\t\t\tdirectly to your inbox."
 msgstr ""
 
-#: admin/views/dashboard/new-feature-notice.php:67
-msgid "Awesome, Let’s go!"
+#: admin/views/dashboard/new-feature-notice.php:48
+msgid "Schedule Report"
 msgstr ""
 
 #: admin/views/dashboard/promote-free-plan.php:34
@@ -14462,7 +14811,7 @@ msgstr[1] ""
 #: admin/views/poll/entries/content.php:95
 #: admin/views/poll/entries/content.php:100
 #: library/modules/custom-forms/admin/admin-page-view.php:35
-#: library/modules/quizzes/admin/admin-page-view.php:113
+#: library/modules/quizzes/admin/admin-page-view.php:115
 msgid "Delete Submissions"
 msgstr ""
 
@@ -15771,7 +16120,7 @@ msgstr ""
 msgid "Failed to save new entry meta."
 msgstr ""
 
-#: library/class-core.php:358
+#: library/class-core.php:363
 msgid "Post Custom Data"
 msgstr ""
 
@@ -15780,7 +16129,7 @@ msgid "Every minute"
 msgstr ""
 
 #: library/class-export.php:193
-#: library/modules/custom-forms/front/front-action.php:2403
+#: library/modules/custom-forms/front/front-action.php:2417
 #: library/modules/custom-forms/user/class-forminator-cform-user-data.php:87
 msgid "Invalid form ID."
 msgstr ""
@@ -15789,64 +16138,56 @@ msgstr ""
 msgid "Invalid form type."
 msgstr ""
 
-#: library/class-export.php:217
-msgid "Invalid email."
-msgstr ""
-
 #: library/class-export.php:448
 msgid "Result"
 msgstr ""
 
-#: library/class-export.php:888
+#: library/class-export.php:890
 msgid "Submission Time"
 msgstr ""
 
-#: library/class-export.php:1057
+#: library/class-export.php:1059
 #: library/modules/custom-forms/admin/admin-page-entries.php:446
 #: library/modules/custom-forms/admin/admin-page-entries.php:498
 msgid "Mode"
 msgstr ""
 
-#: library/class-export.php:1061
+#: library/class-export.php:1063
 #: library/modules/custom-forms/admin/admin-page-entries.php:451
 msgid "Product / Plan Name"
 msgstr ""
 
-#: library/class-export.php:1081 library/helpers/helper-fields.php:412
+#: library/class-export.php:1083 library/helpers/helper-fields.php:412
 #: library/modules/custom-forms/admin/admin-page-entries.php:471
 #: library/modules/custom-forms/admin/admin-page-entries.php:517
 msgid "Transaction ID"
 msgstr ""
 
-#: library/class-export.php:1089
+#: library/class-export.php:1091
 #: library/modules/custom-forms/admin/admin-page-entries.php:486
 msgid "Manage"
 msgstr ""
 
-#: library/class-export.php:1369
+#: library/class-export.php:1371
 msgid "Submissions data for %s"
 msgstr ""
 
-#: library/class-export.php:1432
-msgid "Hi %s,"
-msgstr ""
-
-#: library/class-export.php:1435
+#: library/class-export.php:1437
 msgid ""
 "Your scheduled exports have arrived! Forminator has captured %1$s new "
 "submission(s) and packaged %2$s total submissions from %3$s since the last "
 "scheduled export sent."
 msgstr ""
 
-#: library/class-export.php:1456
+#: library/class-export.php:1458
 msgid "New Submissions"
 msgstr ""
 
-#: library/class-export.php:1458
+#: library/class-export.php:1460
 msgid "Total Submissions"
 msgstr ""
 
-#: library/class-export.php:1466
+#: library/class-export.php:1468
 msgid "Cheers,"
 msgstr ""
 
@@ -15856,6 +16197,11 @@ msgstr ""
 
 #: library/class-modules.php:53 library/modules/custom-forms/loader.php:170
 msgid "Custom Forms"
+msgstr ""
+
+#: library/class-reports.php:194
+#. translators: %s: Url for site
+msgid "Here's your latest report for %s"
 msgstr ""
 
 #: library/class-shortcode-generator.php:70
@@ -16238,18 +16584,6 @@ msgstr ""
 msgid "E.g. John Doe"
 msgstr ""
 
-#: library/fields/name.php:70
-#: library/modules/custom-forms/form-templates/template-contact-form.php:46
-#: library/modules/custom-forms/form-templates/template-contact-form.php:49
-#: library/modules/custom-forms/form-templates/template-leads.php:75
-#: library/modules/custom-forms/form-templates/template-leads.php:78
-#: library/modules/custom-forms/form-templates/template-newsletter.php:46
-#: library/modules/custom-forms/form-templates/template-newsletter.php:49
-#: library/modules/custom-forms/form-templates/template-quote.php:93
-#: library/modules/custom-forms/form-templates/template-quote.php:96
-msgid "E.g. John"
-msgstr ""
-
 #: library/fields/name.php:72
 #: library/modules/custom-forms/form-templates/template-contact-form.php:51
 #: library/modules/custom-forms/form-templates/template-leads.php:80
@@ -16460,28 +16794,28 @@ msgstr ""
 msgid "Please select an option"
 msgstr ""
 
-#: library/fields/stripe.php:498
+#: library/fields/stripe.php:505
 msgid "Your Payment ID is empty, please reload the page and try again!"
 msgstr ""
 
-#: library/fields/stripe.php:517
+#: library/fields/stripe.php:524
 #: library/modules/custom-forms/front/front-action.php:638
 msgid "Payment amount should be larger than 0."
 msgstr ""
 
-#: library/fields/stripe.php:522 library/fields/stripe.php:527
+#: library/fields/stripe.php:529 library/fields/stripe.php:534
 msgid "Your Payment ID is empty!"
 msgstr ""
 
-#: library/fields/stripe.php:728
+#: library/fields/stripe.php:735
 msgid "Payment Intent object is not valid Payment object."
 msgstr ""
 
-#: library/fields/stripe.php:733
+#: library/fields/stripe.php:740
 msgid "Payment Intent ID is not valid!"
 msgstr ""
 
-#: library/fields/stripe.php:824 library/fields/stripe.php:861
+#: library/fields/stripe.php:831 library/fields/stripe.php:868
 msgid "Stripe Payment ID does not exist."
 msgstr ""
 
@@ -16507,52 +16841,52 @@ msgstr ""
 msgid "E.g. 00"
 msgstr ""
 
-#: library/fields/time.php:552
+#: library/fields/time.php:574
 #. translators: ...
 msgid "Please enter a value greater than or equal to %1$s for %2$s."
 msgstr ""
 
-#: library/fields/time.php:559
+#: library/fields/time.php:581
 #. translators: ...
 msgid "Please enter a value less than or equal to %1$s for %2$s."
 msgstr ""
 
-#: library/fields/time.php:567 library/fields/time.php:606
+#: library/fields/time.php:589 library/fields/time.php:628
 #. translators: ...
 msgid "Please enter a valid number for %1$s."
 msgstr ""
 
-#: library/fields/time.php:575 library/fields/time.php:730
+#: library/fields/time.php:597 library/fields/time.php:752
 msgid "This field is required. Please input a valid hour."
 msgstr ""
 
-#: library/fields/time.php:591
+#: library/fields/time.php:613
 #. translators: ...
 msgid "Please enter a value greater than or equal to 0 for %1$s."
 msgstr ""
 
-#: library/fields/time.php:598
+#: library/fields/time.php:620
 #. translators: ...
 msgid "Please enter a value less than or equal to 59 for %1$s."
 msgstr ""
 
-#: library/fields/time.php:614 library/fields/time.php:739
+#: library/fields/time.php:636 library/fields/time.php:761
 msgid "This field is required. Please input a valid minute."
 msgstr ""
 
-#: library/fields/time.php:749
+#: library/fields/time.php:771
 msgid "This field is required. Hours and Minutes cannot be both 0."
 msgstr ""
 
-#: library/fields/time.php:763
+#: library/fields/time.php:785
 msgid "Please enter a valid hour."
 msgstr ""
 
-#: library/fields/time.php:769
+#: library/fields/time.php:791
 msgid "Please enter a valid minute."
 msgstr ""
 
-#: library/fields/time.php:892
+#: library/fields/time.php:930
 msgid "Please select a time within the specified time limits."
 msgstr ""
 
@@ -18676,7 +19010,7 @@ msgstr ""
 #: library/modules/custom-forms/form-templates/template-post.php:84
 #: library/modules/custom-forms/form-templates/template-quote.php:151
 #: library/modules/custom-forms/form-templates/template-registration.php:106
-#: library/modules/custom-forms/front/front-action.php:1465
+#: library/modules/custom-forms/front/front-action.php:1466
 msgid "Error: Your form is not valid, please fix the errors!"
 msgstr ""
 
@@ -18838,7 +19172,7 @@ msgid ""
 msgstr ""
 
 #: library/modules/custom-forms/front/front-action.php:585
-#: library/modules/custom-forms/front/front-action.php:1149
+#: library/modules/custom-forms/front/front-action.php:1150
 msgid "At least one field must be filled out to submit the form."
 msgstr ""
 
@@ -18849,7 +19183,7 @@ msgid ""
 msgstr ""
 
 #: library/modules/custom-forms/front/front-action.php:771
-#: library/modules/custom-forms/front/front-action.php:1629
+#: library/modules/custom-forms/front/front-action.php:1630
 msgid "Payment failed, please try again!"
 msgstr ""
 
@@ -18858,44 +19192,44 @@ msgstr ""
 msgid "SSL required to submit this form, please check your URL."
 msgstr ""
 
-#: library/modules/custom-forms/front/front-action.php:2236
+#: library/modules/custom-forms/front/front-action.php:2250
 msgid "There was an error saving the post data. Please try again"
 msgstr ""
 
-#: library/modules/custom-forms/front/front-action.php:2270
+#: library/modules/custom-forms/front/front-action.php:2284
 msgid "Please try again."
 msgstr ""
 
-#: library/modules/custom-forms/front/front-action.php:2285
+#: library/modules/custom-forms/front/front-action.php:2299
 msgid "Your code has been sent to your email."
 msgstr ""
 
-#: library/modules/custom-forms/front/front-action.php:2377
+#: library/modules/custom-forms/front/front-action.php:2391
 msgid "Email is required."
 msgstr ""
 
-#: library/modules/custom-forms/front/front-action.php:2389
+#: library/modules/custom-forms/front/front-action.php:2403
 msgid "Please enter a valid email."
 msgstr ""
 
-#: library/modules/custom-forms/front/front-action.php:2421
+#: library/modules/custom-forms/front/front-action.php:2435
 msgid ""
 "We've sent the resume form link to your email address. Please check your "
 "spam folder if you can't find the link in your inbox."
 msgstr ""
 
-#: library/modules/custom-forms/front/front-action.php:2422
+#: library/modules/custom-forms/front/front-action.php:2436
 msgid "Change email"
 msgstr ""
 
-#: library/modules/custom-forms/front/front-action.php:2427
+#: library/modules/custom-forms/front/front-action.php:2441
 msgid ""
 "We couldn't send the form resume link to your email at this time. Click on "
 "the link below to resend it or manually copy and save the link in a safe "
 "place."
 msgstr ""
 
-#: library/modules/custom-forms/front/front-action.php:2428
+#: library/modules/custom-forms/front/front-action.php:2442
 msgid "Resend link"
 msgstr ""
 

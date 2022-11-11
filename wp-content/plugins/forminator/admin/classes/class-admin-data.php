@@ -164,6 +164,9 @@ class Forminator_Admin_Data {
 			'hasStripePro'                   => defined( 'FORMINATOR_STRIPE_ADDON' ) && class_exists( 'Forminator_Stripe_Addon' ),
 			'stripeForms'                    => $this->get_forms_by_field_type( 'stripe' ),
 			'paypalForms'                    => $this->get_forms_by_field_type( 'paypal' ),
+			'form_modules'                   => $this->get_modules( 'get_forms' ),
+			'quiz_modules'                   => $this->get_modules( 'get_quizzes' ),
+			'poll_modules'                   => $this->get_modules( 'get_polls' )
 		);
 	}
 
@@ -192,5 +195,30 @@ class Forminator_Admin_Data {
 		}
 
 		return $field_forms;
+	}
+
+	/**
+	 * Print forms select
+	 *
+	 * @return array
+	 * @since 1.0
+	 */
+	public function get_modules( $method ) {
+		$modules      = array();
+		$modules_data = Forminator_API::$method( null, 1, 999, 'publish' );
+		if ( ! empty( $modules_data ) ) {
+			foreach ( $modules_data as $m => $module ) {
+				$module = (array) $module;
+				$title  = forminator_get_form_name( $module['id'] );
+				if ( mb_strlen( $title ) > 25 ) {
+					$title = mb_substr( $title, 0, 25 ) . '...';
+				}
+				$modules[ $m ]['id']   = $module['id'];
+				$modules[ $m ]['name'] = $title;
+			}
+		}
+
+		return $modules;
+
 	}
 }

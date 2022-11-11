@@ -6,15 +6,15 @@
         <?php the_excerpt(); ?>
     </div>
 
-    <div class="collapse" id="collapseDesc">
+    <div class="collapse" id="collapseDesc-<?php echo $postID; ?>">
         <div class="full-desc">
             <?php the_content(); ?>
         </div>
     </div>
 
     <div class="button-more-holder">
-        <button onclick="changeExpandTitle(this);" class="btn btn-expand" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseDesc" aria-expanded="false" aria-controls="collapseDesc">
+        <button id="button-more-<?php echo $postID; ?>" onclick="changeExpandTitle(this);" class="btn btn-expand" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseDesc-<?php echo $postID; ?>" aria-expanded="false" aria-controls="collapseDesc-<?php echo $postID; ?>">
             <span class="title">Read more</span>
         </button>
     </div>

@@ -363,6 +363,10 @@ input:focus, input.form-control:focus {
     margin: 0 0 24px 0;
 }
 
+.home-products-gallery .main-image-box img{
+    border-radius: 18px;
+}
+
 .home-products-gallery .thumbnails {
     display: block;
 }
@@ -379,6 +383,10 @@ input:focus, input.form-control:focus {
     width: 30%;
     display: block;
     background: #F6F6F6;
+    border-radius: 18px;
+}
+
+.home-products-gallery .thumbnails .thumb img{
     border-radius: 18px;
 }
 

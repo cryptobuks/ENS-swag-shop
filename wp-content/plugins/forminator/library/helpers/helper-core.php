@@ -1260,6 +1260,7 @@ function forminator_reset_settings() {
 	$entry_table      = Forminator_Database_Tables::get_table_name( Forminator_Database_Tables::FORM_ENTRY );
 	$entry_meta_table = Forminator_Database_Tables::get_table_name( Forminator_Database_Tables::FORM_ENTRY_META );
 	$views_table      = Forminator_Database_Tables::get_table_name( Forminator_Database_Tables::FORM_VIEWS );
+	$reports_table    = Forminator_Database_Tables::get_table_name( Forminator_Database_Tables::FORM_REPORTS );
 	$forms_sql        = "SELECT `ID` FROM {$wpdb->posts} WHERE `post_type` = %s";
 	$form_types       = forminator_form_types();
 	foreach ( $form_types as $type ) {
@@ -1275,6 +1276,7 @@ function forminator_reset_settings() {
 	$wpdb->query( "TRUNCATE TABLE {$entry_table}" ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery
 	$wpdb->query( "TRUNCATE TABLE {$entry_meta_table}" ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery
 	$wpdb->query( "TRUNCATE TABLE {$views_table}" ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery
+	$wpdb->query( "TRUNCATE TABLE {$reports_table}" ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery
 
 	/**
 	 * Fires after Settings reset

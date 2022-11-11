@@ -71,7 +71,7 @@
                      * We had to use name attribute for Name multi-field because we cannot change
                      * the IDs of elements. Some functions rely on the ID text pattern already.
                      */
-                    if ( $element.attr( 'data-multi' ) === '1' ) {
+					if ( $element.attr( 'data-multi' ) === '1' || 'hidden' === $element.attr( 'type' ) ) {
 					   element_id = $element.attr( 'name' );
                     } else {
 					   element_id = $element.attr( 'id' );

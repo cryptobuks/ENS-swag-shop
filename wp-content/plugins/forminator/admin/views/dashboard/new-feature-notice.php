@@ -1,8 +1,7 @@
 <?php
-$url       = 'https://wpmudev.com/docs/wpmu-dev-plugins/forminator/#field-group';
 $user      = wp_get_current_user();
-$banner_1x = forminator_plugin_url() . 'assets/images/new-feature-19.png';
-$banner_2x = forminator_plugin_url() . 'assets/images/new-feature-19@2x.png';
+$banner_1x = forminator_plugin_url() . 'assets/images/new-feature-20.png';
+$banner_2x = forminator_plugin_url() . 'assets/images/new-feature-20@2x.png';
 ?>
 
 <div class="sui-modal sui-modal-md">
@@ -16,7 +15,7 @@ $banner_2x = forminator_plugin_url() . 'assets/images/new-feature-19@2x.png';
 		aria-labelledby="forminator-new-feature__title"
 	>
 
-		<div class="sui-box forminator-feature-modal" data-prop="forminator_dismiss_feature_1190" data-nonce="<?php echo esc_attr( wp_create_nonce( 'forminator_dismiss_notification' ) ); ?>">
+		<div class="sui-box forminator-feature-modal" data-prop="forminator_dismiss_feature_1200" data-nonce="<?php echo esc_attr( wp_create_nonce( 'forminator_dismiss_notification' ) ); ?>">
 
 			<div class="sui-box-header sui-flatten sui-content-center">
 
@@ -33,38 +32,20 @@ $banner_2x = forminator_plugin_url() . 'assets/images/new-feature-19@2x.png';
 					<span class="sui-screen-reader-text"><?php esc_html_e( 'Close this dialog.', 'forminator' ); ?></span>
 				</button>
 
-				<h3 class="sui-box-title sui-lg" style="overflow: initial; white-space: initial; text-overflow: initial;"><?php esc_html_e( 'New: Now You Can Group and Repeat Fields!', 'forminator' ); ?></h3>
+				<h3 class="sui-box-title sui-lg" style="overflow: initial; white-space: initial; text-overflow: initial;"><?php esc_html_e( 'New! Forminator Scheduled Reports', 'forminator' ); ?></h3>
 
 				<p class="sui-description">
-					<?php
-					printf(
-						/* translators: 1. User name. 2. Open a tag. 3. Close a tag. */
-						esc_html__( 'Hey %1$s! You asked for it and we\'ve delivered. Take a look at the new Field Group and Repeater options which let you group multiple reusable fields together and collect repeated data like event attendees, education/employment history, address lists, etc. Check out this %2$sTutorial%3$s to learn more about grouping and repeating fields.', 'forminator' ),
-						esc_html( ucfirst( $user->display_name ) ),
-						'<a href="' . esc_url( $url ) . '" target="_blank">',
-						'</a>'
-					);
-					?>
+					<?php esc_html_e( 'Put an end to wondering how well your forms, quizzes,
+					and polls are doing! We\'ve added a new scheduled report feature to Forminator
+					reports, so you can now get daily, weekly, or monthly report notifications sent
+					directly to your inbox.', 'forminator' ); ?>
 				</p>
 
 			</div>
 
-<!--			<div class="sui-box-body sui-spacing-top--20">
-
-				<ul style="margin: 0 0 0 20px; list-style: disc;">
-
-					<li style="margin-bottom: 0;">
-						<h4 style="margin-bottom: 0;"></h4>
-						<p class="sui-description" style="margin-left: -20px;"></p>
-					</li>
-
-				</ul>
-
-			</div>-->
-
 			<div class="sui-box-footer sui-flatten sui-content-center">
 
-				<button class="sui-button forminator-dismiss-new-feature" data-modal-close><?php esc_html_e( 'Awesome, Let’s go!', 'forminator' ); ?></button>
+				<button class="sui-button forminator-dismiss-new-feature" data-modal-close><?php esc_html_e( 'Schedule Report', 'forminator' ); ?></button>
 
 			</div>
 
@@ -90,6 +71,7 @@ $banner_2x = forminator_plugin_url() . 'assets/images/new-feature-19@2x.png';
 			}
 		).always( function() {
 			$notice.hide();
+            location.href = '<?php echo admin_url( 'admin.php?page=forminator-reports&section=notification' ); ?>';
 		});
 	});
 </script>

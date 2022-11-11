@@ -4,6 +4,29 @@ Author: Cvetan Cvetanov (Incsub), Dixita Dusara
 Change Log:
 ----------------------------------------------------------------------
 
+= 1.20.1 ( 2022-11-09 ) =
+
+- Improvement: Report Notifications are disabled by default
+- Improvement: Reports Notifications screen UI improvements
+
+= 1.20.0 ( 2022-11-08 ) =
+
+- New: Scheduled report notifications
+- Improvement: Custom Variable selections includes Number fields
+- Fix: Quiz preview modal doesn't work
+- Fix: Knowledge quiz email notification values for From Name, Reply-to email, CC emails, and BCC emails don't work
+- Fix: No Pagination is not set as the quiz presentation type if you use the back button on the quiz creation modal window
+- Fix: HubSpot and AWeber Identifier aren't working
+- Fix: The "Jordanian Dinar – JOD" is missing from the Payment Currency list
+- Fix: Typo on the links for Invisible hCaptcha
+- Fix: Submission indicator doesn't work when a validation error occurs
+- Fix: Select option values aren't trimmed for visibility conditions
+- Fix: Can't create new forms via the dashboard page due to an update notification popup
+- Fix: Timepicker limit not working
+- Fix: Empty submission value when setting the Submission ID as a default value for a hidden filed
+- Fix: Conditional rules don't work when setting the Default Value of the Hidden field to Query Parameter
+- Fix: Error when Routing is based on a checkbox field
+
 = 1.19.0 ( 2022-10-13 ) =
 
 - New: Field group
@@ -1440,4 +1463,4 @@ Change Log:
 - First public release
 
 
-1014685-1666212244-au
+1014685-1668190736-au

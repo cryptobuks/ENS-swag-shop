@@ -21,6 +21,7 @@ class Forminator_Addon_Container implements ArrayAccess, Countable, Iterator {
 	 *
 	 * @return bool
 	 */
+	#[\ReturnTypeWillChange]
 	public function offsetExists( $offset ) {
 		return isset( $this->addons[ $offset ] );
 	}
@@ -32,6 +33,7 @@ class Forminator_Addon_Container implements ArrayAccess, Countable, Iterator {
 	 *
 	 * @return Forminator_Addon_Abstract|mixed|null
 	 */
+	#[\ReturnTypeWillChange]
 	public function offsetGet( $offset ) {
 		if ( isset( $this->addons[ $offset ] ) ) {
 			return $this->addons[ $offset ];
@@ -46,6 +48,7 @@ class Forminator_Addon_Container implements ArrayAccess, Countable, Iterator {
 	 * @param mixed $offset
 	 * @param mixed $value
 	 */
+	#[\ReturnTypeWillChange]
 	public function offsetSet( $offset, $value ) {
 		$this->addons[ $offset ] = $value;
 	}
@@ -53,6 +56,7 @@ class Forminator_Addon_Container implements ArrayAccess, Countable, Iterator {
 	/**
 	 * @param mixed $offset
 	 */
+	#[\ReturnTypeWillChange]
 	public function offsetUnset( $offset ) {
 		unset( $this->addons[ $offset ] );
 	}
@@ -67,6 +71,7 @@ class Forminator_Addon_Container implements ArrayAccess, Countable, Iterator {
 	 * The return value is cast to an integer.
 	 * @since 1.1
 	 */
+	#[\ReturnTypeWillChange]
 	public function count() {
 		return count( $this->addons );
 	}
@@ -129,6 +134,7 @@ class Forminator_Addon_Container implements ArrayAccess, Countable, Iterator {
 	 * @return mixed Can return any type.
 	 * @since 1.1
 	 */
+	#[\ReturnTypeWillChange]
 	public function current() {
 		return current( $this->addons );
 	}
@@ -140,6 +146,7 @@ class Forminator_Addon_Container implements ArrayAccess, Countable, Iterator {
 	 * @return void Any returned value is ignored.
 	 * @since 1.1
 	 */
+	#[\ReturnTypeWillChange]
 	public function next() {
 		next( $this->addons );
 	}
@@ -151,6 +158,7 @@ class Forminator_Addon_Container implements ArrayAccess, Countable, Iterator {
 	 * @return mixed scalar on success, or null on failure.
 	 * @since 1.1
 	 */
+	#[\ReturnTypeWillChange]
 	public function key() {
 		return key( $this->addons );
 	}
@@ -163,6 +171,7 @@ class Forminator_Addon_Container implements ArrayAccess, Countable, Iterator {
 	 * Returns true on success or false on failure.
 	 * @since 1.1
 	 */
+	#[\ReturnTypeWillChange]
 	public function valid() {
 		return key( $this->addons ) !== null;
 	}
@@ -174,6 +183,7 @@ class Forminator_Addon_Container implements ArrayAccess, Countable, Iterator {
 	 * @return void Any returned value is ignored.
 	 * @since 1.1
 	 */
+	#[\ReturnTypeWillChange]
 	public function rewind() {
 		reset( $this->addons );
 	}

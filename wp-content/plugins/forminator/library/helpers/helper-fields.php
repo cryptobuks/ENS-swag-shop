@@ -2457,3 +2457,45 @@ function forminator_truncate_text( $text, $truncate = PHP_INT_MAX ) {
 
 	return $text;
 }
+
+/**
+ * Query users.
+ *
+ * @since 1.20.0
+ *
+ * @param {string} $search_string  Search query.
+ * @param {array}  $exclude        Array of user IDs to exclude from search.
+ *
+ * @return array
+ */
+function forminator_get_users_by_query( $search_string, $exclude ) {
+	$params = array(
+		'orderby'        => 'ID',
+		'order'          => 'DESC',
+		'number'         => 10,
+		'paged'          => 1,
+		'exclude'        => $exclude,
+		'search'         => strtolower( $search_string ),
+		'search_columns' => array(
+			'user_login',
+			'user_email',
+			'user_nicename',
+			'display_name',
+		),
+	);
+
+	$user_query = new WP_User_Query( $params );
+
+	$users = array();
+	foreach ( $user_query->get_results() as $user ) {
+		$users[] = array(
+			'id'     => $user->ID,
+			'name'   => $user->get( 'display_name' ),
+			'email'  => $user->get( 'user_email' ),
+			'role'   => empty( $user->roles ) ? null : ucfirst( $user->roles[0] ),
+			'avatar' => get_avatar_url( $user->get( 'user_email' ) ),
+		);
+	}
+
+	return $users;
+}

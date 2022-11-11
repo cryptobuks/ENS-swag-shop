@@ -131,6 +131,8 @@ class Forminator_Core {
 		// Export management.
 		Forminator_Export::get_instance();
 
+		Forminator_Reports::get_instance();
+
 		// Post meta box.
 		add_action( 'init', array( &$this, 'post_field_meta_box' ) );
 	}
@@ -234,6 +236,8 @@ class Forminator_Core {
 		include_once forminator_plugin_dir() . 'library/class-export-result.php';
 		/* @noinspection PhpIncludeInspection */
 		include_once forminator_plugin_dir() . 'library/class-export.php';
+        /* @noinspection PhpIncludeInspection */
+		include_once forminator_plugin_dir() . 'library/class-reports.php';
 		/* @noinspection PhpIncludeInspection */
 		include_once forminator_plugin_dir() . 'library/render/class-render-form.php';
 		/* @noinspection PhpIncludeInspection */
@@ -300,6 +304,7 @@ class Forminator_Core {
 		include_once forminator_plugin_dir() . 'library/model/class-quiz-form-model.php';
 		/* @noinspection PhpIncludeInspection */
 		include_once forminator_plugin_dir() . 'library/model/class-form-views-model.php';
+		include_once forminator_plugin_dir() . 'library/model/class-form-reports-model.php';
 		if ( is_admin() ) {
 			/* @noinspection PhpIncludeInspection */
 			include_once forminator_plugin_dir() . 'admin/abstracts/class-admin-page.php';

@@ -33,6 +33,8 @@ class Forminator_Upgrade {
 			// Update tables if required.
 			Forminator_Database_Tables::install_database_tables();
 
+			Forminator_Database_Tables::insert_default_entries();
+
 			add_action( 'admin_init', array( __CLASS__, 'flush_rewrite' ) );
 
 			// Update version.

@@ -130,6 +130,7 @@ foreach ( $template_vars as $key => $val ) {
 				<input id="due_date"
 					   class="sui-form-control"
 					   name="due_date"
+                       autocomplete="off"
 					   placeholder="<?php echo esc_attr( __( 'Select a due date', 'forminator' ) ); ?>"
 					   value="<?php echo esc_attr( $vars['due_date'] ); ?>">
 

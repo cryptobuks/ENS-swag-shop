@@ -389,6 +389,13 @@ class Forminator_Stripe extends Forminator_Field {
 		if ( in_array( $currency, $zero_decimal_currencies ) ) {
 			return $amount;
 		}
+
+		// If JOD, amount needs to have 3 decimals and multiplied to 1000.
+		if ( 'JOD' === $currency ) {
+			$amount = number_format( $amount, 3, '.', '' );
+			return $amount * 1000;
+		}
+
 		$amount = number_format( $amount, 2, '.', '' );
 
 		// Currency has decimals, multiply by 100.
